@@ -71,9 +71,11 @@
                         <width>480</width>
                         <align>left</align>
                         <aligny>top</aligny>
-                        <font>font_statusbar</font>
+                        <!-- font changed from font_statusbar -->
+						<font>font_mini_bold</font>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>main_fg_70</textcolor>
+                        <!-- textcolor changed from main_fg_70 to yellow -->
+                        <textcolor>ffe5b535</textcolor>
                     </control>
                 </rulerlayout>
                 <channellayout height="$PARAM[channelheight]" width="$PARAM[channelwidth]">
