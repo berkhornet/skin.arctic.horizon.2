@@ -91,6 +91,9 @@
                     <left>20</left>
                     <right>20</right>
                 </control>
+				<!-- include mini videowindow in EPG display -->
+				<control type="videowindow">
+				</control>  
             </control>
             <control type="group">
                 <left>520</left>
