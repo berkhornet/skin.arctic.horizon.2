@@ -8,6 +8,14 @@
 	<expression name="FHDChannel">String.Contains(ListItem.ChannelName," FHD")</expression>
 	<expression name="HDChannel">String.Contains(ListItem.ChannelName," HD")</expression>
 	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
+	<!-- Channel Icon variable -->
+	<variable name="ImagePVREPGIcon">
+		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>
+		<value condition="$EXP[LiveEPL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EPL.png</value>
+		<value condition="$EXP[LiveEFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL.png</value>
+		<value condition="$EXP[LiveSPFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE SPFL.png</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
 	<!-- Channel Resolution Icon variable -->
 	<variable name="ImageChannelResolutionIcon">
 		<value condition="$EXP[FHDChannel]">pvr/fhd.png</value>

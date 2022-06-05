@@ -85,7 +85,7 @@
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
                     <right>dialog_pad</right>
                     <left>100</left>
-                    <texture>$INFO[ListItem.Icon]</texture>
+                    <texture>$VAR[ImagePVREPGIcon]</texture>
                     <aspectratio align="left">keep</aspectratio>
                     <right>0</right>
                     <bordersize>10</bordersize>
