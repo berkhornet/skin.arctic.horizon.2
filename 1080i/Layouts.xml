@@ -276,7 +276,7 @@
                 <right>30</right>
                 <textcolor>main_fg_70</textcolor>
                 <selectedcolor>main_fg_70</selectedcolor>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$VAR[PVREPGProgramInfo]</label>
                 <visible>$PARAM[visible]</visible>
             </include>
 
