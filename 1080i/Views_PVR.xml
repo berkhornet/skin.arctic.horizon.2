@@ -99,7 +99,8 @@
                 <left>520</left>
                 <right>30</right>
                 <control type="label">
-                    <top>30</top>
+					<!-- top changed from 30 -->
+                    <top>10</top>
                     <!-- font changed from font_menulabel -->
                     <font>font_mini_bold</font>
                     <label>$INFO[ListItem.Label,, ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, ]</label>
@@ -108,7 +109,8 @@
                     <height>40</height>
                 </control>
                 <control type="label">
-                    <top>30</top>
+                    <!-- top changed from 30 -->
+                    <top>10</top>
                     <!-- font changed from font_mini -->
                     <font>font_mini_bold</font>
                     <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
@@ -118,12 +120,14 @@
                     <align>right</align>
                 </control>
                 <control type="textbox">
-                    <top>70</top>
+					<!-- top changed from 70 -->
+                    <top>50</top>
                     <!-- font changed from font_plotbox -->
                     <font>font_plotbox_mini</font>
                     <label>$VAR[Label_Plot]</label>
                     <textcolor>main_fg_70</textcolor>
-                    <height>80</height>
+					<!-- height changed from 80 -->
+                    <height>120</height>
                 </control>
             </control>
         </control>
