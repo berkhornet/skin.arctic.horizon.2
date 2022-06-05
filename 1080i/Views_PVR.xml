@@ -85,7 +85,7 @@
             <control type="group">
                 <width>480</width>
                 <control type="image">
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                    <texture background="true">$VAR[ImagePVRArtwork]</texture>
                     <aspectratio align="center">keep</aspectratio>
                     <bordersize>20</bordersize>
                     <left>20</left>
