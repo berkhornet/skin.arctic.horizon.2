@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
+	<!-- Expressions and Variables for PVR EPG Artwork -->
+	<expression name="StandardChannel">!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb)) + !Player.HasMedia + !String.Contains(ListItem.ChannelName,"EPL ") + !String.Contains(ListItem.ChannelName,"EFL ") + !String.Contains(ListItem.ChannelName,"SPFL ")</expression>
+	<expression name="LiveEPL">String.Contains(ListItem.ChannelName,"EPL ")</expression>
+	<expression name="LiveEFL">String.Contains(ListItem.ChannelName,"EFL ")</expression>
+	<expression name="LiveSPFL">String.Contains(ListItem.ChannelName,"SPFL ")</expression>
+	<expression name="FHDChannel">String.Contains(ListItem.ChannelName," FHD")</expression>
+	<expression name="HDChannel">String.Contains(ListItem.ChannelName," HD")</expression>
+	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
+	<!-- Channel Resolution Icon variable -->
+	<variable name="ImageChannelResolutionIcon">
+		<value condition="$EXP[FHDChannel]">pvr/fhd.png</value>
+		<value condition="$EXP[HDChannel]">pvr/hd.png</value>
+		<value condition="$EXP[SDChannel]">pvr/sd.png</value>
+		<value></value>
+	</variable>
     <variable name="Image_Poster_C5000">
         <value condition="!String.IsEmpty(Container(5000).ListItem.Art(poster))">$INFO[Container(5000).ListItem.Art(poster)]</value>
         <value condition="!String.IsEmpty(Container(5000).ListItem.Art(tvshow.poster))">$INFO[Container(5000).ListItem.Art(tvshow.poster)]</value>
