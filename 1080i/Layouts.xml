@@ -42,7 +42,8 @@
                 <nested />
                 <include content="Object_Control" condition="$PARAM[selected]">
                     <param name="control" value="image" />
-                    <include>Texture_Highlight</include>
+					<!-- Disable the highlight of focused channel -->
+                    <!-- include>Texture_Highlight</include -->
                 </include>
                 <include content="Object_Control" condition="!$PARAM[selected]">
                     <param name="control" value="image" />
