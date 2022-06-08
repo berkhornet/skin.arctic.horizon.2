@@ -59,7 +59,7 @@
         <include content="Object_Control">
             <param name="control" value="image" />
 			<texture>common/blur2.jpg</texture>
-			<visible>Window.IsVisible(Home) | Window.IsVisible(MyPVRGuide.xml)</visible>
+			<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
         </include>
     </include>
 
