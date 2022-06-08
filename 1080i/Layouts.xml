@@ -491,7 +491,8 @@
                     <include content="Object_Include" condition="$PARAM[selected]">
                         <colordiffuse>$VAR[ColorSelected]</colordiffuse>
                     </include>
-                    <colordiffuse>dialog_fg_70</colordiffuse>
+					<!-- colordiffuse disabled -->
+                    <!-- colordiffuse>dialog_fg_70</colordiffuse -->
                     <texture>$INFO[ListItem.Icon]</texture>
                     <bordersize>10</bordersize>
                 </include>
