@@ -46,9 +46,18 @@
         </include>
 		
 		<!-- Temporary background for Home and MyPVRGuide screens -->
+		<!-- Home screen -->
+		<control type="multiimage">
+            <timeperimage>5000</timeperimage>
+            <aspectratio align="center" aligny="center">stretch</aspectratio>
+            <fadetime>10</fadetime>
+            <imagepath>special://userdata\customisations\Skin Images\Home Images A</imagepath>
+            <randomize>false</randomize>
+			<visible>Window.IsVisible(Home)</visible>
+        </control>
+		<!-- MyPVRGuide screen -->
         <include content="Object_Control">
             <param name="control" value="image" />
-            <!--texture colordiffuse="main_bg_45">common/blur.jpg</texture -->
 			<texture>common/blur2.jpg</texture>
 			<visible>Window.IsVisible(Home) | Window.IsVisible(MyPVRGuide.xml)</visible>
         </include>

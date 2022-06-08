@@ -115,7 +115,8 @@
         <!-- Menu bar -->
         <include content="Object_MenuBar_Group">
             <param name="overlay" value="false" />
-            <param name="colordiffuse" value="main_fg_12" />
+			<!-- param colordiffuse changed from main_fg_12 -->
+            <param name="colordiffuse" value="main_bg_30" />
             <left>80</left>
             <visible>!$EXP[Exp_InfoDialogs]</visible>
             <animation effect="fade" start="100" end="0" condition="Window.Next(1114)">Conditional</animation>
