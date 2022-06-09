@@ -62,9 +62,13 @@
 		<!-- MyPVRGuide screen -->
         <include content="Object_Control">
             <param name="control" value="image" />
-			<texture>common/blur2.jpg</texture>
+			<texture>common/blur.jpg</texture>
 			<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
         </include>
+		<control type="image">
+            <texture colordiffuse="ff000000" background="true">common/vignette-white.png</texture>
+			<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
+        </control>
     </include>
 
     <variable name="Background_Fanart_Var">
