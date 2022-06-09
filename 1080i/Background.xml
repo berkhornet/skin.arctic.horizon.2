@@ -55,6 +55,10 @@
             <randomize>false</randomize>
 			<visible>Window.IsVisible(Home)</visible>
         </control>
+		<control type="image">
+            <texture colordiffuse="ff000000" background="true">common/vignette-white.png</texture>
+			<visible>Window.IsVisible(Home)</visible>
+        </control>
 		<!-- MyPVRGuide screen -->
         <include content="Object_Control">
             <param name="control" value="image" />
