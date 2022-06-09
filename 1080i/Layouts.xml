@@ -279,6 +279,8 @@
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$VAR[PVREPGProgramInfo]</label>
                 <visible>$PARAM[visible]</visible>
+				<!-- font added -->
+				<font>font_mini_bold</font>
             </include>
 
             <include content="Object_Control" condition="$PARAM[detailed]">
