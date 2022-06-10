@@ -47,26 +47,36 @@
 		
 		<!-- Temporary background for Home and MyPVRGuide screens -->
 		<!-- Home screen -->
-		<control type="multiimage">
+		
+		<!-- Temporary multi-image disabled -->
+		<!-- control type="multiimage">
             <timeperimage>5000</timeperimage>
             <aspectratio align="center" aligny="center">stretch</aspectratio>
             <fadetime>10</fadetime>
             <imagepath>special://userdata\customisations\Skin Images\Home Images A</imagepath>
             <randomize>false</randomize>
-			<visible>Window.IsVisible(Home)</visible>
-        </control>
+			<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+        </control -->
+		
+		<include content="Object_Control">
+            <param name="control" value="image" />
+			<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Home Background.png</texture>
+			<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+        </include>
+		
 		<control type="image">
-            <texture colordiffuse="ff000000" background="true">common/vignette-white.png</texture>
-			<visible>Window.IsVisible(Home)</visible>
+            <texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
+			<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
         </control>
+		
 		<!-- MyPVRGuide screen -->
         <include content="Object_Control">
             <param name="control" value="image" />
-			<texture>common/blur.jpg</texture>
+			<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\EPG Background.png</texture>
 			<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
         </include>
 		<control type="image">
-            <texture colordiffuse="ff000000" background="true">common/vignette-white.png</texture>
+            <texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
 			<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
         </control>
     </include>
