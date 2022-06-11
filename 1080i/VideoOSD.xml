@@ -159,7 +159,7 @@
             <!-- Episodes Pop-up -->
             <include content="OSD_Menu_Back">
                 <param name="arrow_pos" value="700" />
-                <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)</visible>
+                <visible>VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv)</visible>
                 <visible>Control.HasFocus(6400) | Control.HasFocus(6401)</visible>
                 <visible>Container(6401).IsUpdating | !Integer.IsEqual(Container(6401).NumItems,0)</visible>
                 <include>Animation_SlideIn_Dialog</include>
