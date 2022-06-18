@@ -974,3 +974,18 @@ msgstr ""
 msgctxt "#31192"
 msgid "Aggregate full tv crew list"
 msgstr ""
+
+#: /1080i/Views_List.xml
+msgctxt "#31193"
+msgid "Square Playlist"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31194"
+msgid "Trailer button plays windowed"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31195"
+msgid "Profile image with clock"
+msgstr ""

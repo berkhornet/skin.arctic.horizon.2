@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <expression name="Exp_HasProfileImage">[Skin.HasSetting(Home.ShowProfileImage) + !String.IsEmpty(System.ProfileThumb) + [Window.IsVisible(Home) | $EXP[Exp_SettingsDialogs]] + !$EXP[Exp_InfoDialogs]]</expression>
+
     <expression name="Exp_HasBackgroundVideo">[Skin.HasSetting(UseBackgroundVideo) + Player.HasVideo + !$EXP[Exp_InfoDialogs] + !$EXP[Exp_RecommendationDialogs]]</expression>
 
     <expression name="Exp_HasPagesItems">[[Control.HasFocus(60) | Control.HasFocus(61)] + !$EXP[Exp_InfoDialogs]]</expression>
@@ -15,7 +17,7 @@
 
     <expression name="Exp_HasLandscapeFormatArt">[$EXP[Exp_HasArtFanart] | $EXP[Exp_HasArtLandscape] | !String.IsEmpty(ListItem.EPGEventIcon) | [!$EXP[Exp_IsPVRItem] + !String.IsEmpty(ListItem.Art(thumb))]]</expression>
 
-    <expression name="Exp_HasWatchedProgress">[!Skin.HasSetting(DisableIndicator.Progress) + [[ListItem.IsResumable + !Integer.IsEqual(ListItem.PercentPlayed,0)] | [!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0)]]]</expression>
+    <expression name="Exp_HasWatchedProgress">[!Skin.HasSetting(DisableIndicator.Progress) + [[ListItem.IsResumable + !Integer.IsEqual(ListItem.PercentPlayed,0)] | [!String.IsEmpty(ListItem.Property(WatchedProgress)) + !Integer.IsEqual(ListItem.Property(WatchedProgress),0)] | [!Integer.IsEqual(ListItem.Progress,0)]]]</expression>
 
     <expression name="Exp_IsPVRItem">[!String.IsEmpty(ListItem.ChannelNumberLabel)]</expression>
 
@@ -58,6 +60,8 @@
     <expression name="Exp_WallViews">[Control.IsVisible(500) | Control.IsVisible(510) | Control.IsVisible(520) | Control.IsVisible(540) | Control.IsVisible(570) | Control.IsVisible(580)]</expression>
 
     <expression name="Exp_ListViews">[Control.IsVisible(501) | Control.IsVisible(511) | Control.IsVisible(507) | Control.IsVisible(517)]</expression>
+
+    <expression name="Exp_BigListViews">[Control.IsVisible(508)]</expression>
 
     <!-- <expression name="Exp_View_Special">[True]</expression> -->
     <expression name="Exp_View_Special">!String.IsEqual(Container.Property(param.info),user_discover)</expression>

@@ -196,6 +196,17 @@
                                 <onclick condition="Skin.String(WeatherClock,Small)">Skin.Reset(WeatherClock)</onclick>
                                 <selected>Skin.String(WeatherClock,Small)</selected>
                             </include>
+                            <include content="Dialog_Settings_Button" description="Profile image">
+                                <param name="id" value="4002" />
+                                <param name="control" value="radiobutton" />
+                                <label>$LOCALIZE[31195]</label>
+                                <visible>Container(3).HasFocus(4)</visible>
+                                <onclick>Skin.ToggleSetting(Home.ShowProfileImage)</onclick>
+                                <selected>Skin.HasSetting(Home.ShowProfileImage)</selected>
+                                <!-- Reset window -->
+                                <onclick>SetProperty(ReplaceWindow,skinsettings,Home)</onclick>
+                                <onclick>ReplaceWindow(1197)</onclick>
+                            </include>
 
                             <!-- Playback -->
                             <include content="Dialog_Settings_Label" description="Playback">
@@ -248,6 +259,14 @@
                                 <visible>Container(3).HasFocus(6)</visible>
                                 <label2>$INFO[Skin.String(OSD_Timeout),,s]</label2>
                                 <onclick>Skin.SetNumeric(OSD_Timeout)</onclick>
+                            </include>
+                            <include content="Dialog_Settings_Button" description="Trailer button plays fullscreen">
+                                <param name="id" value="6003" />
+                                <param name="control" value="radiobutton" />
+                                <label>$LOCALIZE[31194]</label>
+                                <visible>Container(3).HasFocus(6)</visible>
+                                <onclick>Skin.ToggleSetting(VideoInfo.FullscreenTrailer)</onclick>
+                                <selected>!Skin.HasSetting(VideoInfo.FullscreenTrailer)</selected>
                             </include>
 
 
