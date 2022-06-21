@@ -84,6 +84,30 @@
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
             </include>
+			
+			<!-- Temporary background for Home and MyPVRGuide screens -->
+			<!-- Home screen -->		
+			<include content="Object_Control">
+				<param name="control" value="image" />
+				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Home Background.png</texture>
+				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+			</include>	
+			<control type="image">
+				<texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
+				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+			</control>
+		
+			<!-- MyPVRGuide screen -->
+			<include content="Object_Control">
+				<param name="control" value="image" />
+				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\EPG Background.png</texture>
+				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
+			</include>
+			<control type="image">
+				<texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
+				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
+			</control>
+			
         </control>
     </include>
 
@@ -183,13 +207,14 @@
             <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
             <nested />
         </include>
-        <control type="group">
+		<!-- Temporary Disable shading at bottom of Home Screen -->
+        <!-- control type="group">
             <include>Animation_Background_FadeInOut</include>
             <include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_90">common/floor.png</texture>
             </include>
-        </control>
+        </control -->
     </include>
 
 </includes>
