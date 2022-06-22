@@ -79,35 +79,29 @@
                 <visible>$EXP[Exp_ShowSideArt]</visible>
                 <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
             </include>
-
-            <include content="Object_Control">
-                <param name="control" value="image" />
-                <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
-            </include>
-			
-			<!-- Temporary background for Home and MyPVRGuide screens -->
-			<!-- Home screen -->		
+         
+			<!-- Temporary background for non-media screens -->
+			<!-- Home (and Search) screens -->		
 			<include content="Object_Control">
 				<param name="control" value="image" />
 				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Home Background.png</texture>
 				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
 			</include>	
-			<control type="image">
-				<texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
-				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
-			</control>
 		
-			<!-- MyPVRGuide screen -->
+			<!-- Other screens, including EPG -->
 			<include content="Object_Control">
-				<param name="control" value="image" />
-				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\EPG Background.png</texture>
-				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
-			</include>
-			<control type="image">
-				<texture colordiffuse="99000000" background="true">common/vignette-white.png</texture>
-				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
-			</control>
+                <param name="control" value="image" />
+				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Other Background.png</texture>
+				<visible>!String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))</visible>
+            </include>
+			<!-- End of Temporary backgrounds -->
 			
+			<include content="Object_Control">
+                <param name="control" value="image" />
+				<!-- colordiffuse changed from main_bg_45 -->
+                <texture colordiffuse="main_bg_12">common/bg.jpg</texture>
+            </include>
+						
         </control>
     </include>
 
