@@ -4,1043 +4,978 @@
 # Addon Provider: jurialmunkey
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_il\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
 
 #: /1080i/SettingsSystemInfo.xml
 msgctxt "#31000"
 msgid "Live TV / PVR"
-msgstr ""
+msgstr "טלוויזיה חיה/PVR"
 
 #: /1080i/Custom_Colors_1101.xml
 msgctxt "#31001"
 msgid "Select colours"
-msgstr ""
+msgstr "בחר צבעים"
 
 #: /1080i/Items.xml
 msgctxt "#31002"
 msgid "Manage"
-msgstr ""
+msgstr "הגדר"
 
 #: /1080i/Custom_Colors_1101.xml
 msgctxt "#31003"
 msgid "Change"
-msgstr ""
+msgstr "שנה"
 
 #: /1080i/MyWeather.xml
 msgctxt "#31004"
 msgid "Weekly Forecast"
-msgstr ""
+msgstr "תחזית שבועית"
 
 #: /1080i/MyWeather.xml
 msgctxt "#31005"
 msgid "Rain Chance"
-msgstr ""
+msgstr "שנה גשם"
 
 #: /1080i/Items.xml
 msgctxt "#31006"
 msgid "Location"
-msgstr ""
+msgstr "מיקום"
 
 #: /1080i/Items.xml
 msgctxt "#31007"
 msgid "Customise appearance"
-msgstr ""
+msgstr "התאם אישית את המראה"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31008"
 msgid "Image"
-msgstr ""
+msgstr "תמונה"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31009"
 msgid "Blur"
-msgstr ""
+msgstr "טישטוש"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31010"
 msgid "ClearArt"
-msgstr ""
+msgstr "ClearArt"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31011"
 msgid "Small Fanart"
-msgstr ""
+msgstr "קטן Fanart"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31012"
 msgid "Keyart"
-msgstr ""
+msgstr "Keyart"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31013"
 msgid "Text"
-msgstr ""
+msgstr "טקסט"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31014"
 msgid "Clearlogo"
-msgstr ""
+msgstr "Clearlogo"
 
 #: /1080i/Items.xml
 msgctxt "#31015"
 msgid "Order"
-msgstr ""
+msgstr "סדר"
 
 #: /1080i/Items.xml
 msgctxt "#31016"
 msgid "Sort by"
-msgstr ""
+msgstr "סדר לפי"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31017"
 msgid "File Details"
-msgstr ""
+msgstr "פרטי הקובץ"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31018"
 msgid "Recommendations"
-msgstr ""
+msgstr "המלצות"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31019"
 msgid "Crew"
-msgstr ""
+msgstr "צוות"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31020"
 msgid "lists"
-msgstr ""
+msgstr "רשימות"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31021"
 msgid "Similar"
-msgstr ""
+msgstr "דומה"
 
 #: /1080i/Dialogs.xml
 msgctxt "#31022"
 msgid "items"
-msgstr ""
+msgstr "פריטים"
 
 #: /1080i/Objects.xml
 msgctxt "#31023"
 msgid "Loading"
-msgstr ""
+msgstr "טוען"
 
 #: /1080i/Labels.xml
 msgctxt "#31024"
 msgid "Critics Consensus"
-msgstr ""
+msgstr "קונצנזוס המבקרים"
 
 #: /1080i/DialogAddonInfo.xml
 msgctxt "#31025"
 msgid "Add-on ID"
-msgstr ""
+msgstr "מזהה הרחבה"
 
 #: /1080i/DialogAddonInfo.xml
 msgctxt "#31026"
 msgid "Origin"
-msgstr ""
+msgstr "ארגון"
 
 #: /1080i/Labels.xml
 msgctxt "#31027"
 msgid "Not installed"
-msgstr ""
+msgstr "לא הותקן"
 
 #: /1080i/Dialogs.xml
 msgctxt "#31028"
 msgid "Outline"
-msgstr ""
+msgstr "מתווה"
 
 #: /1080i/Items.xml
 msgctxt "#31029"
 msgid "Updated"
-msgstr ""
+msgstr "עודכן"
 
 #: /1080i/Items.xml
 msgctxt "#31030"
 msgid "Installed"
-msgstr ""
+msgstr "הותקן"
 
 #: /1080i/MyWeather.xml
 msgctxt "#31031"
 msgid "Weather Forecast for"
-msgstr ""
+msgstr "תחזית מזג האוויר עבור"
 
 #: /1080i/Custom_Discover_1116.xml
 msgctxt "#31032"
 msgid "Filters"
-msgstr ""
+msgstr "פילטרים"
 
 #: /1080i/Labels.xml
 msgctxt "#31033"
 msgid "People"
-msgstr ""
+msgstr "אנשים"
 
 #: /1080i/Labels.xml
 msgctxt "#31034"
 msgid "Cast member"
-msgstr ""
+msgstr "חבר בהפקה"
 
 #: /1080i/Labels.xml
 msgctxt "#31035"
 msgid "Crew member"
-msgstr ""
+msgstr "חבר בצוות"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31036"
 msgid "Balanced"
-msgstr ""
+msgstr "מאוזן"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31037"
 msgid "Quality"
-msgstr ""
+msgstr "איכות"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31038"
 msgid "Performance"
-msgstr ""
+msgstr "ביצועים"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31039"
 msgid "Background style"
-msgstr ""
+msgstr "סגנון רקע"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31040"
 msgid "Foreground"
-msgstr ""
+msgstr "חזית"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31041"
 msgid "FlixArt"
-msgstr ""
+msgstr "FlixArt"
 
 #: /1080i/Labels.xml
 msgctxt "#31042"
 msgid "Discover"
-msgstr ""
+msgstr "גלה"
 
 #: /1080i/Custom_Colors_1111.xml
 msgctxt "#31043"
 msgid "Flat (No Gradient)"
-msgstr ""
+msgstr "שטוח (ללא שיפוע))"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31044"
 msgid "Fade"
-msgstr ""
+msgstr "לדהות"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31045"
 msgid "Transparent"
-msgstr ""
+msgstr "שקוף"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31046"
 msgid "Opaque"
-msgstr ""
+msgstr "אָטוּם"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31047"
 msgid "Divider Options"
-msgstr ""
+msgstr "אפשרויות מחלק"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31048"
 msgid "Shadows"
-msgstr ""
+msgstr "הצללות"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31049"
 msgid "Default Widgets"
-msgstr ""
+msgstr "ברירת מחדל ווידג'טים"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31050"
 msgid "Title / Divider"
-msgstr ""
+msgstr "כותרת / מחלק"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31051"
 msgid "Classic"
-msgstr ""
+msgstr "קלַאסִי"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31052"
 msgid "Presets"
-msgstr ""
+msgstr "הגדרות קבועות מראש"
 
 #: /1080i/Labels.xml
 msgctxt "#31053"
 msgid "Profile"
-msgstr ""
+msgstr "פרופיל"
 
 #: /1080i/Labels.xml
 msgctxt "#31054"
 msgid "Liked by"
-msgstr ""
+msgstr "אהבתי לפי"
 
 #: /1080i/Labels.xml
 msgctxt "#31055"
 msgid "out of"
-msgstr ""
+msgstr "מִתוֹך"
 
 #: /1080i/Labels.xml
 msgctxt "#31056"
 msgid "critics"
-msgstr ""
+msgstr "מבקרים"
 
 #: /1080i/Objects.xml
 msgctxt "#31057"
 msgid "Years Old"
-msgstr ""
+msgstr "שנים"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31058"
 msgid "Solid"
-msgstr ""
+msgstr "סולידי"
 
 #: /1080i/Custom_Backgrounds_1112.xml
 msgctxt "#31059"
 msgid "Split"
-msgstr ""
+msgstr "לְפַצֵל"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31060"
 msgid "Premiered in"
-msgstr ""
+msgstr "הועלה לראשונה"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31061"
 msgid "From"
-msgstr ""
+msgstr "מ"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31062"
 msgid "By"
-msgstr ""
+msgstr "על ידי"
 
 #: /1080i/Labels.xml
 msgctxt "#31063"
 msgid "Last Aired"
-msgstr ""
+msgstr "שודר לאחרונה"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31064"
 msgid "Awards"
-msgstr ""
+msgstr "פרסים"
 
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31065"
 msgid "Creator"
-msgstr ""
+msgstr "יוצר"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31066"
 msgid "Movies as Cast Member"
-msgstr ""
+msgstr "סרטים בתור חבר צוות"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31067"
 msgid "TV Shows as Cast Member"
-msgstr ""
+msgstr "תוכניות טלוויזיה כחבר צוות"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31068"
 msgid "Movies as Crew Member"
-msgstr ""
+msgstr "סרטים כחבר צוות"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31069"
 msgid "TV Shows as Crew Member"
-msgstr ""
+msgstr "תוכניות טלוויזיה כחבר צוות"
 
 #: /1080i/Custom_Recommend_1120.xml
 msgctxt "#31070"
 msgid "Posters"
-msgstr ""
+msgstr "פוסטרים"
 
 #: /1080i/Labels.xml
 msgctxt "#31071"
 msgid "Playback Speed"
-msgstr ""
+msgstr "מהירות השמעה"
 
 #: /1080i/Info.xml
 msgctxt "#31072"
 msgid "Ends at"
-msgstr ""
+msgstr "מסתיים ב"
 
 #: /1080i/Info.xml
 msgctxt "#31073"
 msgid "mins"
-msgstr ""
+msgstr "דקות"
 
 #: /1080i/Info.xml
 msgctxt "#31074"
 msgid "hr"
-msgstr ""
+msgstr "שעה"
 
 #: /1080i/VideoOSD.xml
 msgctxt "#31075"
 msgid "Cast of"
-msgstr ""
+msgstr "שחקנים של"
 
 #: /1080i/Custom_Search_1117.xml
 msgctxt "#31076"
 msgid "Search by"
-msgstr ""
+msgstr "חפש ב"
 
 #: /1080i/Home.xml
 msgctxt "#31077"
 msgid "More Information"
-msgstr ""
+msgstr "עוד מידע"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31078"
 msgid "Delete settings shortcut"
-msgstr ""
+msgstr "קיצור דרך למחיקת הגדרות"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31079"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
-msgstr ""
+msgstr "האם אתה בטוח שברצונך להסיר את קיצור הדרך להגדרות?[CR]אנא ודא שיש לך שיטה חלופית לגישה להגדרות לפני שתסיר קיצור זה."
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31080"
 msgid "Customise home menu"
-msgstr ""
+msgstr "התאמה אישית של תפריט הבית"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31081"
 msgid "Action"
-msgstr ""
+msgstr "פעולה"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31082"
 msgid "Select icon"
-msgstr ""
+msgstr "בחר סמל"
 
 #: /1080i/AddonBrowser.xml
 msgctxt "#31083"
 msgid "Updates Available"
-msgstr ""
+msgstr "עדכונים זמינים"
 
 #: /1080i/AddonBrowser.xml
 msgctxt "#31084"
 msgid "Last Checked"
-msgstr ""
+msgstr "נבדק לאחרונה"
 
 #: /shortcuts/mainmenu.DATA.xml
 msgctxt "#31085"
 msgid "Live TV"
-msgstr ""
+msgstr "שידור חי"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31086"
 msgid "Customise power menu"
-msgstr ""
+msgstr "התאם אישית את תפריט ההפעלה"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31087"
 msgid "Menus / Widgets"
-msgstr ""
+msgstr "תפריטים / ווידג'טים"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31088"
 msgid "Menus and widgets"
-msgstr ""
+msgstr "תפריטים ווידג'טים"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31089"
 msgid "Recently played"
-msgstr ""
+msgstr "שיחק לאחרונה"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31090"
 msgid "In-Progress"
-msgstr ""
+msgstr "בתהליך"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31091"
 msgid "Top rated"
-msgstr ""
+msgstr "מדורג גבוה"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31092"
 msgid "IMDb Top 250"
-msgstr ""
+msgstr "Top 250 IMDb"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31093"
 msgid "Nodes"
-msgstr ""
+msgstr "צמתים"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31094"
 msgid "Random albums"
-msgstr ""
+msgstr "אלבומים אקראיים"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31095"
 msgid "Random artists"
-msgstr ""
+msgstr "אמנים אקראיים"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31096"
 msgid "Active recordings"
-msgstr ""
+msgstr "הקלטות פעילות"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31097"
 msgid "Grouped recordings"
-msgstr ""
+msgstr "הקלטות מקובצות"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31098"
 msgid "Grouped deleted recordings"
-msgstr ""
+msgstr "הקלטות שנמחקו מקובצות"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31099"
 msgid "Video Sources"
-msgstr ""
+msgstr "מקורות וידאו"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31100"
 msgid "Music Sources"
-msgstr ""
+msgstr "מקורות מוזיקה"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31101"
 msgid "Picture Sources"
-msgstr ""
+msgstr "מקור תמונה"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31102"
 msgid "Fullscreen widget"
-msgstr ""
+msgstr "ווידג'ט במסך מלא"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31103"
 msgid "Widgets"
-msgstr ""
+msgstr "ווידג'טים"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31104"
 msgid "Choose widget"
-msgstr ""
+msgstr "בחר יישומון"
 
 #: /shortcuts/template.xml
 msgctxt "#31105"
 msgid "Spotlight"
-msgstr ""
+msgstr "זַרקוֹר"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31106"
 msgid "Content type"
-msgstr ""
+msgstr "סוג תוכן"
 
 #: /1080i/Custom_1112_Backgrounds.xml
 msgctxt "#31107"
 msgid "Simple"
-msgstr ""
+msgstr "פָּשׁוּט"
 
 #: /1080i/Custom_1114_Search.xml
 msgctxt "#31108"
 msgid "Collections"
-msgstr ""
+msgstr "אוספים"
 
 #: /1080i/Custom_1114_Search.xml
 msgctxt "#31109"
 msgid "Tagged"
-msgstr ""
+msgstr "מתויג: "
 
 #: /1080i/Info.xml
 msgctxt "#31110"
 msgid "pages"
-msgstr ""
+msgstr "דפים"
 
 #: /1080i/Views_Row.xml
 msgctxt "#31111"
 msgid "Poster Row"
-msgstr ""
+msgstr "שורת פוסטרים"
 
 #: /1080i/Views_Row.xml
 msgctxt "#31112"
 msgid "Landscape Row"
-msgstr ""
+msgstr "שורת נוף"
 
 #: /1080i/Views_Row.xml
 msgctxt "#31113"
 msgid "Square Row"
-msgstr ""
+msgstr "שורה מרובעת"
 
 #: /1080i/Items.xml
 msgctxt "#31114"
 msgid "View"
-msgstr ""
+msgstr "מראה"
 
 #: /1080i/Views_Wall.xml
 msgctxt "#31115"
 msgid "Poster Wall"
-msgstr ""
+msgstr "קיר פוסטר"
 
 #: /1080i/Views_Wall.xml
 msgctxt "#31116"
 msgid "Landscape Wall"
-msgstr ""
+msgstr "קיר נוף"
 
 #: /1080i/Views_Wall.xml
 msgctxt "#31117"
 msgid "Square Wall"
-msgstr ""
+msgstr "קיר מרובע"
 
 #: /1080i/Views_Combined.xml
 msgctxt "#31118"
 msgid "Poster Combined"
-msgstr ""
+msgstr "פוסטר משולב"
 
 #: /1080i/Views_Combined.xml
 msgctxt "#31119"
 msgid "Landscape Combined"
-msgstr ""
+msgstr "נוף משולב"
 
 #: /1080i/Views_Combined.xml
 msgctxt "#31120"
 msgid "Square Combined"
-msgstr ""
+msgstr "ריבוע משולב"
 
 #: /1080i/Views_List.xml
 msgctxt "#31121"
 msgid "Square List"
-msgstr ""
+msgstr "רשימה מרובעת"
 
 #: /1080i/Views_List.xml
 msgctxt "#31122"
 msgid "Landscape List"
-msgstr ""
+msgstr "רשימת נוף"
 
 #: /1080i/Views_List.xml
 msgctxt "#31123"
 msgid "Infolist"
-msgstr ""
+msgstr "רשימת מידע"
 
 #: /1080i/Custom_1111_Colours.xml
 msgctxt "#31124"
 msgid "Indicator"
-msgstr ""
+msgstr "מד"
 
 #: /1080i/Custom_1111_Colours.xml
 msgctxt "#31125"
 msgid "Invert Text Colour"
-msgstr ""
+msgstr "היפוך צבע טקסט"
 
 #: /1080i/Custom_1112_Backgrounds.xml
 msgctxt "#31126"
 msgid "Light Font"
-msgstr ""
+msgstr "גופן בהיר"
 
 #: /1080i/Custom_1112_Backgrounds.xml
 msgctxt "#31127"
 msgid "Heavy Font"
-msgstr ""
+msgstr "גופן כבד"
 
 #: /1080i/Views_Wall.xml
 msgctxt "#31128"
 msgid "Big Poster Wall"
-msgstr ""
+msgstr "קיר פוסטרים גדול"
 
 #: /1080i/script-upnext-upnext.xml
 msgctxt "#31129"
 msgid "Up next in"
-msgstr ""
+msgstr "יימשך פנימה"
 
 #: /1080i/script-upnext-upnext.xml
 msgctxt "#31130"
 msgid "seconds"
-msgstr ""
+msgstr "שניות"
 
 #: /1080i/script-upnext-stillwatching.xml
 msgctxt "#31131"
 msgid "Continue watching in"
-msgstr ""
+msgstr "המשך צפייה"
 
 #: /1080i/SmartPlaylistEditor.xml
 msgctxt "#31132"
 msgid "Rules"
-msgstr ""
+msgstr "כללים"
 
 #: /1080i/SmartPlaylistEditor.xml
 msgctxt "#31133"
 msgid "Set the type and add rules to create a smart playlist. These playlists are dynamic and include all media items from your database which apply to your chosen rules."
-msgstr ""
-
+msgstr "הגדר את הסוג והוסף כללים כדי ליצור רשימת השמעה חכמה. רשימות השמעה אלו הן דינמיות וכוללות את כל פריטי המדיה ממסד הנתונים שלך החלים על הכללים שבחרת."
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31134"
 msgid "Expand information"
-msgstr ""
+msgstr "הרחב מידע"
 
 #: /1080i/Custom_1112_Backgrounds.xml
 msgctxt "#31135"
 msgid "Divider"
-msgstr ""
+msgstr "מחיצה"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31136"
 msgid "Select highlight colour preset"
-msgstr ""
+msgstr "בחר הגדרה מראש של צבע הדגשה"
 
 #: /1080i/Custom_1115_PresetColors.xml
 msgctxt "#31137"
 msgid "Colour Presets"
-msgstr ""
+msgstr "הגדרות צבע מראש"
 
 #: /1080i/Custom_1115_PresetColors.xml
 msgctxt "#31138"
 msgid "Aqua Classic"
-msgstr ""
+msgstr "אקווה קלאסיק"
 
 #: /1080i/Custom_1115_PresetColors.xml
 msgctxt "#31139"
 msgid "Tropical Sunset"
-msgstr ""
+msgstr "שקיעה טרופית"
 
 #: /1080i/Custom_1115_PresetColors.xml
 msgctxt "#31140"
 msgid "Miami Vaporwave"
-msgstr ""
+msgstr "מיאמי וופורווייב"
 
 #: /1080i/Custom_1115_PresetColors.xml
 msgctxt "#31141"
 msgid "Plain Monochrome"
-msgstr ""
+msgstr "מונוכרום רגיל"
 
 #: /1080i/Info.xml
 msgctxt "#31142"
 msgid "Total Duration"
-msgstr ""
+msgstr "משך זמן כולל"
 
 #: /1080i/Views_List.xml
 msgctxt "#31143"
 msgid "Square Infolist"
-msgstr ""
+msgstr "רשימת מידע מרובעת"
 
 #: /1080i/Views_List.xml
 msgctxt "#31144"
 msgid "Landscape Infolist"
-msgstr ""
+msgstr "מידע רשימת נוף"
 
 #: /1080i/Custom_1198_Startup.xml
 msgctxt "#31145"
 msgid "Initialising Skin"
-msgstr ""
+msgstr "אתחול מעטפת"
 
 #: /1080i/Views.xml
 msgctxt "#31146"
 msgid "No items to display[CR]Add rules on the left menu to discover new items"
-msgstr ""
+msgstr "אין פריטים להצגה[CR]הוסף כללים בתפריט השמאלי כדי לגלות פריטים חדשים"
 
 #: /1080i/Custom_1191_Testing.xml
 msgctxt "#31147"
 msgid "Aired"
-msgstr ""
+msgstr "שודר"
 
 #: /1080i/Views_Combined.xml
 msgctxt "#31148"
 msgid "Big Landscape Combined"
-msgstr ""
+msgstr "נוף גדול משולב"
 
 #: /1080i/Views_Row.xml
 msgctxt "#31149"
 msgid "Big Landscape Row"
-msgstr ""
+msgstr "שורת נוף גדולה"
 
 #: /1080i/Views_Wall.xml
 msgctxt "#31150"
 msgid "Big Landscape Wall"
-msgstr ""
+msgstr "קיר נוף גדול"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31151"
 msgid "Customise search menu"
-msgstr ""
+msgstr "התאם אישית את תפריט החיפוש"
 
 #: /1080i/Views_PVR.xml
 msgctxt "#31152"
 msgid "Detailed"
-msgstr ""
+msgstr "מְפוֹרָט"
 
 #: /1080i/MyPVRSearch.xml
 msgctxt "#31153"
 msgid "Results"
-msgstr ""
+msgstr "תוצאות"
 
 #: /1080i/DialogPVRChannelManager.xml
 msgctxt "#31154"
 msgid "Misc options"
-msgstr ""
+msgstr "אפשרויות שונות"
 
 #: /1080i/DialogPVRGroupManager.xml
 msgctxt "#31155"
 msgid "Add Group"
-msgstr ""
+msgstr "הוסף קבוצה"
 
 #: /1080i/DialogPVRGroupManager.xml
 msgctxt "#31156"
 msgid "Rename Group"
-msgstr ""
+msgstr "שנה את שם הקבוצה"
 
 #: /1080i/DialogPVRGroupManager.xml
 msgctxt "#31157"
 msgid "Delete group"
-msgstr ""
+msgstr "מחק קבוצה"
 
 #: /1080i/Labels.xml
 msgctxt "#31158"
 msgid "Next Aired"
-msgstr ""
+msgstr "הבא שודר"
 
 #: /1080i/Layouts.xml
 msgctxt "#31159"
 msgid "No plot information available"
-msgstr ""
+msgstr "אין מידע על העלילה"
 
 #: /1080i/Labels.xml
 msgctxt "#31160"
 msgid "REC"
-msgstr ""
+msgstr "הקלטה"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31161"
 msgid "Next Aired Library"
-msgstr ""
+msgstr "הספרייה המשודרת הבאה"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31162"
 msgid "Next Aired Trakt"
-msgstr ""
+msgstr "טראקט המשודר הבא"
 
 #: /1080i/Items.xml
 msgctxt "#31163"
 msgid "Vertical"
-msgstr ""
+msgstr "אֲנָכִי"
 
 #: /1080i/Items.xml
 msgctxt "#31164"
 msgid "Horizontal"
-msgstr ""
+msgstr "אופקי"
 
 #: /1080i/Custom_1112_Backgrounds.xml
 msgctxt "#31165"
 msgid "Experimental"
-msgstr ""
+msgstr "נִסיוֹנִי"
 
 #: /shortcuts/videos-1.DATA.xml
 msgctxt "#31166"
 msgid "Popular"
-msgstr ""
+msgstr "פופולרי"
 
 #: /shortcuts/videos-1.DATA.xml
 msgctxt "#31167"
 msgid "Anticipated"
-msgstr ""
+msgstr "צָפוּי"
 
 #: /shortcuts/searchmenu.DATA.xml
 msgctxt "#31168"
 msgid "TMDb Movies"
-msgstr ""
+msgstr "סרטי TMDb"
 
 #: /shortcuts/searchmenu.DATA.xml
 msgctxt "#31169"
 msgid "TMDb TV Shows"
-msgstr ""
+msgstr "תוכניות טלוויזיה של TMDb"
 
 #: /shortcuts/searchmenu.DATA.xml
 msgctxt "#31170"
 msgid "TMDb Collections"
-msgstr ""
+msgstr "אוספי TMDb"
 
 #: /shortcuts/searchmenu.DATA.xml
 msgctxt "#31171"
 msgid "TMDb People"
-msgstr ""
+msgstr "אנשים TMDb"
 
 #: /1080i/Views_Row.xml
 msgctxt "#31172"
 msgid "Big Poster Row"
-msgstr ""
+msgstr "שורת פוסטרים גדולה"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31173"
 msgid "widget"
-msgstr ""
+msgstr "יישומון"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31174"
 msgid "Navigation"
-msgstr ""
+msgstr "ניווט"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31175"
 msgid "Press back from EPG to open menu"
-msgstr ""
+msgstr "לחץ אחורה מ-EPG כדי לפתוח את התפריט"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31176"
 msgid "Use simple background for standard widgets"
-msgstr ""
+msgstr "השתמש ברקע פשוט עבור ווידג'טים סטנדרטיים"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31177"
 msgid "Menus"
-msgstr ""
+msgstr "תפריטים"
 
 #: /shortcuts/overrides.xml
 msgctxt "#31178"
 msgid "Open Submenu"
-msgstr ""
+msgstr "פתח את תפריט המשנה"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31179"
 msgid "Press up from home menu to open submenu"
-msgstr ""
+msgstr "לחץ למעלה מתפריט הבית כדי לפתוח תפריט משנה"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31180"
 msgid "Furniture"
-msgstr ""
+msgstr "אביזרים נלווים"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31181"
 msgid "Weather with clock"
-msgstr ""
+msgstr "מזג אוויר עם שעון "
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31182"
 msgid "Always display stop button"
-msgstr ""
+msgstr "הצג תמיד את לחצן העצירה -בנגן עצמו"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31183"
 msgid "Label"
-msgstr ""
+msgstr "תווית"
 
 #: /1080i/Labels.xml
 msgctxt "#31184"
 msgid "Wall"
-msgstr ""
+msgstr "קיר"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31185"
 msgid "Autoscroll"
-msgstr ""
+msgstr "גלילה אוטומטית"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31186"
 msgid "Behaviour"
-msgstr ""
+msgstr "התנהגות"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31187"
 msgid "Autoscroll time interval"
-msgstr ""
+msgstr "מרווח זמן של גלילה אוטומטית"
 
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31188"
 msgid "Limit"
-msgstr ""
+msgstr "מוגבל"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31189"
 msgid "Autoclose OSD after X seconds"
-msgstr ""
+msgstr "סגירה אוטומטית של OSD לאחר X שניות"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31190"
 msgid "Use EPGEventIcon for PVR background fanart"
-msgstr ""
+msgstr "השתמש ב-EPGEventIcon עבור יצירת רקע PVR"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31191"
 msgid "Aggregate full tv cast list"
-msgstr ""
+msgstr "אחד רשימת השחקנים מלאה"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31192"
 msgid "Aggregate full tv crew list"
-msgstr ""
-
-#: /1080i/Views_List.xml
-msgctxt "#31193"
-msgid "Square Playlist"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31194"
-msgid "Trailer button plays windowed"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31195"
-msgid "Profile image with clock"
-msgstr ""
-
-#: /1080i/Custom_1120_Recommend.xml
-msgctxt "#31196"
-msgid "Up Next"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31197"
-msgid "Customise recommendations"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31198"
-msgid "Customise ratings"
-msgstr ""
-
-#: /1080i/Items.xml
-msgctxt "#31199"
-msgid "Star"
-msgstr ""
-
-#: /1080i/Items.xml
-msgctxt "#31200"
-msgid "User"
-msgstr ""
-
-#: /1080i/Items.xml
-msgctxt "#31201"
-msgid "Critic"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31202"
-msgid "Ratings"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31203"
-msgid "Customise"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31204"
-msgid "Use videowindow for background"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31205"
-msgid "Press down from row view scrollbar opens"
-msgstr ""
-
-#: /1080i/Items.xml
-msgctxt "#31206"
-msgid "Ratings display placeholders when unavailable or updating"
-msgstr ""
+msgstr "אחד רשימת צוות טלוויזיה מלאה"
