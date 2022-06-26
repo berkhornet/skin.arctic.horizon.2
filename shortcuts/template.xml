@@ -230,8 +230,7 @@
                 <visible>!Integer.IsEqual(Window(Home).Property(TMDBHelper.WidgetContainer),301) | !$SKINSHORTCUTS[isFullscreenWidget]</visible>
                 <visible>!$EXP[Exp_InfoDialogs]</visible>
                 <visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenuVisibility])</visible>
-				<!-- Change visibility from Window.IsActive(Home) -->
-                <visible>!Window.IsActive(Home)</visible>
+                <visible>Window.IsActive(Home)</visible>
             </include>
         </controls>
         <items insert="widgets">
