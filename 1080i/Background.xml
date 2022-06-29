@@ -91,7 +91,7 @@
 			<!-- Home (and Search) screens -->		
 			<include content="Object_Control">
 				<param name="control" value="image" />
-				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Home Background.png</texture>
+				<texture>special://userdata\customisations\Skin Images\AH2 Images\Current\Other Background.png</texture>
 				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
 			</include>
 			<!-- End of Temporary backgrounds -->
@@ -201,12 +201,38 @@
             <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
             <nested />
         </include>
-		<!-- Temporary Disable shading at bottom of Home Screen -->
+		<!-- Add Kodi Logo to Home Window (as for Video Library etc.) -->
+		<control type="group">
+			<control type="image">
+				<left>60</left>
+				<top>950</top>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/kodi.png</texture>
+			</control>
+			<control type="label">
+				<left>127</left>
+				<top>967</top>
+				<height>32</height>
+				<textcolor>main_fg_100</textcolor>
+				<width>auto</width>
+				<centertop>52%</centertop>
+				<label>KODI</label>
+				<font>font_logo</font>
+			</control>				
+			<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+		</control>		
+		<!-- End of Add Kodi Logo to Home Window (as for Video Library etc.) -->
+		<!-- Temporary Disable shading at bottom of Main Background -->
         <!-- control type="group">
             <include>Animation_Background_FadeInOut</include>
             <include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_90">common/floor.png</texture>
+				<!-- Temporary Disable shading at bottom of Main Background>
+				<visible>!Window.IsVisible(Home) + !Window.IsVisible(11114)</visible>
             </include>
         </control -->
     </include>
