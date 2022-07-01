@@ -1039,7 +1039,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                 </include>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1131,7 +1131,7 @@
                         </control>
                     </include>
                 </include>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1179,7 +1179,7 @@
                         <visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(season.banner))</visible>
                     </control>
                 </include>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1268,7 +1268,7 @@
                         </control>
                     </include>
                 </include>
-                <include content="Object_Control" condition="!$PARAM[selected] + $PARAM[bg_layer]">
+                <include content="Object_Control" condition="!$PARAM[selected] + $PARAM[bg_layer] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1799,7 +1799,7 @@
                         <centertop>50%</centertop>
                     </control>
                 </control>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1847,7 +1847,7 @@
                     </control>
                 </control>
 
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1904,7 +1904,7 @@
                         <textoffsetx>20</textoffsetx>
                     </control>
                 </control>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -1985,7 +1985,7 @@
                         <centerbottom>33%</centerbottom>
                     </control>
                 </control>
-                <include content="Object_Control" condition="!$PARAM[selected]">
+                <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
