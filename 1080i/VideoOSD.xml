@@ -229,7 +229,7 @@
                             <param name="item_h" value="120" />
                             <param name="textoffsetx" value="dialog_pad" />
                             <param name="misc" value="20" />
-                            <param name="color_fg" value="dialog_fg" />
+                            <param name="textcolor" value="dialog_fg" />
                             <param name="detailed" value="true" />
                         </include>
                     </itemlayout>
@@ -241,7 +241,7 @@
                                 <param name="item_h" value="120" />
                                 <param name="textoffsetx" value="dialog_pad" />
                                 <param name="misc" value="20" />
-                                <param name="color_fg" value="dialog_fg" />
+                                <param name="textcolor" value="dialog_fg" />
                                 <param name="detailed" value="true" />
                             </include>
                         </control>
@@ -252,7 +252,7 @@
                                 <param name="item_h" value="120" />
                                 <param name="textoffsetx" value="dialog_pad" />
                                 <param name="misc" value="20" />
-                                <param name="color_fg" value="dialog_fg" />
+                                <param name="textcolor" value="dialog_fg" />
                                 <param name="detailed" value="true" />
                             </include>
                         </control>
