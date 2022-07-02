@@ -54,22 +54,21 @@
 	</variable>
 	
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
-	<expression name="Monday">String.IsEqual(System.Date(ddd),"Mon")</expression>
-	<expression name="Tuesday">String.IsEqual(System.Date(ddd),"Tue")</expression>
-	<expression name="Wednesday">String.IsEqual(System.Date(ddd),"Wed")</expression>
-	<expression name="Thursday">String.IsEqual(System.Date(ddd),"Thu")</expression>
-	<expression name="Friday">String.IsEqual(System.Date(ddd),"Fri")</expression>
-	<expression name="Saturday">String.IsEqual(System.Date(ddd),"Sat")</expression>
-	<expression name="Sunday">String.IsEqual(System.Date(ddd),"Sun")</expression>
+	<expression name="0009">String.StartsWith(System.Time(mm),"0")</expression>
+	<expression name="1019">String.StartsWith(System.Time(mm),"1")</expression>
+	<expression name="2029">String.StartsWith(System.Time(mm),"2")</expression>
+	<expression name="3039">String.StartsWith(System.Time(mm),"3")</expression>
+	<expression name="4049">String.StartsWith(System.Time(mm),"4")</expression>
+	<expression name="5059">String.StartsWith(System.Time(mm),"5")</expression>
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
-		<value condition="$EXP[Monday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
-		<value condition="$EXP[Tuesday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 1.png</value>
-		<value condition="$EXP[Wednesday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 2.png</value>
-		<value condition="$EXP[Thursday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 1.png</value>
-		<value condition="$EXP[Friday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 2.png</value>
-		<value condition="$EXP[Saturday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 1.png</value>
-		<value condition="$EXP[Sunday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
+		<value condition="$EXP[0009]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
+		<value condition="$EXP[1019]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
+		<value condition="$EXP[2029]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 1.png</value>
+		<value condition="$EXP[3039]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 1.png</value>
+		<value condition="$EXP[4049]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 2.png</value>
+		<value condition="$EXP[5059]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 3.png</value>
+		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 2.png</value>
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
 	
