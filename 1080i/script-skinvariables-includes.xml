@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- START Expressions and Variables for PVR EPG -->
+	<!-- START Expressions and Variables for PVR EPG and Skin Backgrounds -->
 	<!-- Expressions for Channel Icon variable (ImagePVREPGIcon) and EPG Artwork variable (ImagePVRArtwork) -->
 	<expression name="StandardChannel">!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb)) + !Player.HasMedia + !String.Contains(ListItem.ChannelName,"EPL ") + !String.Contains(ListItem.ChannelName,"EFL ") + !String.Contains(ListItem.ChannelName,"SPFL ")</expression>
 	<expression name="LiveEPL">String.Contains(ListItem.ChannelName,"EPL ")</expression>
 	<expression name="LiveEFL">String.Contains(ListItem.ChannelName,"EFL ")</expression>
 	<expression name="LiveSPFL">String.Contains(ListItem.ChannelName,"SPFL ")</expression>
-	<!-- Expressions for Channel Resolution Icon variable (ImageChannelResolutionIcon) -->
-	<expression name="FHDChannel">String.Contains(ListItem.ChannelName," FHD")</expression>
-	<expression name="HDChannel">String.Contains(ListItem.ChannelName," HD")</expression>
-	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
-	<!-- Expression for EPG Program Information variable (EPGProgramInfo) -->
-	<expression name="EXPTest">String.Contains(ListItem.Label,"No information available")</expression>
-	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
-	<expression name="FHNathoChannel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
-	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
 	<!-- Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
 		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>
@@ -22,13 +13,6 @@
 		<value condition="$EXP[LiveEFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL.png</value>
 		<value condition="$EXP[LiveSPFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE SPFL.png</value>
 		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-	<!-- Channel Resolution Icon variable -->
-	<variable name="ImagePVRChannelResolutionIcon">
-		<value condition="$EXP[FHDChannel]">pvr/resolution/fhd.png</value>
-		<value condition="$EXP[HDChannel]">pvr/resolution/hd.png</value>
-		<value condition="$EXP[SDChannel]">pvr/resolution/sd.png</value>
-		<value></value>
 	</variable>
 	<!-- PVR EPG Artwork variable -->
 	<variable name="ImagePVRArtwork">
@@ -38,18 +22,57 @@
 		<value condition="$EXP[LiveSPFL] + !Player.HasMedia">special://masterprofile/customisations\PVR\EPG Artwork\SPFL.jpg</value>
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
 	</variable>
+	
+	<!-- Expressions for Channel Resolution Icon variable (ImageChannelResolutionIcon) -->
+	<expression name="FHDChannel">String.Contains(ListItem.ChannelName," FHD")</expression>
+	<expression name="HDChannel">String.Contains(ListItem.ChannelName," HD")</expression>
+	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
+	<!-- Channel Resolution Icon variable -->
+	<variable name="ImagePVRChannelResolutionIcon">
+		<value condition="$EXP[FHDChannel]">pvr/resolution/fhd.png</value>
+		<value condition="$EXP[HDChannel]">pvr/resolution/hd.png</value>
+		<value condition="$EXP[SDChannel]">pvr/resolution/sd.png</value>
+		<value></value>
+	</variable>
+	
+	<!-- Expression for EPG Program Information variable (EPGProgramInfo) -->
+	<expression name="EXPTest">String.Contains(ListItem.Label,"No information available")</expression>
 	<!-- PVR EPG Program Info variable -->
 	<variable name="TextPVREPGProgramInfo">
 		<value condition="$EXP[EXPTest]">$INFO[ListItem.ChannelName]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+	
+	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
+	<expression name="FHNathoChannel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
+	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
 	<!-- PVR Channel Provider variable -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNathoChannel]">pvr/provider/FHNatho.png</value>
 		<value condition="$EXP[AnovaChannel]">pvr/provider/Anova.png</value>
 		<value>pvr/provider/NoProvider.png</value>
 	</variable>
-	<!-- END Expressions and Variables for PVR EPG -->
+	
+	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
+	<expression name="Monday">String.IsEqual(System.Date(ddd),"Mon")</expression>
+	<expression name="Tuesday">String.IsEqual(System.Date(ddd),"Tue")</expression>
+	<expression name="Wednesday">String.IsEqual(System.Date(ddd),"Wed")</expression>
+	<expression name="Thursday">String.IsEqual(System.Date(ddd),"Thu")</expression>
+	<expression name="Friday">String.IsEqual(System.Date(ddd),"Fri")</expression>
+	<expression name="Saturday">String.IsEqual(System.Date(ddd),"Sat")</expression>
+	<expression name="Sunday">String.IsEqual(System.Date(ddd),"Sun")</expression>
+	<!-- Skin Background variable -->
+	<variable name="ImageSkinBackground">
+		<value condition="$EXP[Monday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
+		<value condition="$EXP[Tuesday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 1.png</value>
+		<value condition="$EXP[Wednesday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 2.png</value>
+		<value condition="$EXP[Thursday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 1.png</value>
+		<value condition="$EXP[Friday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 2.png</value>
+		<value condition="$EXP[Saturday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 1.png</value>
+		<value condition="$EXP[Sunday]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
+	</variable>
+	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
+	
     <variable name="Image_Poster_C5000">
         <value condition="!String.IsEmpty(Container(5000).ListItem.Art(poster))">$INFO[Container(5000).ListItem.Art(poster)]</value>
         <value condition="!String.IsEmpty(Container(5000).ListItem.Art(tvshow.poster))">$INFO[Container(5000).ListItem.Art(tvshow.poster)]</value>
