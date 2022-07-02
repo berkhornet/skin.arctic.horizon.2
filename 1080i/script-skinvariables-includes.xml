@@ -54,20 +54,17 @@
 	</variable>
 	
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
-	<expression name="0009">String.StartsWith(System.Time(mm),"0")</expression>
-	<expression name="1019">String.StartsWith(System.Time(mm),"1")</expression>
-	<expression name="2029">String.StartsWith(System.Time(mm),"2")</expression>
-	<expression name="3039">String.StartsWith(System.Time(mm),"3")</expression>
-	<expression name="4049">String.StartsWith(System.Time(mm),"4")</expression>
-	<expression name="5059">String.StartsWith(System.Time(mm),"5")</expression>
+	<expression name="Time0005">String.IsEqual(System.Time(hh),"00") | String.IsEqual(System.Time(hh),"01") | String.IsEqual(System.Time(hh),"02") | String.IsEqual(System.Time(hh),"03") | String.IsEqual(System.Time(hh),"04") | String.IsEqual(System.Time(hh),"05")</expression>
+	<expression name="Time0611">String.IsEqual(System.Time(hh),"06") | String.IsEqual(System.Time(hh),"07") | String.IsEqual(System.Time(hh),"08") | String.IsEqual(System.Time(hh),"09") | String.IsEqual(System.Time(hh),"10") | String.IsEqual(System.Time(hh),"11")</expression>
+	<expression name="Time1217">String.IsEqual(System.Time(hh),"12") | String.IsEqual(System.Time(hh),"13") | String.IsEqual(System.Time(hh),"14") | String.IsEqual(System.Time(hh),"15") | String.IsEqual(System.Time(hh),"16") | String.IsEqual(System.Time(hh),"17")</expression>
+	<expression name="Time1823">String.IsEqual(System.Time(hh),"18") | String.IsEqual(System.Time(hh),"19") | String.IsEqual(System.Time(hh),"20") | String.IsEqual(System.Time(hh),"21") | String.IsEqual(System.Time(hh),"22") | String.IsEqual(System.Time(hh),"23")</expression>
+	
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
-		<value condition="$EXP[0009]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
-		<value condition="$EXP[1019]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
-		<value condition="$EXP[2029]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Green 1.png</value>
-		<value condition="$EXP[3039]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 1.png</value>
-		<value condition="$EXP[4049]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 2.png</value>
-		<value condition="$EXP[5059]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 3.png</value>
+		<value condition="$EXP[Time0005]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
+		<value condition="$EXP[Time0611]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
+		<value condition="$EXP[Time1217]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
+		<value condition="$EXP[Time1823]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
 		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 2.png</value>
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
