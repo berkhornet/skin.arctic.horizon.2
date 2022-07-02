@@ -12,6 +12,9 @@
 	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
 	<!-- Expression for EPG Program Information variable (EPGProgramInfo) -->
 	<expression name="EXPTest">String.Contains(ListItem.Label,"No information available")</expression>
+	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
+	<expression name="FHNathoChannel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
+	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
 	<!-- Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
 		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>
@@ -21,10 +24,10 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- Channel Resolution Icon variable -->
-	<variable name="ImageChannelResolutionIcon">
-		<value condition="$EXP[FHDChannel]">pvr/fhd.png</value>
-		<value condition="$EXP[HDChannel]">pvr/hd.png</value>
-		<value condition="$EXP[SDChannel]">pvr/sd.png</value>
+	<variable name="ImagePVRChannelResolutionIcon">
+		<value condition="$EXP[FHDChannel]">pvr/resolution/fhd.png</value>
+		<value condition="$EXP[HDChannel]">pvr/resolution/hd.png</value>
+		<value condition="$EXP[SDChannel]">pvr/resolution/sd.png</value>
 		<value></value>
 	</variable>
 	<!-- PVR EPG Artwork variable -->
@@ -36,9 +39,15 @@
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- PVR EPG Program Info variable -->
-	<variable name="PVREPGProgramInfo">
+	<variable name="TextPVREPGProgramInfo">
 		<value condition="$EXP[EXPTest]">$INFO[ListItem.ChannelName]</value>
 		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<!-- PVR Channel Provider variable -->
+	<variable name="ImagePVRProviderIcon">
+		<value condition="$EXP[FHNathoChannel]">pvr/provider/FHNatho.png</value>
+		<value condition="$EXP[AnovaChannel]">pvr/provider/Anova.png</value>
+		<value>pvr/provider/NoProvider.png</value>
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG -->
     <variable name="Image_Poster_C5000">
