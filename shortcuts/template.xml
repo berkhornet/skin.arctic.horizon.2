@@ -103,8 +103,17 @@
         <property name="mainmenuid" tag="property" attribute="name|id" value="$NUMBER[99]">99</property>
         <property name="isFullscreenWidget" tag="property" attribute="name|widgetPath">True</property>
         <property name="isFullscreenWidget">False</property>
-        <property name="isSubmenuBumper" tag="property" attribute="name|disableSubmenuBumper">False</property>
-        <property name="isSubmenuBumper">True</property>
+        <property name="isSubmenuBumper" tag="property" attribute="name|widgetPath.SubmenuBumper">True</property>
+        <property name="isSubmenuBumper">False</property>
+        <property name="isSubmenuBumperCustom" tag="property" attribute="name|widgetPath.SubmenuBumper" value="Submenu">False</property>
+        <property name="isSubmenuBumperCustom" tag="property" attribute="name|widgetPath.SubmenuBumper">True</property>
+        <property name="isSubmenuBumperCustom">False</property>
+        <property name="submenuPath" tag="property" attribute="name|widgetPath.SubmenuBumper" />
+        <property name="submenuTarget" tag="property" attribute="name|widgetTarget.SubmenuBumper" />
+        <property name="submenuName" tag="property" attribute="name|widgetName.SubmenuBumper" />
+        <property name="submenuName">$LOCALIZE[1034]</property>
+
+
         <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility"/>
 
         <property name="mainmenuIcon" tag="thumb" />
@@ -134,13 +143,13 @@
                         <animation effect="fade" start="100" end="0" time="200" reversible="false" condition="!Integer.IsEqual(Window(Home).Property(TMDBHelper.WidgetContainer),301)">Conditional</animation>
 
                         <include content="Info_Panel">
-                            <param name="plotwidth" value="880" />
+                            <param name="plotwidth" value="info_plot_w" />
                             <param name="plotheight" value="80" />
                             <param name="line_id" value="$PYTHON[int(mainmenuid) * 1000 + 598]" />
                             <param name="container" value="Container(301)." />
                             <param name="ratings" value="[Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | String.IsEqual(Container(301).ListItem.DBType,movie) | String.IsEqual(Container(301).ListItem.DBType,tvshow) | String.IsEqual(Container(301).ListItem.DBType,set) | String.IsEqual(Container(301).ListItem.DBType,season) | String.IsEqual(Container(301).ListItem.DBType,episode) | Container(301).ListItem.IsCollection]" />
                             <height>280</height>
-                            <width>1080</width>
+                            <width>info_panel_w</width>
                             <bottom>480</bottom>
                         </include>
 
@@ -161,6 +170,7 @@
                                 <include content="Object_Info_Button">
                                     <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 501]" />
                                     <param name="groupid" value="$PYTHON[int(mainmenuid) * 1000 + 511]" />
+                                    <param name="sliceid" value="$PYTHON[int(mainmenuid) * 1000 + 521]" />
                                     <param name="label" value="$VAR[Label_FullscreenWidget_PlayButton]" />
                                     <param name="icon" value="$VAR[Image_FullscreenWidget_PlayButton]" />
                                     <onup>SetFocus(300)</onup>
@@ -168,12 +178,14 @@
                                     <ondown>$PYTHON[int(mainmenuid) * 1000 + 601]</ondown>
                                     <onclick>SetFocus(301)</onclick>
                                     <onclick>Action(Select)</onclick>
-                                    <onclick>SetFocus($PYTHON[int(mainmenuid) * 1000 + 501])</onclick>
+                                    <onclick condition="!Container(301).ListItem.IsFolder">SetFocus($PYTHON[int(mainmenuid) * 1000 + 501])</onclick>
                                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,Home)</onfocus>
+                                    <onfocus>SetProperty(FullscreenWidgetRefocus,$PYTHON[int(mainmenuid) * 1000 + 501],Home)</onfocus>
                                 </include>
                                 <include content="Object_Info_Button">
                                     <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 503]" />
                                     <param name="groupid" value="$PYTHON[int(mainmenuid) * 1000 + 513]" />
+                                    <param name="sliceid" value="$PYTHON[int(mainmenuid) * 1000 + 523]" />
                                     <param name="label" value="$LOCALIZE[31077]" />
                                     <param name="icon" value="special://skin/extras/icons/info2.png" />
                                     <onup>SetFocus(300)</onup>
@@ -183,6 +195,7 @@
                                     <onclick>Action(Info)</onclick>
                                     <onclick>SetFocus($PYTHON[int(mainmenuid) * 1000 + 503])</onclick>
                                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,Home)</onfocus>
+                                    <onfocus>SetProperty(FullscreenWidgetRefocus,$PYTHON[int(mainmenuid) * 1000 + 501],Home)</onfocus>
                                 </include>
                             </control>
                         </control>
@@ -197,19 +210,17 @@
                         <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 698]" />
                         <param name="spacerid" value="$PYTHON[int(mainmenuid) * 1000 + 898]" />
                         <param name="buttonid" value="$PYTHON[(int(mainmenuid) * 1098) * 100]" />
-                        <param name="label" value="$LOCALIZE[1034]" />
+                        <param name="label" value="$SKINSHORTCUTS[submenuName]" />
                         <param name="include" value="List_Button_Row" />
-                        <param name="visible" value="True" />
+                        <param name="visible" value="[String.IsEqual(Container(300).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenuVisibility])]" />
                         <param name="infowidget" value="False" />
                         <param name="busy_visible" value="Integer.IsEqual(Container($PYTHON[int(mainmenuid) * 1000 + 698]).NumItems,0)" />
-                        <content>
-                            <item>
-                                <label>$SKINSHORTCUTS[mainmenuLabel]</label>
-                                <icon>$SKINSHORTCUTS[mainmenuIcon]</icon>
-                                <onclick>$SKINSHORTCUTS[mainmenuPath]</onclick>
-                            </item>
-                        </content>
-                        <content><include>skinshortcuts-submenu</include></content>
+                        <include content="Object_Include" condition="$SKINSHORTCUTS[isSubmenuBumperCustom]">
+                            <content target="$SKINSHORTCUTS[submenuTarget]">$SKINSHORTCUTS[submenuPath]</content>
+                        </include>
+                        <include content="Object_Include" condition="![$SKINSHORTCUTS[isSubmenuBumperCustom]]">
+                            <content><include>skinshortcuts-group-$SKINSHORTCUTS[submenuVisibility]</include></content>
+                        </include>
                         <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(mainmenuid) * 1000 + 698],Home)</onfocus>
                         <onfocus>SetProperty(Slide.WidgetInfoStyle,$SKINSHORTCUTS[widgetInfo],Home)</onfocus>
                         <onunfocus>ClearProperty(Slide.WidgetContainer,Home)</onunfocus>
@@ -221,6 +232,7 @@
                         <param name="control" value="group" />
                         <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 699]" />
                         <height>-300</height>
+                        <visible>Control.IsVisible($PYTHON[int(mainmenuid) * 1000 + 698])</visible>
                     </include>
                 </control>
             </control>
@@ -348,10 +360,14 @@
 
             <!-- Include -->
             <property name="widgetInclude" tag="property" attribute="name|list" value="Submenu">Widget_Submenu</property>
+            <property name="widgetInclude" tag="property" attribute="name|widgetAspect" value="Button">Widget_Submenu</property>
+            <property name="widgetInclude" tag="property" attribute="name|widgetAspect" value="Apps">Widget_Submenu</property>
             <property name="widgetInclude">Widget_Poster</property>
 
             <!-- Style -->
             <property name="widgetStyle" tag="property" attribute="name|list" value="Submenu">List_Button_Row</property>
+            <property name="widgetStyle" tag="property" attribute="name|widgetAspect" value="Button">List_Button_Row</property>
+            <property name="widgetStyle" tag="property" attribute="name|widgetAspect" value="Apps">List_Apps_Row</property>
             <property name="widgetStyle" tag="property" attribute="name|widgetAspect" value="Square">List_Square_Row</property>
             <property name="widgetStyle" tag="property" attribute="name|widgetAspect" value="Landscape">List_Landscape_Row</property>
             <property name="widgetStyle" tag="property" attribute="name|widgetAspect" value="Big Landscape">List_BigLandscape_Row</property>
@@ -387,9 +403,15 @@
             <property name="isAutoScroll" tag="property" attribute="name|widgetAutoScroll">True</property>
             <property name="isAutoScroll">False</property>
 
-            <!-- IsVisible -->
+            <!-- IsInfo -->
+            <property name="isInfo" tag="property" attribute="name|list" value="Submenu">False</property>
+            <property name="isInfo" tag="property" attribute="name|widgetAspect" value="Button">False</property>
+            <property name="isInfo" tag="property" attribute="name|widgetAspect" value="Apps">False</property>
             <property name="isInfo" tag="property" attribute="name|widgetInfo">True</property>
             <property name="isInfo">False</property>
+            <property name="widgetInfo" tag="property" attribute="name|list" value="Submenu"></property>
+            <property name="widgetInfo" tag="property" attribute="name|widgetAspect" value="Button"></property>
+            <property name="widgetInfo" tag="property" attribute="name|widgetAspect" value="Apps"></property>
             <property name="widgetInfo" tag="property" attribute="name|widgetInfo" />
             <controls>
                 <include content="$SKINSHORTCUTS[widgetInclude]">
@@ -400,7 +422,7 @@
                     <param name="label" value="$SKINSHORTCUTS[widgetName]" />
                     <param name="usewidgetlabel" value="$SKINSHORTCUTS[widgetLabelName]" />
                     <param name="include" value="$SKINSHORTCUTS[widgetStyle]" />
-                    <param name="visible" value="$SKINSHORTCUTS[isVisible]" />
+                    <param name="visible" value="[[$SKINSHORTCUTS[isVisible]] + String.IsEqual(Container(300).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenuVisibility])]" />
                     <param name="infowidget" value="$SKINSHORTCUTS[isInfo]" />
                     <param name="busy_visible" value="Integer.IsEqual(Container($PYTHON[int(mainmenuid) * 1000 + 600 + int(id)]).NumItems,0)" />
                     <include content="Object_Include" condition="!$SKINSHORTCUTS[isSubmenu]">
@@ -410,15 +432,7 @@
                         </include>
                     </include>
                     <include content="Object_Include" condition="$SKINSHORTCUTS[isSubmenu]">
-                        <content>
-                            <item>
-                                <label>$SKINSHORTCUTS[mainmenuLabel]</label>
-                                <icon>$SKINSHORTCUTS[mainmenuIcon]</icon>
-                                <onclick>SetFocus(399)</onclick>
-                                <onclick>Action(Select)</onclick>
-                            </item>
-                        </content>
-                        <content><include>skinshortcuts-submenu</include></content>
+                        <content><include>skinshortcuts-group-$SKINSHORTCUTS[submenuVisibility]</include></content>
                     </include>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(mainmenuid) * 1000 + 600 + int(id)],Home)</onfocus>
                     <onfocus condition="$SKINSHORTCUTS[isInfo]">SetProperty(Slide.WidgetContainer,$PYTHON[int(mainmenuid) * 1000 + 600 + int(id)],Home)</onfocus>
@@ -880,8 +894,15 @@
             <property name="id" tag="property" attribute="name|id" value="$NUMBER[49]">49</property>
             <property name="id">50</property>
 
+            <!-- IsInfo -->
+            <property name="isInfo" tag="property" attribute="name|list" value="Submenu">False</property>
+            <property name="isInfo" tag="property" attribute="name|widgetAspect" value="Button">False</property>
+            <property name="isInfo" tag="property" attribute="name|widgetAspect" value="Apps">False</property>
             <property name="isInfo" tag="property" attribute="name|widgetInfo">True</property>
             <property name="isInfo">False</property>
+            <property name="widgetInfo" tag="property" attribute="name|list" value="Submenu"></property>
+            <property name="widgetInfo" tag="property" attribute="name|widgetAspect" value="Button"></property>
+            <property name="widgetInfo" tag="property" attribute="name|widgetAspect" value="Apps"></property>
             <property name="widgetInfo" tag="property" attribute="name|widgetInfo" value="Full">Plot</property>
             <property name="widgetInfo" tag="property" attribute="name|widgetInfo" />
 

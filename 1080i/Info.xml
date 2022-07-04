@@ -681,7 +681,7 @@
                     <param name="include_condition">!Skin.HasSetting(Ratings.DisableOscar)</param>
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
                     <param name="icon">flags/$PARAM[directory]/ratings/oscar.png</param>
-                    <param name="label">$VAR[Label_$PARAM[tmdbtype]_TrophyWins, x,   ]</param>
+                    <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].Oscar_Wins), x,   ]</param>
                     <param name="is_varlabel">true</param>
                     <visible>$PARAM[oscars]</visible>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].Oscar_Wins))</visible>
@@ -691,10 +691,20 @@
                     <param name="include_condition">!Skin.HasSetting(Ratings.DisableOscar)</param>
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
                     <param name="icon">flags/$PARAM[directory]/ratings/goldenglobe.png</param>
-                    <param name="label">$VAR[Label_$PARAM[tmdbtype]_TrophyWins, x,   ]</param>
+                    <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].GoldenGlobe_Wins), x,   ]</param>
                     <param name="is_varlabel">true</param>
                     <visible>$PARAM[oscars]</visible>
-                    <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].Oscar_Wins)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].GoldenGlobe_Wins))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].GoldenGlobe_Wins))</visible>
+                </include>
+
+                <include content="Info_Ratings_Item">
+                    <param name="include_condition">!Skin.HasSetting(Ratings.DisableOscar)</param>
+                    <param name="colordiffuse">$PARAM[colordiffuse]</param>
+                    <param name="icon">flags/$PARAM[directory]/ratings/emmy.png</param>
+                    <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].Emmy_Wins), x,   ]</param>
+                    <param name="is_varlabel">true</param>
+                    <visible>$PARAM[oscars]</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[tmdbtype].Emmy_Wins))</visible>
                 </include>
 
                 <include content="Info_Ratings_Item">
@@ -1002,7 +1012,7 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <left>-8</left>
                 <right>-8</right>
-                <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video) | [String.IsEqual(Container.PluginName,plugin.video.themoviedb.helper) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]]</visible>
+                <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
                 <visible>!$EXP[Exp_IsPersonInfo]</visible>
                 <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.AudioCodec)</visible>
 
@@ -1035,8 +1045,6 @@
                 <include content="Info_Provider"><param name="pos" value="8" /></include>
                 <include content="Info_Provider"><param name="pos" value="9" /></include>
                 <include content="Info_Provider"><param name="pos" value="10" /></include>
-
-
             </control>
 
             <!-- Details -->
@@ -1054,17 +1062,17 @@
                 <!-- TvShow Total Episodes / Seasons -->
                 <include content="Info_Codec_Label">
                     <param name="icon" value="special://skin/extras/icons/database.png" />
-                    <param name="label" value="$INFO[ListItem.Season,[B],[/B] $LOCALIZE[33054]]" />
+                    <param name="label" value="$INFO[ListItem.Property(TotalSeasons),[B],[/B] $LOCALIZE[33054]]" />
                     <visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
-                    <visible>!String.IsEmpty(ListItem.Season)</visible>
+                    <visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
                 </include>
 
                 <!-- Season Total Episodes and Unwatched -->
                 <include content="Info_Codec_Label">
                     <param name="icon" value="special://skin/extras/icons/database.png" />
-                    <param name="label" value="$INFO[ListItem.Episode,[B],[/B] $LOCALIZE[20360]   ]$INFO[ListItem.Property(WatchedEpisodes),[B],[/B] $LOCALIZE[16102]]" />
+                    <param name="label" value="$INFO[ListItem.Property(TotalEpisodes),[B],[/B] $LOCALIZE[20360]   ]$INFO[ListItem.Property(WatchedEpisodes),[B],[/B] $LOCALIZE[16102]]" />
                     <visible>String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)</visible>
-                    <visible>!String.IsEmpty(ListItem.Episode)</visible>
+                    <visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
                 </include>
 
                 <!-- Birthday Actor / Artist -->

@@ -127,6 +127,7 @@
                             <onclick>SetProperty(custom-grouping,widget)</onclick>
                             <onclick>SendClick(401)</onclick>
                             <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                            <include>Action_SkinShortcuts_ContentType_AutoSetOnUnFocus</include>
                         </include>
                         <include content="Dialog_Settings_Button">
                             <param name="id" value="4101" />
@@ -136,9 +137,19 @@
                             <onclick>SetProperty(custom-grouping,customsearchdefaultitems)</onclick>
                             <onclick>SendClick(401)</onclick>
                             <visible>String.IsEqual(Window.Property(groupname),searchmenu)</visible>
+                            <include>Action_SkinShortcuts_ContentType_AutoSetOnUnFocus</include>
                         </include>
-
-
+                        <include content="Dialog_Settings_Button">
+                            <param name="id" value="4307" />
+                            <param name="control" value="button" />
+                            <description>Action</description>
+                            <label>$LOCALIZE[31081]</label>
+                            <onclick>SetProperty(custom-grouping,widget)</onclick>
+                            <onclick>SendClick(307)</onclick>
+                            <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
+                            <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                            <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                        </include>
                         <include content="Dialog_Settings_Button">
                             <param name="id" value="307" />
                             <param name="control" value="button" />
@@ -193,14 +204,14 @@
                         </include>
                         <include content="Dialog_Settings_Button">
                             <param name="id" value="9906" />
-                            <param name="control" value="radiobutton" />
+                            <param name="control" value="button" />
                             <description>Submenu bumper</description>
                             <label>$LOCALIZE[1034] $LOCALIZE[31173]</label>
-                            <selected>String.IsEmpty(Container(211).ListItem.Property(disableSubmenuBumper))</selected>
-                            <onclick>SetProperty(customProperty,disableSubmenuBumper)</onclick>
-                            <onclick condition="String.IsEmpty(Container(211).ListItem.Property(disableSubmenuBumper))">SetProperty(customValue,1)</onclick>
-                            <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(disableSubmenuBumper)) + String.IsEqual(Container(211).ListItem.Property(disableSubmenuBumper),1)">ClearProperty(customValue)</onclick>
-                            <onclick>SendClick(404)</onclick>
+                            <label2>$INFO[Container(211).ListItem.Property(widgetName.SubmenuBumper)]</label2>
+
+                            <onclick>SetProperty(widgetID,SubmenuBumper)</onclick>
+                            <onclick>SendClick(312)</onclick>
+
                             <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                             <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                         </include>
@@ -225,6 +236,7 @@
                             <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
                             <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                             <visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)</visible>
+                            <include>Action_SkinShortcuts_ContentType_AutoSetOnFocus</include>
                         </include>
                         <include content="Dialog_Settings_Button">
                             <param name="id" value="9903" />
@@ -258,6 +270,7 @@
                             <onclick>SendClick(404)</onclick>
                             <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                             <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                            <visible>!String.IsEqual(Container(211).ListItem.Property(widgetAspect),Button) + !String.IsEqual(Container(211).ListItem.Property(widgetAspect),Apps) + !String.IsEqual(Container(211).ListItem.Property(list),Submenu)</visible>
                         </include>
                         <include content="Dialog_Settings_Button">
                             <param name="id" value="9909" />
@@ -271,6 +284,7 @@
                             <onclick>SendClick(404)</onclick>
                             <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                             <visible>String.IsEqual(Window.Property(groupname),searchmenu)</visible>
+                            <visible>!String.IsEqual(Container(211).ListItem.Property(widgetAspect),Button) + !String.IsEqual(Container(211).ListItem.Property(widgetAspect),Apps) + !String.IsEqual(Container(211).ListItem.Property(list),Submenu)</visible>
                         </include>
 
                         <include content="Dialog_Settings_Button">

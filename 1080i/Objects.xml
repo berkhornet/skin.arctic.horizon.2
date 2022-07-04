@@ -303,7 +303,7 @@
                     <texture diffuse="$PARAM[diffuse]">$PARAM[icon]</texture>
                     <visible>$PARAM[icon_visible]</visible>
                 </include>
-                <include content="Object_Control">
+                <include content="Object_Control" condition="Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -323,7 +323,7 @@
                     <texture colordiffuse="$PARAM[colordiffuse]" border="10">$PARAM[texture]</texture>
                 </include>
                 <nested />
-                <include content="Object_Control">
+                <include content="Object_Control" condition="Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
                 </include>
@@ -383,7 +383,7 @@
                     <param name="control" value="image" />
                     <texture colordiffuse="shadow_hard" border="32">shadows/inner-glow.png</texture>
                 </include>
-                <include content="Object_Control" condition="Skin.HasSetting(DividerShadows)">
+                <include content="Object_Control" condition="Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <bordersize>-1</bordersize>
                     <texture colordiffuse="main_fg_12" border="8">common/box-outline.png</texture>
@@ -428,25 +428,25 @@
                     <texture flipx="true" colordiffuse="shadow_hard">shadows/shadow-line-24-v.png</texture>
                 </include>
 
-                <include content="Object_Control" condition="$PARAM[shadow_top] + Skin.HasSetting(DividerShadows)">
+                <include content="Object_Control" condition="$PARAM[shadow_top] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <height>1</height>
                     <top>-1</top>
                     <texture colordiffuse="main_fg_12">common/white.png</texture>
                 </include>
-                <include content="Object_Control" condition="$PARAM[shadow_bottom] + Skin.HasSetting(DividerShadows)">
+                <include content="Object_Control" condition="$PARAM[shadow_bottom] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <height>1</height>
                     <texture colordiffuse="main_fg_12">common/white.png</texture>
                     <bottom>-1</bottom>
                 </include>
-                <include content="Object_Control" condition="$PARAM[shadow_left] + Skin.HasSetting(DividerShadows)">
+                <include content="Object_Control" condition="$PARAM[shadow_left] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <width>1</width>
                     <left>-1</left>
                     <texture colordiffuse="main_fg_12">common/white.png</texture>
                 </include>
-                <include content="Object_Control" condition="$PARAM[shadow_right] + Skin.HasSetting(DividerShadows)">
+                <include content="Object_Control" condition="$PARAM[shadow_right] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
                     <width>1</width>
                     <texture colordiffuse="main_fg_12">common/white.png</texture>
@@ -721,7 +721,7 @@
         <control type="group">
             <visible>$PARAM[visible]</visible>
             <control type="image">
-                <texture colordiffuse="$PARAM[colordiffuse_back]">$PARAM[texture]</texture>
+                <texture colordiffuse="$PARAM[colordiffuse_back]" border="128,0,0,0">$PARAM[texture]</texture>
             </control>
             <control type="image">
                 <left>80</left>
@@ -743,7 +743,7 @@
         <definition>
             <control type="group" id="$PARAM[groupid]">
                 <left>-28</left>
-                <width>128</width>
+                <width>150</width>
                 <height>256</height>
                 <visible>$PARAM[visible]</visible>
                 <include content="Object_Info_Button_Left" condition="!$PARAM[invertcolor]">
@@ -774,18 +774,35 @@
                 <visible>$PARAM[visible]</visible>
                 <height>256</height>
                 <include content="Object_Include" condition="$PARAM[invertcolor]">
-                    <texturefocus border="0,93,74,93" colordiffuse="panel_fg_100">common/$PARAM[texturename]right.png</texturefocus>
+                    <texturefocus colordiffuse="panel_fg_100">common/$PARAM[texturename]right_x.png</texturefocus>
                     <focusedcolor>panel_bg</focusedcolor>
                 </include>
-                <texturenofocus border="0,93,74,93" colordiffuse="main_fg_12">common/$PARAM[texturename]right.png</texturenofocus>
-                <texturefocus border="0,93,74,93">special://profile/addon_data/script.texturemaker/ArcticHorizon/$PARAM[texturename]right_h.png</texturefocus>
+                <texturenofocus colordiffuse="main_fg_12">common/$PARAM[texturename]right_x.png</texturenofocus>
+                <texturefocus>special://profile/addon_data/script.texturemaker/ArcticHorizon/$PARAM[texturename]right_h_x.png</texturefocus>
                 <font>font_mini_bold</font>
-                <label>$PARAM[label][COLOR=00ffffff]______[/COLOR]</label>
+                <label>$PARAM[label]</label>
                 <align>left</align>
-                <textoffsetx>24</textoffsetx>
+                <textoffsetx>0</textoffsetx>
                 <textcolor>main_fg_70</textcolor>
                 <focusedcolor>$VAR[ColorSelected]</focusedcolor>
                 <nested />
+            </control>
+            <control type="group" id="$PARAM[sliceid]">
+                <left>$PARAM[itemgap]</left>
+                <visible>$PARAM[visible]</visible>
+                <width>80</width>
+                <height>256</height>
+                <control type="image">
+                    <visible>![Control.HasFocus($PARAM[id]) | $PARAM[focused]]</visible>
+                    <texture colordiffuse="main_fg_12">common/$PARAM[texturename]right_y.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) | $PARAM[focused]</visible>
+                    <include content="Object_Include" condition="$PARAM[invertcolor]">
+                        <texture colordiffuse="panel_fg_100">common/$PARAM[texturename]right_y.png</texture>
+                    </include>
+                    <texture>special://profile/addon_data/script.texturemaker/ArcticHorizon/$PARAM[texturename]right_h_y.png</texture>
+                </control>
             </control>
         </definition>
     </include>
@@ -1492,20 +1509,21 @@
     <include name="Object_IsSelected_Checkmark">
         <param name="color_off" default="dialog_fg_30" />
         <param name="color_on" default="dialog_fg_70" />
+        <param name="selected">ListItem.IsSelected</param>
         <definition>
             <control type="image">
                 <centertop>50%</centertop>
                 <texture colordiffuse="$PARAM[color_off]">buttons/check-off.png</texture>
                 <width>24</width>
                 <height>24</height>
-                <visible>!ListItem.IsSelected</visible>
+                <visible>!$PARAM[selected]</visible>
             </control>
             <control type="image">
                 <centertop>50%</centertop>
                 <texture colordiffuse="$PARAM[color_on]">buttons/check-on.png</texture>
                 <width>24</width>
                 <height>24</height>
-                <visible>ListItem.IsSelected</visible>
+                <visible>$PARAM[selected]</visible>
             </control>
         </definition>
     </include>
@@ -1514,6 +1532,7 @@
         <include content="Object_IsSelected_Checkmark">
             <param name="color_off" value="$VAR[ColorSelected]" />
             <param name="color_on" value="$VAR[ColorSelected]" />
+            <param name="selected">$PARAM[selected]</param>
         </include>
     </include>
 
@@ -1591,6 +1610,8 @@
         <param name="icon_other">$VAR[Image_OtherIcon]</param>
         <param name="icon_other_bordersize">40</param>
         <param name="icon_other_fallback">DefaultFolder.png</param>
+
+        <param name="selected">False</param>
         <definition>
             <control type="image">
                 <texture background="true" diffuse="$PARAM[diffuse]">$PARAM[icon]</texture>
@@ -1610,14 +1631,22 @@
                 <visible>!$PARAM[is_other]</visible>
             </control>
             <control type="image">
-                <texture background="true" diffuse="$PARAM[diffuse]" colordiffuse="main_fg_90" fallback="$PARAM[icon_genre_fallback]">$PARAM[icon_genre]</texture>
+                <include content="Object_Include" condition="$PARAM[selected]">
+                    <colordiffuse>$VAR[ColorSelected]</colordiffuse>
+                </include>
+                <colordiffuse>main_fg_90</colordiffuse>
+                <texture background="true" diffuse="$PARAM[diffuse]" fallback="$PARAM[icon_genre_fallback]">$PARAM[icon_genre]</texture>
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <aspectratio scalediffuse="false">keep</aspectratio>
                 <visible>$PARAM[is_genre]</visible>
                 <bordersize>$PARAM[icon_genre_bordersize]</bordersize>
             </control>
             <control type="image">
-                <texture background="true" diffuse="$PARAM[diffuse]" colordiffuse="main_fg_90" fallback="$PARAM[icon_other_fallback]">$PARAM[icon_other]</texture>
+                <include content="Object_Include" condition="$PARAM[selected]">
+                    <colordiffuse>$VAR[ColorSelected]</colordiffuse>
+                </include>
+                <colordiffuse>main_fg_90</colordiffuse>
+                <texture background="true" diffuse="$PARAM[diffuse]" fallback="$PARAM[icon_other_fallback]">$PARAM[icon_other]</texture>
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <aspectratio scalediffuse="false">keep</aspectratio>
                 <visible>$PARAM[is_other]</visible>

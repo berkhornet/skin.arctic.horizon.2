@@ -1084,3 +1084,73 @@ msgstr ""
 msgctxt "#31214"
 msgid "Visualisation presets"
 msgstr ""
+
+#: /1080i/Items.xml
+msgctxt "#31215"
+msgid "Reviews"
+msgstr ""
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31216"
+msgid "Video decoder"
+msgstr ""
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31217"
+msgid "Pixel format"
+msgstr ""
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31218"
+msgid "Memory usage"
+msgstr ""
+
+#: /shortcuts/videos-1.DATA.xml
+msgctxt "#31219"
+msgid "Categories"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31220"
+msgid "Customise viewtypes"
+msgstr ""
+
+#: /1080i/Custom_1112_Backgrounds.xml
+msgctxt "#31221"
+msgid "Borders"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31222"
+msgid "Overlay"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31223"
+msgid "Gridlines"
+msgstr ""
+
+#: /1080i/Custom_1120_Recommend.xml
+msgctxt "#31224"
+msgid "Written by"
+msgstr ""
+
+#: /1080i/Custom_1120_Recommend.xml
+msgctxt "#31225"
+msgid "Directed by"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31226"
+msgid "Use extrafanart for fanart background"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31227"
+msgid "Customise colours"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31228"
+msgid "Customise background"
+msgstr ""
