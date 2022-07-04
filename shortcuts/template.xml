@@ -134,13 +134,13 @@
                         <animation effect="fade" start="100" end="0" time="200" reversible="false" condition="!Integer.IsEqual(Window(Home).Property(TMDBHelper.WidgetContainer),301)">Conditional</animation>
 
                         <include content="Info_Panel">
-                            <param name="plotwidth" value="880" />
+                            <param name="plotwidth" value="info_plot_w" />
                             <param name="plotheight" value="80" />
                             <param name="line_id" value="$PYTHON[int(mainmenuid) * 1000 + 598]" />
                             <param name="container" value="Container(301)." />
                             <param name="ratings" value="[Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | String.IsEqual(Container(301).ListItem.DBType,movie) | String.IsEqual(Container(301).ListItem.DBType,tvshow) | String.IsEqual(Container(301).ListItem.DBType,set) | String.IsEqual(Container(301).ListItem.DBType,season) | String.IsEqual(Container(301).ListItem.DBType,episode) | Container(301).ListItem.IsCollection]" />
                             <height>280</height>
-                            <width>1080</width>
+                            <width>info_panel_w</width>
                             <bottom>480</bottom>
                         </include>
 
@@ -161,7 +161,7 @@
                                 <include content="Object_Info_Button">
                                     <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 501]" />
                                     <param name="groupid" value="$PYTHON[int(mainmenuid) * 1000 + 511]" />
-                                    <param name="groupid2" value="$PYTHON[int(mainmenuid) * 1000 + 521]" />
+                                    <param name="sliceid" value="$PYTHON[int(mainmenuid) * 1000 + 521]" />
                                     <param name="label" value="$VAR[Label_FullscreenWidget_PlayButton]" />
                                     <param name="icon" value="$VAR[Image_FullscreenWidget_PlayButton]" />
                                     <onup>SetFocus(300)</onup>
@@ -169,13 +169,14 @@
                                     <ondown>$PYTHON[int(mainmenuid) * 1000 + 601]</ondown>
                                     <onclick>SetFocus(301)</onclick>
                                     <onclick>Action(Select)</onclick>
-                                    <onclick>SetFocus($PYTHON[int(mainmenuid) * 1000 + 501])</onclick>
+                                    <onclick condition="!Container(301).ListItem.IsFolder">SetFocus($PYTHON[int(mainmenuid) * 1000 + 501])</onclick>
                                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,Home)</onfocus>
+                                    <onfocus>SetProperty(FullscreenWidgetRefocus,$PYTHON[int(mainmenuid) * 1000 + 501],Home)</onfocus>
                                 </include>
                                 <include content="Object_Info_Button">
                                     <param name="id" value="$PYTHON[int(mainmenuid) * 1000 + 503]" />
                                     <param name="groupid" value="$PYTHON[int(mainmenuid) * 1000 + 513]" />
-                                    <param name="groupid2" value="$PYTHON[int(mainmenuid) * 1000 + 523]" />
+                                    <param name="sliceid" value="$PYTHON[int(mainmenuid) * 1000 + 523]" />
                                     <param name="label" value="$LOCALIZE[31077]" />
                                     <param name="icon" value="special://skin/extras/icons/info2.png" />
                                     <onup>SetFocus(300)</onup>
@@ -185,6 +186,7 @@
                                     <onclick>Action(Info)</onclick>
                                     <onclick>SetFocus($PYTHON[int(mainmenuid) * 1000 + 503])</onclick>
                                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,301,Home)</onfocus>
+                                    <onfocus>SetProperty(FullscreenWidgetRefocus,$PYTHON[int(mainmenuid) * 1000 + 501],Home)</onfocus>
                                 </include>
                             </control>
                         </control>
