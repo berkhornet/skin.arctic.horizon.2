@@ -961,10 +961,7 @@
                 </include>
 
                 <!-- Audio / Subtitle Languages -->
-				
-				<!-- Remove audio and subtitle language flags from "info" -->
-				
-                <!-- control type="group">
+                <control type="group">
                     <width>0</width>
                     <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) | !String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
                 </control>
@@ -1012,7 +1009,7 @@
                 <include content="Info_Language">
                     <param name="property" value="ListItem.Property(SubtitleLanguage.5)" />
                     <param name="icon" value="flags/subtitles.png" />
-                </include -->
+                </include>
             </control>
 
             <!-- Info Providers -->
