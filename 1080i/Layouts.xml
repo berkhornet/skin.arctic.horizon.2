@@ -1602,7 +1602,8 @@
                         <width>$PARAM[item_h]</width>
                         <control type="image">
                             <bordersize>20</bordersize>
-                            <texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Icon]</texture>
+							<!-- texture changed from $INFO[ListItem.Icon] -->
+                            <texture background="true" fallback="DefaultFolder.png">$VAR[ImagePVREPGIcon]</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
                     </include>
