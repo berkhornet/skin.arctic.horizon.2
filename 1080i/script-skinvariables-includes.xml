@@ -54,18 +54,28 @@
 	</variable>
 	
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
-	<expression name="Time0005">String.IsEqual(System.Time(hh),"00") | String.IsEqual(System.Time(hh),"01") | String.IsEqual(System.Time(hh),"02") | String.IsEqual(System.Time(hh),"03") | String.IsEqual(System.Time(hh),"04") | String.IsEqual(System.Time(hh),"05")</expression>
-	<expression name="Time0611">String.IsEqual(System.Time(hh),"06") | String.IsEqual(System.Time(hh),"07") | String.IsEqual(System.Time(hh),"08") | String.IsEqual(System.Time(hh),"09") | String.IsEqual(System.Time(hh),"10") | String.IsEqual(System.Time(hh),"11")</expression>
-	<expression name="Time1217">String.IsEqual(System.Time(hh),"12") | String.IsEqual(System.Time(hh),"13") | String.IsEqual(System.Time(hh),"14") | String.IsEqual(System.Time(hh),"15") | String.IsEqual(System.Time(hh),"16") | String.IsEqual(System.Time(hh),"17")</expression>
-	<expression name="Time1823">String.IsEqual(System.Time(hh),"18") | String.IsEqual(System.Time(hh),"19") | String.IsEqual(System.Time(hh),"20") | String.IsEqual(System.Time(hh),"21") | String.IsEqual(System.Time(hh),"22") | String.IsEqual(System.Time(hh),"23")</expression>
-	
+	<expression name="Exp_HomeWindow">Window.IsVisible(Home) | Window.IsVisible(11114)</expression>
+	<!-- MyPVRChannels.xml (10700), MyPVRRecordings.xml (10701), MyPVRGuide.xml (10702), MyPVRGuide.xml (10703), MyPVRSearch.xml (10704) -->
+	<expression name="Exp_PVRWindow">Window.IsVisible(10700) | Window.IsVisible(10701) | Window.IsVisible(10702) | Window.IsVisible(10703) | Window.IsVisible(10704)</expression>
+	<!-- MyVideoNav.xml (10025), MyPlaylist.xml (10028) -->
+	<expression name="Exp_VideoWindow">Window.IsVisible(10025) | Window.IsVisible(10028)</expression>
+	<!-- MyMusicNav.xml (10502), MyMusicPlaylistEditor.xml (10503), MyPlayList.xml (10500) -->
+	<expression name="Exp_MusicWindow">Window.IsVisible(10502) | Window.IsVisible(MyMusicPlaylistEditor) | Window.IsVisible(10500)</expression>
+	<expression name="Exp_WeatherWindow">Window.IsVisible(MyWeather)</expression>
+	<!-- FileManager.xml (10003), Settings.xml (10004), SettingsSystemInfo.xml (10007), SettingsSystemInfo.xml (10016) -->
+	<!-- SettingsCategory.xml (10018, 10021, 10022, 10030, 10031, 10032, 10034, 10035), AddonBrowser.xml (10040), EventLog.xml (10050) -->
+	<!-- FileBrowser.xml (10026) -->
+	<expression name="Exp_SystemWindow">Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</expression>
+
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
-		<value condition="$EXP[Time0005]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
-		<value condition="$EXP[Time0611]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
-		<value condition="$EXP[Time1217]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Blue 5.png</value>
-		<value condition="$EXP[Time1823]">special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Red 1.png</value>
-		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Other\Gradient Wallpaper Pink 2.png</value>
+		<value condition="$EXP[Exp_HomeWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Home.jpg</value>
+		<value condition="$EXP[Exp_PVRWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\PVR.png</value>
+		<value condition="$EXP[Exp_VideoWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Video.jpg</value>
+		<value condition="$EXP[Exp_MusicWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Music.jpg</value>
+		<value condition="$EXP[Exp_WeatherWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Weather.jpg</value>
+		<value condition="$EXP[Exp_SystemWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\System.png</value>
+		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Fallback.jpg</value>
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
 	
