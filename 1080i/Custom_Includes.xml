@@ -30,9 +30,9 @@
 	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
 	<!-- Channel Resolution Icon variable -->
 	<variable name="ImagePVRChannelResolutionIcon">
-		<value condition="$EXP[FHDChannel]">pvr/resolution/fhd.png</value>
-		<value condition="$EXP[HDChannel]">pvr/resolution/hd.png</value>
-		<value condition="$EXP[SDChannel]">pvr/resolution/sd.png</value>
+		<value condition="$EXP[FHDChannel]">special://masterprofile/customisations\Skin Customisations\PVR\resolution flags\fhd.png</value>
+		<value condition="$EXP[HDChannel]">special://masterprofile/customisations\Skin Customisations\PVR\resolution flags\hd.png</value>
+		<value condition="$EXP[SDChannel]">special://masterprofile/customisations\Skin Customisations\PVR\resolution flags\sd.png</value>
 		<value></value>
 	</variable>
 	
@@ -49,9 +49,9 @@
 	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
 	<!-- PVR Channel Provider variable -->
 	<variable name="ImagePVRProviderIcon">
-		<value condition="$EXP[FHNathoChannel]">pvr/provider/FHNatho.png</value>
-		<value condition="$EXP[AnovaChannel]">pvr/provider/Anova.png</value>
-		<value>pvr/provider/NoProvider.png</value>
+		<value condition="$EXP[FHNathoChannel]">special://masterprofile/customisations\Skin Customisations\PVR\provider icons\FHNatho.png</value>
+		<value condition="$EXP[AnovaChannel]">special://masterprofile/customisations\Skin Customisations\PVR\provider icons\Anova.png</value>
+		<value>special://masterprofile/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
 	
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
