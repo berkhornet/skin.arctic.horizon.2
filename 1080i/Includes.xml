@@ -30,6 +30,8 @@
     <include file="Views_Combined.xml" />
     <include file="Views_PVR.xml" />
 
+	<include file="Custom_Includes.xml" />
+
     <include file="script-skinviewtypes-includes.xml" />
     <include file="script-skinvariables-includes.xml" />
     <include file="script-skinshortcuts-includes.xml" />

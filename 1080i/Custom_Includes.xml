@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- START Expressions and Variables for PVR EPG and Skin Backgrounds -->
+	
+	<!-- Expressions for Channel Icon variable (ImagePVREPGIcon) and EPG Artwork variable (ImagePVRArtwork) -->
+	<expression name="StandardChannel">!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb)) + !Player.HasMedia + !String.Contains(ListItem.ChannelName,"EPL ") + !String.Contains(ListItem.ChannelName,"EFL ") + !String.Contains(ListItem.ChannelName,"SPFL ")</expression>
+	<expression name="LiveEPL">String.Contains(ListItem.ChannelName,"EPL ")</expression>
+	<expression name="LiveEFL">String.Contains(ListItem.ChannelName,"EFL ")</expression>
+	<expression name="LiveSPFL">String.Contains(ListItem.ChannelName,"SPFL ")</expression>
+	<!-- Channel Icon variable -->
+	<variable name="ImagePVREPGIcon">
+		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>
+		<value condition="$EXP[LiveEPL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EPL.png</value>
+		<value condition="$EXP[LiveEFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL.png</value>
+		<value condition="$EXP[LiveSPFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE SPFL.png</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<!-- PVR EPG Artwork variable -->
+	<variable name="ImagePVRArtwork">
+		<value condition="$EXP[StandardChannel] + !Player.HasMedia">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		<value condition="$EXP[LiveEPL] + !Player.HasMedia">special://masterprofile/customisations\PVR\EPG Artwork\EPL.jpg</value>
+		<value condition="$EXP[LiveEFL] + !Player.HasMedia">special://masterprofile/customisations\PVR\EPG Artwork\EFL.jpg</value>
+		<value condition="$EXP[LiveSPFL] + !Player.HasMedia">special://masterprofile/customisations\PVR\EPG Artwork\SPFL.jpg</value>
+		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
+	</variable>
+	
+	<!-- Expressions for Channel Resolution Icon variable (ImageChannelResolutionIcon) -->
+	<expression name="FHDChannel">String.Contains(ListItem.ChannelName," FHD")</expression>
+	<expression name="HDChannel">String.Contains(ListItem.ChannelName," HD")</expression>
+	<expression name="SDChannel">String.Contains(ListItem.ChannelName," SD")</expression>
+	<!-- Channel Resolution Icon variable -->
+	<variable name="ImagePVRChannelResolutionIcon">
+		<value condition="$EXP[FHDChannel]">pvr/resolution/fhd.png</value>
+		<value condition="$EXP[HDChannel]">pvr/resolution/hd.png</value>
+		<value condition="$EXP[SDChannel]">pvr/resolution/sd.png</value>
+		<value></value>
+	</variable>
+	
+	<!-- Expression for EPG Program Information variable (EPGProgramInfo) -->
+	<expression name="EXPTest">String.Contains(ListItem.Label,"No information available")</expression>
+	<!-- PVR EPG Program Info variable -->
+	<variable name="TextPVREPGProgramInfo">
+		<value condition="$EXP[EXPTest]">$INFO[ListItem.ChannelName]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	
+	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
+	<expression name="FHNathoChannel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
+	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
+	<!-- PVR Channel Provider variable -->
+	<variable name="ImagePVRProviderIcon">
+		<value condition="$EXP[FHNathoChannel]">pvr/provider/FHNatho.png</value>
+		<value condition="$EXP[AnovaChannel]">pvr/provider/Anova.png</value>
+		<value>pvr/provider/NoProvider.png</value>
+	</variable>
+	
+	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
+	<expression name="Exp_HomeWindow">Window.IsVisible(Home) | Window.IsVisible(11114)</expression>
+	<!-- MyPVRChannels.xml (10700), MyPVRRecordings.xml (10701), MyPVRGuide.xml (10702), MyPVRGuide.xml (10703), MyPVRSearch.xml (10704) -->
+	<expression name="Exp_PVRWindow">Window.IsVisible(10700) | Window.IsVisible(10701) | Window.IsVisible(10702) | Window.IsVisible(10703) | Window.IsVisible(10704)</expression>
+	<!-- MyVideoNav.xml (10025), MyPlaylist.xml (10028) -->
+	<expression name="Exp_VideoWindow">Window.IsVisible(10025) | Window.IsVisible(10028)</expression>
+	<!-- MyMusicNav.xml (10502), MyMusicPlaylistEditor.xml (10503), MyPlayList.xml (10500) -->
+	<expression name="Exp_MusicWindow">Window.IsVisible(10502) | Window.IsVisible(MyMusicPlaylistEditor) | Window.IsVisible(10500)</expression>
+	<expression name="Exp_WeatherWindow">Window.IsVisible(MyWeather)</expression>
+	<!-- FileManager.xml (10003), Settings.xml (10004), SettingsSystemInfo.xml (10007), SettingsSystemInfo.xml (10016) -->
+	<!-- SettingsCategory.xml (10018, 10021, 10022, 10030, 10031, 10032, 10034, 10035), AddonBrowser.xml (10040), EventLog.xml (10050) -->
+	<!-- FileBrowser.xml (10026) -->
+	<expression name="Exp_SystemWindow">Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</expression>
+
+	<!-- Skin Background variable -->
+	<variable name="ImageSkinBackground">
+		<value condition="$EXP[Exp_HomeWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Home.jpg</value>
+		<value condition="$EXP[Exp_PVRWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\PVR.png</value>
+		<value condition="$EXP[Exp_VideoWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Video.jpg</value>
+		<value condition="$EXP[Exp_MusicWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Music.jpg</value>
+		<value condition="$EXP[Exp_WeatherWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Weather.jpg</value>
+		<value condition="$EXP[Exp_SystemWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\System.png</value>
+		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Fallback.jpg</value>
+	</variable>
+	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
+
+</includes>
