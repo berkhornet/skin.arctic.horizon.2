@@ -10,9 +10,9 @@
 	<!-- Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
 		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>
-		<value condition="$EXP[LiveEPL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EPL.png</value>
-		<value condition="$EXP[LiveEFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL.png</value>
-		<value condition="$EXP[LiveSPFL]">special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE SPFL.png</value>
+		<value condition="$EXP[LiveEPL]">special://masterprofile/customisations\PVR\PVR Logo Pack\LIVE EPL.png</value>
+		<value condition="$EXP[LiveEFL]">special://masterprofile/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>
+		<value condition="$EXP[LiveSPFL]">special://masterprofile/customisations\PVR\PVR Logo Pack\LIVE SPFL.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- PVR EPG Artwork variable -->
@@ -70,12 +70,12 @@
 
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
-		<value condition="$EXP[Exp_HomeWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Home.jpg</value>
-		<value condition="$EXP[Exp_PVRWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\PVR.png</value>
-		<value condition="$EXP[Exp_VideoWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Video.jpg</value>
-		<value condition="$EXP[Exp_MusicWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Music.jpg</value>
-		<value condition="$EXP[Exp_WeatherWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\Weather.jpg</value>
-		<value condition="$EXP[Exp_SystemWindow]">special://masterprofile/customisations\Skin Images\AH2 Images\System.png</value>
+		<value condition="$EXP[Exp_HomeWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
+		<value condition="$EXP[Exp_PVRWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
+		<value condition="$EXP[Exp_VideoWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
+		<value condition="$EXP[Exp_MusicWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
+		<value condition="$EXP[Exp_WeatherWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
+		<value condition="$EXP[Exp_SystemWindow]">special://masterprofile/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
 		<value>special://masterprofile/customisations\Skin Images\AH2 Images\Fallback.jpg</value>
 	</variable>
 	<!-- END Expressions and Variables for PVR EPG and Skin Backgrounds -->
