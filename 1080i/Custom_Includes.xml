@@ -47,9 +47,13 @@
 	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
 	<expression name="FHNathoChannel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
 	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
+	<expression name="BBCChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,400) + Integer.IsLess(ListItem.ChannelNumberLabel,407) </expression>
+	<expression name="CUTVChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,407) + Integer.IsLess(ListItem.ChannelNumberLabel,499) </expression>	
 	<!-- PVR Channel Provider variable -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNathoChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\FHNatho.png</value>
+		<value condition="$EXP[BBCChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\BBC iPlayer New.png</value>
+		<value condition="$EXP[CUTVChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\CUTV.png</value>
 		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\Anova.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
