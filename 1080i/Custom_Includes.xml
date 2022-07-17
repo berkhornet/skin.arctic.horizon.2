@@ -49,7 +49,7 @@
 	<expression name="AnovaChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,199) + Integer.IsLess(ListItem.ChannelNumberLabel,600) </expression>
 	<expression name="BBCChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,400) + Integer.IsLess(ListItem.ChannelNumberLabel,407) </expression>
 	<expression name="CUTVChannel">Integer.IsGreater(ListItem.ChannelNumberLabel,406) + Integer.IsLess(ListItem.ChannelNumberLabel,499) </expression>	
-	<!-- PVR Channel Provider variable -->
+	<!-- PVR Channel Provider variable (Icon) -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNathoChannel]">special://userdata/customisations\Addon Icons\FHNatho.png</value>
 		<value condition="$EXP[BBCChannel]">special://userdata/customisations\Addon Icons\BBC iPlayer New.png</value>
@@ -57,6 +57,14 @@
 		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Addon Icons\Anova Alternative.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
+	<!-- Alternative PVR Channel Provider variable (Fanart)-->
+	<!-- variable name="ImagePVRProviderIcon">
+		<value condition="$EXP[FHNathoChannel]">special://userdata/customisations\Addon Fanart\FHNatho.jpg</value>
+		<value condition="$EXP[BBCChannel]">special://userdata/customisations\Addon Fanart\BBC iPlayer New.png</value>
+		<value condition="$EXP[CUTVChannel]">special://userdata/customisations\Addon Fanart\CUTV.jpg</value>
+		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Addon Fanart\Anova.png</value>
+		<value>special://userdata/customisations\Addon Fanart\NoProvider.png</value>
+	</variable -->
 	
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
 	<expression name="Exp_HomeWindow">Window.IsVisible(Home) | Window.IsVisible(11114)</expression>
