@@ -54,7 +54,7 @@
 		<value condition="$EXP[FHNathoChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\FHNatho.png</value>
 		<value condition="$EXP[BBCChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\BBC iPlayer New.png</value>
 		<value condition="$EXP[CUTVChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\CUTV.png</value>
-		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\Anova.png</value>
+		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Skin Customisations\PVR\provider icons\Anova Alternative.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
 	
