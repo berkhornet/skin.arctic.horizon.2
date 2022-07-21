@@ -35,7 +35,7 @@
 		<value condition="$EXP[LiveEFLCAnova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[LiveEFL1Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[LiveEFL2Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>	
-		<value condition="$EXP[LiveEPLFHnatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
+		<value condition="$EXP[LiveEPLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
 		<value condition="$EXP[LiveEFLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[LiveSPFLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>			
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
