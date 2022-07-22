@@ -136,6 +136,18 @@
 					<height>38</height>
 					<texture>$VAR[ImagePVRProviderIcon]</texture>
                 </control>
+				<!-- Anova Live Football team icon added -->
+				<control type="image">
+					<left>335</left>
+					<top>10</top>
+					<width>60</width>
+					<height>60</height>									
+					<texture>$INFO[ListItem.Icon]</texture>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<visible>$EXP[LiveFootballAnova]</visible>	
+				</control>
             </control>
         </definition>
     </include>
