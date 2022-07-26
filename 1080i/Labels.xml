@@ -269,7 +269,7 @@
         <value condition="String.IsEqual(Window.Property(TMDbType),genre)">$LOCALIZE[515]</value>
         <value condition="String.IsEqual(Window.Property(TMDbType),cast)">$LOCALIZE[31034]</value>
         <value condition="String.IsEqual(Window.Property(TMDbType),crew)">$LOCALIZE[31035]</value>
-        <value condition="String.IsEqual(Window.Property(TMDbType),collection)">Movie Collections</value>
+        <value condition="String.IsEqual(Window.Property(TMDbType),collection)">$LOCALIZE[20434]</value>
     </variable>
 
     <variable name="Label_Plot_Widget_Title_Tilde">
