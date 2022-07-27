@@ -146,7 +146,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<aspectratio>keep</aspectratio>
-					<visible>$EXP[LiveFootballAnova]</visible>	
+					<visible>$EXP[Live_Football_Anova]</visible>	
 				</control>
             </control>
         </definition>
