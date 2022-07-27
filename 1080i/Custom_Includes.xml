@@ -12,9 +12,11 @@
 	<expression name="LiveEFL1Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,545) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,568)</expression>
 	<expression name="LiveEFL2Anova">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,569) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,592)</expression>
 	<expression name="LiveFootballFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,699)</expression>
-	<expression name="LiveEPLFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"EPL ")</expression>
-	<expression name="LiveEFLFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"EFL ")</expression>
-	<expression name="LiveSPFLFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"SPFL ")</expression>
+	<expression name="LiveEPLFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EPL ")</expression>
+	<expression name="LiveEFLCFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(CH)")</expression>
+	<expression name="LiveEFL1FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L1)")</expression>
+	<expression name="LiveEFL2FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L2)")</expression>
+	<expression name="LiveSPFLFHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ")</expression>
 	<!-- Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
 		<value condition="$EXP[StandardChannel]">$INFO[ListItem.Icon]</value>				
@@ -23,8 +25,11 @@
 		<value condition="$EXP[LiveEFL1Anova]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL L1.png</value>
 		<value condition="$EXP[LiveEFL2Anova]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL L2.png</value>
 		<value condition="$EXP[LiveEPLFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EPL.png</value>
-		<value condition="$EXP[LiveEFLFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>
-		<value condition="$EXP[LiveSPFLFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL.png</value>		
+		<value condition="$EXP[LiveEFLCFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL C.png</value>
+		<value condition="$EXP[LiveEFL1FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL L1.png</value>
+		<value condition="$EXP[LiveEFL2FHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL L2.png</value>
+		<value condition="$EXP[LiveSPFLFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE SPFL.png</value>
+		<value condition="$EXP[LiveFootballFHNatho]">special://userdata/customisations\PVR\PVR Logo Pack\LIVE EFL.png</value>		
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- PVR EPG Artwork variable -->
@@ -36,8 +41,11 @@
 		<value condition="$EXP[LiveEFL1Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
 		<value condition="$EXP[LiveEFL2Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>	
 		<value condition="$EXP[LiveEPLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
-		<value condition="$EXP[LiveEFLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
-		<value condition="$EXP[LiveSPFLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>			
+		<value condition="$EXP[LiveEFLCFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
+		<value condition="$EXP[LiveEFL1FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
+		<value condition="$EXP[LiveEFL2FHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>
+		<value condition="$EXP[LiveSPFLFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\SPFL.jpg</value>	
+		<value condition="$EXP[LiveFootballFHNatho] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EFL.jpg</value>		
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
 	</variable>
 	
@@ -71,8 +79,11 @@
 		<value condition="$EXP[LiveEFL1Anova]">Live football from the English Football League 1 featuring $INFO[ListItem.ChannelName].</value>
 		<value condition="$EXP[LiveEFL2Anova]">Live football from the English Football League 2 featuring $INFO[ListItem.ChannelName].</value>
 		<value condition="$EXP[LiveEPLFHNatho]">Live football from the English Premier League.</value>
-		<value condition="$EXP[LiveEFLFHNatho]">Live football from the English Football League (Championship, League 1 and League 2).</value>
+		<value condition="$EXP[LiveEFLCFHNatho]">Live football from the English Football League (Championship).</value>
+		<value condition="$EXP[LiveEFL1FHNatho]">Live football from the English Football League (League 1).</value>
+		<value condition="$EXP[LiveEFL2FHNatho]">Live football from the English Football League (League 2).</value>
 		<value condition="$EXP[LiveSPFLFHNatho]">Live football from the Scottish Professional Football League.</value>
+		<value condition="$EXP[LiveFootballFHNatho]">Live football from the English Football League.</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	
