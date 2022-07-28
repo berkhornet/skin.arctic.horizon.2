@@ -36,7 +36,7 @@
 	</variable>
 	<!-- PVR EPG Artwork variable -->	
 	<variable name="ImagePVRArtwork">
-		<value condition="$EXP[Standard_Channel] + !Player.HasMedia">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<!-- Live Football Artwork -->
 		<value condition="$EXP[Live_Football_Anova] + !Player.HasMedia">$INFO[ListItem.Icon]</value>			
 		<value condition="$EXP[Live_EPL_Anova] + !Player.HasMedia">special://userdata/customisations\PVR\EPG Artwork\EPL.jpg</value>
