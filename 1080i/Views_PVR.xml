@@ -8,7 +8,10 @@
                 <centerleft>50%</centerleft>
                 <include>Animation_SlideIn_Dialog</include>
                 <include>Animation_FadeOut</include>
-                <width>760</width>
+                <!-- width changed from 760 -->
+                <width>1760</width>
+				<!-- top added -->
+				<top>87</top>
                 <visible>!$EXP[Exp_InfoDialogs]</visible>
                 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
                 <include content="Object_MenuBar_Group_Texture">
@@ -22,6 +25,8 @@
                 <include content="Object_MenuBar_TextList">
                     <param name="id" value="11" />
                     <param name="color_nf" value="main_fg" />
+					<!-- font parameter added -->
+					<param name="font" value="font_hintlabel" />
                     <left>-20</left>
                     <right>0</right>
 
