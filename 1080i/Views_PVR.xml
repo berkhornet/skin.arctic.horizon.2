@@ -10,8 +10,9 @@
                 <include>Animation_FadeOut</include>
                 <!-- width changed from 760 -->
                 <width>1720</width>
-				<!-- top added -->
+				<!-- top and left added -->
 				<top>87</top>
+				<left>20</left>
                 <visible>!$EXP[Exp_InfoDialogs]</visible>
                 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
                 <include content="Object_MenuBar_Group_Texture">
@@ -19,7 +20,8 @@
                     <param name="overlay" value="false" />
                     <left>0</left>
                     <right>0</right>
-                    <height>60</height>
+					<!-- height changed from 60 -->
+                    <height>70</height>
                     <centertop>50%</centertop>
                 </include>
                 <include content="Object_MenuBar_TextList">
