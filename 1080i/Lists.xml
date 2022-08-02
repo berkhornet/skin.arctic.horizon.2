@@ -124,11 +124,15 @@
                         <width>480</width>
                         <align>left</align>
                         <aligny>top</aligny>
+						<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
                         <!-- font changed from font_statusbar -->
 						<font>font_mini_bold</font>
+						<!-- PVR007 - END -->
                         <label>$INFO[ListItem.Label]</label>
+						<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
                         <!-- textcolor changed from main_fg_70 to yellow -->
                         <textcolor>ffe5b535</textcolor>
+						<!-- PVR007 - END -->
                     </control>
                 </rulerlayout>
                 <channellayout height="$PARAM[channelheight]" width="$PARAM[channelwidth]">

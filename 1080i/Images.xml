@@ -277,6 +277,7 @@
     </variable>
 
     <variable name="Image_PVRGuide_Indicator">
+		<!-- PVR012 - Custom EPG indicators -->
 		<!-- indicator changed from recording.png -->
         <value condition="ListItem.IsRecording">indicator/isrecording.png</value>
 		<!-- Reminder indicator added -->

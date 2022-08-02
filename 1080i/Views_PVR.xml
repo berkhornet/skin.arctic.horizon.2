@@ -8,11 +8,13 @@
                 <centerleft>50%</centerleft>
                 <include>Animation_SlideIn_Dialog</include>
                 <include>Animation_FadeOut</include>
+				<!-- PVR014 - Group Switcher Customisations -->
                 <!-- width changed from 760 -->
                 <width>1720</width>
 				<!-- top and left added -->
 				<top>87</top>
 				<left>20</left>
+				<!-- PVR014 - END -->
                 <visible>!$EXP[Exp_InfoDialogs]</visible>
                 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
                 <include content="Object_MenuBar_Group_Texture">
@@ -20,15 +22,19 @@
                     <param name="overlay" value="false" />
                     <left>0</left>
                     <right>0</right>
+					<!-- PVR014 - Group Switcher Customisations -->
 					<!-- height changed from 60 -->
                     <height>70</height>
+					<!-- PVR014 - END -->
                     <centertop>50%</centertop>
                 </include>
                 <include content="Object_MenuBar_TextList">
                     <param name="id" value="11" />
                     <param name="color_nf" value="main_fg" />
+					<!-- PVR014 - Group Switcher Customisations -->
 					<!-- font parameter added -->
 					<param name="font" value="font_hintlabel" />
+					<!-- PVR014 - END -->
                     <left>-20</left>
                     <right>0</right>
 
@@ -94,52 +100,73 @@
             <control type="group">
                 <width>480</width>
                 <control type="image">
+					<!-- PVR005 - Display PVR artwork or channel icon -->
+					<!-- texture changed from $INFO[ListItem.Icon] -->
                     <texture background="true">$VAR[ImagePVRArtwork]</texture>
+					<!-- PVR005 - END -->
                     <aspectratio align="center">keep</aspectratio>
                     <bordersize>20</bordersize>
                     <left>20</left>
                     <right>20</right>
                 </control>
+				<!-- PVR005 - Display PVR artwork or channel icon -->
 				<!-- include mini videowindow in EPG display -->
 				<control type="videowindow">
-				</control>  
+				</control>
+				<!-- PVR005 - END -->				
             </control>
             <control type="group">
                 <left>520</left>
                 <right>30</right>
                 <control type="label">
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
 					<!-- top changed from 30 -->
                     <top>10</top>
                     <!-- font changed from font_menulabel -->
                     <font>font_mini_bold</font>
+					<!-- PVR007 - END -->
+					<!-- PVR013 - Custom Program Titles and Plot for Live Football channels -->
 					<!-- Display Program Title or Channel Name (for Live Football channels) -->
 					<!-- First part of label changed from $INFO[ListItem.Label,, ] -->
                     <label>$VAR[TextPVREPGProgramInfo,, ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, ]</label>
+					<!-- PVR013 - END -->
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
                     <!-- textcolor changed from main_fg_90 to yellow -->
                     <textcolor>ffe5b535</textcolor>
+					<!-- PVR007 - END -->
                     <height>40</height>
                 </control>
                 <control type="label">
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
                     <!-- top changed from 30 -->
                     <top>10</top>
                     <!-- font changed from font_mini -->
                     <font>font_mini_bold</font>
+					<!-- PVR007 - END -->
                     <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
                     <!-- textcolor changed from main_fg_70 to yellow -->
                     <textcolor>ffe5b535</textcolor>
+					<!-- PVR007 - END -->
                     <height>40</height>
                     <align>right</align>
                 </control>
                 <control type="textbox">
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
 					<!-- top changed from 70 -->
                     <top>50</top>
                     <!-- font changed from font_plotbox -->
                     <font>font_plotbox_mini</font>
+					<!-- PVR007 - END -->
+					<!-- PVR013 - Custom Program Titles and Plot for Live Football channels -->
 					<!-- Label changed from $VAR[Label_Plot] -->
                     <label>$VAR[TextPVREPGProgramPlot]</label>
+					<!-- PVR013 - END -->
                     <textcolor>main_fg_70</textcolor>
+					<!-- PVR007 - Customise TV Guide fonts/colours and plotbox size -->
 					<!-- height changed from 80 -->
                     <height>120</height>
+					<!-- PVR007 - END -->
                 </control>
             </control>
         </control>
@@ -318,8 +345,10 @@
                             <width>$PARAM[channelwidth]</width>
                             <align>left</align>
                             <aligny>top</aligny>
+							<!-- PVR010 - Change PVR channels header font and colour (as for EPG rulerlayout) -->
                             <!-- font changed from font_statusbar -->
 							<font>font_mini_bold</font>
+							<!-- PVR010 - END -->
                             <label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
                             <!-- textcolor changed from main_fg_70 to yellow -->
 							<textcolor>ffe5b535</textcolor>
@@ -330,22 +359,30 @@
                                 <width>50%</width>
                                 <align>left</align>
                                 <aligny>top</aligny>
+								<!-- PVR010 - Change PVR channels header font and colour (as for EPG rulerlayout) -->
                                 <!-- font changed from font_statusbar -->
 								<font>font_mini_bold</font>
+								<!-- PVR010 - END -->
                                 <label>$LOCALIZE[19030]</label>
+								<!-- PVR010 - Change PVR channels header font and colour (as for EPG rulerlayout) -->
                                 <!-- textcolor changed from main_fg_70 to yellow -->
 								<textcolor>ffe5b535</textcolor>
+								<!-- PVR010 - END -->
                             </control>
                             <control type="label">
                                 <right>0</right>
                                 <width>50%</width>
                                 <align>left</align>
                                 <aligny>top</aligny>
+								<!-- PVR010 - Change PVR channels header font and colour (as for EPG rulerlayout) -->
                                 <!-- font changed from font_statusbar -->
 								<font>font_mini_bold</font>
+								<!-- PVR010 - END -->
                                 <label>$LOCALIZE[19031]</label>
+								<!-- PVR010 - Change PVR channels header font and colour (as for EPG rulerlayout) -->
                                 <!-- textcolor changed from main_fg_70 to yellow -->
 								<textcolor>ffe5b535</textcolor>
+								<!-- PVR010 - END -->
                             </control>
                         </control>
                     </control>
