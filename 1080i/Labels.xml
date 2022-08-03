@@ -229,9 +229,7 @@
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
-		
-		<!-- Add condition for Movie Sets -->
-		<value condition="Container.Content(sets)">Movie Collections</value>
+
         <value condition="Container.Content(seasons)">$LOCALIZE[33054]</value>
         <value condition="Container.Content(episodes) + !String.IsEmpty(Container.FolderName) + String.IsEqual(Container.FolderName,Container.ShowTitle)">$LOCALIZE[20360]</value>
 
