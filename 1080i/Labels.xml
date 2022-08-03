@@ -237,7 +237,7 @@
 
         <value condition="!String.IsEmpty(Container.PluginCategory)">$INFO[Container.PluginCategory]</value>
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml)">[CAPITALIZE]$LOCALIZE[10702][/CAPITALIZE]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml)">$LOCALIZE[19069]</value>
         <value>$LOCALIZE[10000]</value>
     </variable>
 
