@@ -204,7 +204,10 @@
             <!-- Episodes Pop-up -->
             <include content="OSD_Menu_Back">
                 <param name="arrow_pos" value="700" />
+				<!-- PVR015 - Disable Next/Stop button "pop-up" if playing Live TV -->
+				<!-- visible changed from VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv) -->
                 <visible>VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv)</visible>
+				<!-- PVR015 - END -->
                 <visible>Control.HasFocus(6400) | Control.HasFocus(6401)</visible>
                 <visible>Container(6401).IsUpdating | !Integer.IsEqual(Container(6401).NumItems,0)</visible>
                 <include>Animation_SlideIn_Dialog</include>
