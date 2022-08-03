@@ -230,12 +230,16 @@
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
 
+		<!-- LAB001 - Add condition for Movie Sets -->
+		<value condition="Container.Content(sets)">Movie Collections</value>
         <value condition="Container.Content(seasons)">$LOCALIZE[33054]</value>
         <value condition="Container.Content(episodes) + !String.IsEmpty(Container.FolderName) + String.IsEqual(Container.FolderName,Container.ShowTitle)">$LOCALIZE[20360]</value>
 
         <value condition="!String.IsEmpty(Container.PluginCategory)">$INFO[Container.PluginCategory]</value>
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml)">$LOCALIZE[19069]</value>
+		<!-- LAB001 - Use "TV Guide" as EPG header -->
+		<!-- change value from $LOCALIZE[19069] -->
+        <value condition="Window.IsVisible(MyPVRGuide.xml)">[CAPITALIZE]$LOCALIZE[10702][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(10025)">$LOCALIZE[14236]</value>
         <value condition="Window.IsVisible(10502)">$LOCALIZE[14237]</value>
         <value>$LOCALIZE[10000]</value>
