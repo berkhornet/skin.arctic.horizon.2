@@ -36,6 +36,7 @@
 	</variable>
 	<!-- PVR EPG Artwork variable -->	
 	<variable name="ImagePVRArtwork">
+		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + String.IsEqual(ListItem.Label,No information available)">$INFO[ListItem.Icon]</value>
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<!-- Live Football Artwork -->
 		<value condition="$EXP[Live_Football_Anova] + !Player.HasMedia">$INFO[ListItem.Icon]</value>			
@@ -52,6 +53,7 @@
 		<value condition="!Player.HasMedia">$INFO[ListItem.Icon]</value>
 	</variable>
 	
+	<!-- ImagePVRArtwork_Test not in use -->
 	<variable name="ImagePVRArtwork_Test">	
 		<!-- Standard Channel Preference 1 - ClearArt -->
 		<value condition="$EXP[Standard_Channel] + !Player.HasMedia + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.ClearArt)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearArt))">$INFO[Window(Home).Property(TMDbHelper.ListItem.ClearArt)]</value>
