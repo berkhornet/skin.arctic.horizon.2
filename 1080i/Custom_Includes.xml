@@ -18,7 +18,7 @@
 	<expression name="Live_EFL2_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE EFL ") + String.Contains(ListItem.ChannelName,"(L2)")</expression>
 	<expression name="Live_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ")</expression>
 	<expression name="Live_NoMatch_EPL_EFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.EndsWith(ListItem.ChannelName,":")</expression>
-	<expression name="Live_NoMatch_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ") + (String.EndsWith(ListItem.ChannelName,"01") | String.EndsWith(ListItem.ChannelName,"02") | String.EndsWith(ListItem.ChannelName,"03") | String.EndsWith(ListItem.ChannelName,"04") | String.EndsWith(ListItem.ChannelName,"05") | String.EndsWith(ListItem.ChannelName,"06"))</expression>
+	<expression name="Live_NoMatch_SPFL_FHNatho">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,601) + String.Contains(ListItem.ChannelName,"LIVE: SPFL ") + [String.EndsWith(ListItem.ChannelName,"01") | String.EndsWith(ListItem.ChannelName,"02") | String.EndsWith(ListItem.ChannelName,"03") | String.EndsWith(ListItem.ChannelName,"04") | String.EndsWith(ListItem.ChannelName,"05") | String.EndsWith(ListItem.ChannelName,"06")]</expression>
 	<!-- Channel Icon variable -->
 	<variable name="ImagePVREPGIcon">
 		<value condition="$EXP[Standard_Channel]">$INFO[ListItem.Icon]</value>				
