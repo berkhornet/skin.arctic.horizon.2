@@ -79,7 +79,7 @@
                 <visible>$EXP[Exp_ShowSideArt]</visible>
                 <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
             </include>
-
+            
 			<!-- Temporary backgrounds for non-media screens -->
 			<!-- Other screens, including EPG -->
 			<include content="Object_Control">
@@ -95,7 +95,7 @@
 				<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
 			</include>
 			<!-- End of Temporary backgrounds -->
-
+      
             <include content="Object_Control">
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
