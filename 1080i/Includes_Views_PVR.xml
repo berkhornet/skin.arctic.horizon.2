@@ -35,7 +35,7 @@
 					<!-- font parameter added -->
 					<param name="font" value="font_hintlabel" />
 					<!-- PVR014 - END -->
-          <left>-20</left>
+					<left>-20</left>
                     <right>0</right>
 
                     <ondown condition="!Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">SetFocus(10,0,absolute)</ondown>
