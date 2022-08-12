@@ -107,7 +107,7 @@
     <!-- Unfixed -->
 
     <include name="List_EPGGrid">
-        <param name="channelheight" default="row_height" />
+        <param name="channelheight" default="grid_x2" />
         <param name="channelwidth" default="480" />
         <param name="include_channels" default="Layout_PVRGuide_Channels" />
         <param name="include_programs" default="Layout_PVRGuide_Programs" />
@@ -117,10 +117,10 @@
                 <scrolltime tween="quadratic">300</scrolltime>
                 <timeblocks>28</timeblocks>
                 <rulerunit>6</rulerunit>
-                <rulerlayout height="row_height" width="480">
+                <rulerlayout height="grid_x2" width="480">
                     <control type="label" id="2">
                         <top>20</top>
-                        <height>row_height_x50</height>
+                        <height>grid_x1</height>
                         <width>480</width>
                         <align>left</align>
                         <aligny>top</aligny>
@@ -191,7 +191,7 @@
                 <top>0</top>
                 <left>-514.28</left>
                 <focusedlayout width="514.28" height="760">
-                    <include condition="$PARAM[context_button]">Object_OnFocusButton_Context</include>
+                    <include condition="$PARAM[context_button]">ContextMenu_OnFocusButton</include>
                     <control type="image">
                         <visible>$EXP[Exp_ShowBigPosterInfo]</visible>
                         <animation effect="fade" start="0" end="100" time="400" delay="400" reversible="false">Visible</animation>
@@ -241,7 +241,7 @@
     </include>
 
     <include name="List_DialogSelect">
-        <param name="item_height" default="row_height" />
+        <param name="item_height" default="grid_x2" />
         <param name="detailed" default="false" />
         <param name="itemlayout_include" default="Layout_DialogSelect" />
         <definition>
@@ -263,8 +263,8 @@
     </include>
 
     <include name="List_MediaList">
-        <param name="item_h" default="row_height" />
-        <param name="itemlayout_h" default="row_height" />
+        <param name="item_h" default="grid_x2" />
+        <param name="itemlayout_h" default="grid_x2" />
         <param name="detailed" default="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,video)]" />
         <param name="itemlayout_include" default="Layout_MediaList" />
         <definition>
@@ -312,7 +312,7 @@
     <include name="List_AddonCategories">
         <param name="itemlayout_include" default="Layout_Iconic" />
         <param name="width" default="440" />
-        <param name="height" default="row_height" />
+        <param name="height" default="grid_x2" />
         <param name="detailed" default="false" />
         <param name="orientation" default="vertical" />
         <param name="controltype" default="list" />
@@ -645,8 +645,8 @@
         <param name="tween" default="quadratic" />
         <param name="scrolltime" default="400" />
         <param name="viewtype" default="list" />
-        <param name="offset_x" default="row_height" />
-        <param name="offset_y" default="row_height" />
+        <param name="offset_x" default="grid_x2" />
+        <param name="offset_y" default="grid_x2" />
         <param name="itemlayout_w" default="" />
         <param name="itemlayout_h" default="" />
         <param name="item_w" default="" />
@@ -683,7 +683,7 @@
                     </control>
                 </itemlayout>
                 <focusedlayout width="$PARAM[itemlayout_w]" height="$PARAM[itemlayout_h]" condition="!$PARAM[focusedlayout_special]">
-                    <include condition="$PARAM[context_button]">Object_OnFocusButton_Context</include>
+                    <include condition="$PARAM[context_button]">ContextMenu_OnFocusButton</include>
                     <control type="group">
                         <left>$PARAM[offset_x]</left>
                         <right>-$PARAM[offset_x]</right>
