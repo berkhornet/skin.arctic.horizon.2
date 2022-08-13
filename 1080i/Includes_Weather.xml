@@ -10,7 +10,7 @@
             <visible>Weather.IsFetched</visible>
             <!-- Left Side Today -->
             <control type="group">
-                <width>weather_conditions_width</width>
+                <width>weather_conditions_w</width>
                 <include content="Dialog_Group">
                     <control type="label">
                         <textcolor>dialog_fg_70</textcolor>
@@ -194,7 +194,7 @@
 
             <!-- Right Side -->
             <control type="group">
-                <left>weather_conditions_width</left>
+                <left>weather_conditions_w</left>
 
                 <!-- Forecast Top Section -->
                 <include>Dialog_Overlay</include>
@@ -209,13 +209,13 @@
                 <include content="Dialog_Group">
                     <control type="group">
                         <top>100</top>
-                        <height>weather_forecast_height</height>
+                        <height>weather_forecast_h</height>
                         <control type="list">
                             <include content="Dimension_Padding">
                                 <param name="pad" value="-40" />
                             </include>
                             <orientation>horizontal</orientation>
-                            <itemlayout width="weather_forecast_item_width" height="weather_forecast_height">
+                            <itemlayout width="weather_forecast_item_w" height="weather_forecast_h">
                                 <control type="group">
                                     <left>40</left>
                                     <right>-40</right>
@@ -224,7 +224,7 @@
                                     <include>Weather_Forecast_Itemlayout</include>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="weather_forecast_item_width" height="weather_forecast_height">
+                            <focusedlayout width="weather_forecast_item_w" height="weather_forecast_h">
                                 <control type="group">
                                     <left>40</left>
                                     <right>-40</right>
@@ -300,18 +300,18 @@
                 <control type="group">
                     <height>50%</height>
                     <control type="group">
-                        <include content="Dimension_Padding"><param name="pad" value="grid_x1" /></include>
+                        <include content="Dimension_Padding"><param name="pad" value="grid_x04" /></include>
                         <control type="label">
                             <label>$PARAM[hi_label_a]</label>
-                            <height>grid_x0.5</height>
+                            <height>grid_x02</height>
                             <textcolor>dialog_fg_70</textcolor>
                             <font>font_mini</font>
                             <include condition="$PARAM[center_text]">Weather_Details_Group_Center</include>
                         </control>
                         <control type="label">
                             <label>$PARAM[hi_label_b]</label>
-                            <top>grid_x1</top>
-                            <height>grid_x1</height>
+                            <top>grid_x04</top>
+                            <height>grid_x04</height>
                             <textcolor>dialog_fg_70</textcolor>
                             <font>font_weatherlabel</font>
                             <include condition="$PARAM[center_text]">Weather_Details_Group_Center</include>
@@ -332,10 +332,10 @@
                     <!-- <include>Dialog_Overlay_V</include> -->
                     <include>Object_Separator_V</include>
                     <control type="group">
-                        <include content="Dimension_Padding"><param name="pad" value="grid_x1" /></include>
+                        <include content="Dimension_Padding"><param name="pad" value="grid_x04" /></include>
                         <control type="label">
                             <label>$PARAM[lo_label_a]</label>
-                            <height>grid_x0.5</height>
+                            <height>grid_x02</height>
                             <textcolor>dialog_fg_70</textcolor>
                             <font>font_mini</font>
                             <include condition="$PARAM[center_text]">Weather_Details_Group_Center</include>
@@ -343,8 +343,8 @@
                         </control>
                         <control type="label">
                             <label>$PARAM[lo_label_b]</label>
-                            <top>grid_x1</top>
-                            <height>grid_x1</height>
+                            <top>grid_x04</top>
+                            <height>grid_x04</height>
                             <textcolor>dialog_fg_70</textcolor>
                             <font>font_weatherlabel</font>
                             <include condition="$PARAM[center_text]">Weather_Details_Group_Center</include>
@@ -366,7 +366,7 @@
 
     <include name="Weather_Forecast_Itemlayout">
         <control type="group">
-            <right>grid_x1</right>
+            <right>grid_x04</right>
             <include>Dialog_Outline_Box</include>
             <control type="label">
                 <label>$INFO[ListItem.Property(DayName)]</label>

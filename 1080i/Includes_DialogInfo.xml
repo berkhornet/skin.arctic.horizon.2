@@ -5,8 +5,8 @@
     <include name="DialogInfo_MainGroup">
         <control type="group">
             <visible>!Window.IsActive(1120)</visible>
-            <animation effect="slide" start="0" end="-dialoginfo_left_w" time="800" tween="cubic" easing="out" reversible="false">Hidden</animation>
-            <animation effect="slide" end="0" start="-dialoginfo_left_w" time="800" tween="cubic" easing="out" reversible="false">Visible</animation>
+            <animation effect="slide" start="0" end="-infodialog_left_w" time="800" tween="cubic" easing="out" reversible="false">Hidden</animation>
+            <animation effect="slide" end="0" start="-infodialog_left_w" time="800" tween="cubic" easing="out" reversible="false">Visible</animation>
             <nested />
         </control>
     </include>
@@ -15,11 +15,11 @@
     <include name="DialogInfo_LeftGroup">
         <param name="poster_visible">true</param>
         <param name="diffuse">diffuse/poster_w544_h800.png</param>
-        <param name="width">dialoginfo_poster_w</param>
-        <param name="height">dialoginfo_poster_h</param>
+        <param name="width">infodialog_poster_w</param>
+        <param name="height">infodialog_poster_h</param>
         <definition>
             <control type="group">
-                <width>dialoginfo_left_w</width>
+                <width>infodialog_left_w</width>
                 <include>Animation_Left_Delay</include>
                 <nested />
                 <include content="Object_BigPoster">
@@ -37,8 +37,8 @@
 
     <!-- Right Group for DialogInfo -->
     <include name="DialogInfo_RightGroup">
-        <param name="left" default="dialoginfo_left_w" />
-        <param name="left_divider" default="dialoginfo_left_divider_w" />
+        <param name="left" default="infodialog_left_w" />
+        <param name="left_divider" default="infodialog_divider_left_w" />
         <definition>
             <control type="group">
                 <include content="Object_Left" condition="!Skin.String(DividerStyle,Split)">
@@ -107,10 +107,10 @@
         <control type="group">
             <nested />
             <control type="grouplist">
-                <width>400</width>
-                <height>240</height>
+                <width>grid_x40</width>
+                <height>gird_x24</height>
                 <orientation>vertical</orientation>
-                <itemgap>20</itemgap>
+                <itemgap>grid_x02</itemgap>
                 <include content="Object_InfoCircle">
                     <param name="icon" value="$VAR[Image_DirectorIcon]" />
                     <param name="role" value="$LOCALIZE[20339]" />
@@ -137,10 +137,10 @@
                 </include>
             </control>
             <control type="grouplist">
-                <left>445</left>
+                <left>grid_x44</left>
                 <orientation>vertical</orientation>
-                <itemgap>20</itemgap>
-                <height>240</height>
+                <itemgap>grid_x02</itemgap>
+                <height>grid_x24</height>
                 <include content="Object_InfoCircle">
                     <param name="icon" value="special://skin/extras/icons/trophy.png" />
                     <param name="role" value="$LOCALIZE[31064]" />
@@ -170,49 +170,37 @@
             <param name="control" value="panel" />
             <param name="id" value="50" />
             <orientation>horizontal</orientation>
-            <top>480</top>
-            <height>240</height>
+            <top>grid_x48</top>
+            <height>grid_x24</height>
             <right>0</right>
-            <itemlayout height="grid_x2" width="380">
+            <itemlayout height="grid_x08" width="380">
                 <include content="Object_InfoCircle">
                     <param name="role" value="$INFO[ListItem.Label]" />
                     <param name="name" value="$INFO[ListItem.Duration]" />
                     <param name="bordersize" value="4" />
-                    <right>40</right>
-                    <include content="Object_Control">
-                        <param name="control" value="image" />
-                        <width>60</width>
-                        <bordersize>4</bordersize>
-                        <texture colordiffuse="panel_bg">common/circle.png</texture>
-                    </include>
+                    <right>grid_x04</right>
                     <control type="label">
-                        <width>60</width>
-                        <height>60</height>
-                        <font>font_small_bold</font>
-                        <textcolor>panel_fg_70</textcolor>
+                        <width>grid_x06</width>
+                        <height>grid_x06</height>
+                        <font>font_mini_bold</font>
+                        <textcolor>panel_fg_90</textcolor>
                         <label>$INFO[ListItem.TrackNumber]</label>
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
                 </include>
             </itemlayout>
-            <focusedlayout height="grid_x2" width="380">
+            <focusedlayout height="grid_x08" width="380">
                 <include content="Object_InfoCircle">
                     <param name="role" value="$INFO[ListItem.Label]" />
                     <param name="name" value="$INFO[ListItem.Duration]" />
                     <param name="bordersize" value="4" />
-                    <right>40</right>
-                    <include content="Object_Control">
-                        <param name="control" value="image" />
-                        <width>60</width>
-                        <bordersize>4</bordersize>
-                        <texture colordiffuse="panel_bg">common/circle.png</texture>
-                    </include>
+                    <right>grid_x04</right>
                     <control type="label">
-                        <width>60</width>
-                        <height>60</height>
-                        <font>font_small_bold</font>
-                        <textcolor>panel_fg_70</textcolor>
+                        <width>grid_x06</width>
+                        <height>grid_x06</height>
+                        <font>font_mini_bold</font>
+                        <textcolor>panel_fg_90</textcolor>
                         <label>$INFO[ListItem.TrackNumber]</label>
                         <align>center</align>
                         <aligny>center</aligny>
@@ -346,8 +334,8 @@
             <bottom>0</bottom>
             <itemgap>10</itemgap>
             <height>view_pad</height>
-            <left>grid_x1</left>
-            <right>grid_x1</right>
+            <left>grid_x04</left>
+            <right>grid_x04</right>
             <align>right</align>
             <visible>ControlGroup(9000).HasFocus()</visible>
             <animation effect="fade" start="0" end="100" time="300" delay="100">Visible</animation>
@@ -373,7 +361,7 @@
         <param name="discart_top" default="272" />
         <param name="discart_spin" default="true" />
         <param name="discart_image" default="$VAR[Image_DiscArt]" />
-        <param name="width" default="dialoginfo_poster_w" />
+        <param name="width" default="infodialog_poster_w" />
         <definition>
             <control type="group">
                 <top>view_top</top>
