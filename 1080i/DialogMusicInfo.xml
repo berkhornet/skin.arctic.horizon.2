@@ -31,26 +31,22 @@
                     </include>
 
                     <!-- Track Details -->
-                    <include>DialogInfo_MusicTracks</include>
+                    <include content="DialogInfo_MusicTracks" condition="String.IsEqual(ListItem.DBType,album)">
+                        <param name="id">50</param>
+                    </include>
+                    <include content="DialogInfo_MusicTracks" condition="String.IsEqual(ListItem.DBType,artist)">
+                        <param name="id">5050</param>
+                        <param name="detailed">true</param>
+                        <content target="music" sortby="playcount" sortorder="descending">$INFO[ListItem.Artist,musicdb://songs/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D]</content>
+                    </include>
 
                     <!-- Codecs -->
-                    <control type="group">
-                        <height>40</height>
-                        <bottom>0</bottom>
-                        <include>Info_Codecs</include>
-                        <include>Info_Studio</include>
-                    </control>
+                    <include>DialogInfo_Codecs</include>
 
                     <!-- Mouse Nav Button -->
-                    <!-- <include content="Object_Control">
-                        <param name="control">group</param>
-                        <bottom>-80</bottom>
-                        <height>140</height>
-                        <include content="Object_NavButton">
-                            <param name="flipy">true</param>
-                            <param name="id">5000</param>
-                        </include>
-                    </include> -->
+                    <include content="DialogInfo_MouseNavArrow">
+                        <visible>!Integer.IsEqual(Container(50).NumItems,0)</visible>
+                    </include>
                 </control>
 
                 <!-- Trailer and Plot -->
@@ -111,7 +107,7 @@
                 <include content="Widget_Poster" condition="String.IsEqual(ListItem.DBType,artist)">
                     <param name="groupid" value="5100" />
                     <param name="id" value="50" />
-                    <param name="label" value="Albums" />
+                    <param name="label" value="$LOCALIZE[132]" />
                     <param name="visible" value="true" />
                     <param name="include" value="List_Square_Row" />
                 </include>
