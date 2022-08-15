@@ -145,7 +145,7 @@
 					<top>30</top>
 					<width>38</width>
 					<height>38</height>
-					<texture>$VAR[ImagePVRCatchUpIcon]</texture>
+					<texture>indicator/hasarchive.png</texture>
 					<visible>ListItem.HasArchive</visible>
                 </control>
 				<!-- PVR004 - END -->
