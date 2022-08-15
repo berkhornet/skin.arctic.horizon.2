@@ -91,9 +91,18 @@
 	<expression name="SD_Channel">String.Contains(ListItem.ChannelName," SD")</expression>
 	<!-- Channel Resolution Icon variable -->
 	<variable name="ImagePVRChannelResolutionIcon">
-		<value condition="$EXP[FHD_Channel]">special://userdata/customisations\Skin Customisations\PVR\resolution flags\fhd.png</value>
-		<value condition="$EXP[HD_Channel]">special://userdata/customisations\Skin Customisations\PVR\resolution flags\hd.png</value>
-		<value condition="$EXP[SD_Channel]">special://userdata/customisations\Skin Customisations\PVR\resolution flags\sd.png</value>
+		<value condition="$EXP[FHD_Channel]">special://userdata/customisations\PVR\resolution flags\fhd.png</value>
+		<value condition="$EXP[HD_Channel]">special://userdata/customisations\PVR\resolution flags\hd.png</value>
+		<value condition="$EXP[SD_Channel]">special://userdata/customisations\PVR\resolution flags\sd.png</value>
+		<value></value>
+	</variable>
+	
+	<!-- EPG OTHER INDICATOR EXPRESSIONS & VARIABLES -->
+	<!-- Expressions for Catch-up Icon variable (ImagePVRCatchUpIcon) -->
+	<expression name="CatchUp_Available">List.Item.HasArchive</expression>
+	<!-- Channel Resolution Icon variable -->
+	<variable name="ImagePVRCatchUpIcon">
+		<value condition="$EXP[CatchUp_Available]">special://userdata/customisations\PVR\other icons\hasarchive.png</value>
 		<value></value>
 	</variable>
 	
@@ -142,7 +151,7 @@
 		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer New.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\Addon Icons\CUTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\Addon Icons\Anova.png</value>
-		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
+		<value>special://userdata/customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
 	<!-- Alternative PVR Channel Provider variable (Fanart)-->
 	<!-- variable name="ImagePVRProviderIcon">
