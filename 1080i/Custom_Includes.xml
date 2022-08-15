@@ -99,7 +99,7 @@
 	
 	<!-- EPG OTHER INDICATOR EXPRESSIONS & VARIABLES -->
 	<!-- Expressions for Catch-up Icon variable (ImagePVRCatchUpIcon) -->
-	<expression name="CatchUp_Available">ListItem.HasArchive</expression>
+	<expression name="CatchUp_Available">List.Item.HasArchive</expression>
 	<!-- Channel Resolution Icon variable -->
 	<variable name="ImagePVRCatchUpIcon">
 		<value condition="$EXP[CatchUp_Available]">special://userdata/customisations\PVR\other icons\hasarchive.png</value>
