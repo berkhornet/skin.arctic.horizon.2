@@ -730,8 +730,7 @@
                     <right>grid_x04</right>
                     <control type="group">
                         <visible>!String.IsEqual(ListItem.DBType,song)</visible>
-						<!-- TEST001 - Remove Episode / Year etc. from Video List Views -->
-                        <!-- include content="Object_Control">
+                        <include content="Object_Control">
                             <param name="control" value="label" />
                             <include condition="$PARAM[selected]">Color_SelectedText</include>
                             <textcolor>main_fg_70</textcolor>
@@ -742,15 +741,15 @@
                             <bottom>3</bottom>
                             <width>80</width>
                             <left>-20</left>
-                        </include -->
+                        </include>
                         <include content="Object_Indicator_List">
                             <param name="selected">$PARAM[selected]</param>
                             <centertop>50%</centertop>
-                            <centerleft>10</centerleft> <!-- TEST001 - was 100 -->
+                            <centerleft>100</centerleft>
                         </include>
                         <include content="Object_Control">
                             <param name="control" value="label" />
-                            <left>60</left> <!-- TEST001 - was 140 -->
+                            <left>140</left>
                             <include condition="$PARAM[selected]">Color_SelectedText</include>
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
