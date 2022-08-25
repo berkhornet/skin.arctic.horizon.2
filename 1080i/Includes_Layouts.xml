@@ -729,7 +729,10 @@
                     <left>grid_x04</left>
                     <right>grid_x04</right>
                     <control type="group">
-                        <visible>!String.IsEqual(ListItem.DBType,song)</visible>
+					
+                        <visible>!String.IsEqual(ListItem.DBType,song) + [!String.IsEmpty(ListItem.DBID) | !String.IsEmpty(ListItem.Year)]</visible>
+						<!-- TEST001: Visibility above changed from !String.IsEqual(ListItem.DBType,song) -->
+						<!-- TEST001: Used for items in the Kodi Library OR with an associated Year -->
                         <include content="Object_Control">
                             <param name="control" value="label" />
                             <include condition="$PARAM[selected]">Color_SelectedText</include>
@@ -768,6 +771,48 @@
                             <bottom>3</bottom>
                         </include>
                     </control>
+					<!-- TEST001: additional group copied from above for items NOT in Kodi library AND without associated year -->
+					<control type="group">
+                        <visible>!String.IsEqual(ListItem.DBType,song) + String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Year)</visible>
+                        <!--include content="Object_Control">
+                            <param name="control" value="label" />
+                            <include condition="$PARAM[selected]">Color_SelectedText</include>
+                            <textcolor>main_fg_70</textcolor>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <label>$VAR[Label_MediaList_Year]</label>
+                            <align>right</align>
+                            <font>font_small</font>
+                            <bottom>3</bottom>
+                            <width>80</width>
+                            <left>-20</left>
+                        </include -->
+                        <include content="Object_Indicator_List">
+                            <param name="selected">$PARAM[selected]</param>
+                            <centertop>50%</centertop>
+                            <centerleft>20</centerleft> <!-- TEST001: was 100 above-->
+                        </include>
+                        <include content="Object_Control">
+                            <param name="control" value="label" />
+                            <left>60</left> <!-- TEST001: was 140 above -->
+                            <include condition="$PARAM[selected]">Color_SelectedText</include>
+                            <textcolor>main_fg_70</textcolor>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <label>$INFO[ListItem.Title]</label>
+                            <font>font_small_bold</font>
+                            <bottom>3</bottom>
+                        </include>
+                        <include content="Object_Control">
+                            <param name="control" value="label" />
+                            <include condition="$PARAM[selected]">Color_SelectedText</include>
+                            <textcolor>main_fg_70</textcolor>
+                            <selectedcolor>main_fg_70</selectedcolor>
+                            <label>$INFO[ListItem.Rating]</label>
+                            <font>font_small</font>
+                            <align>right</align>
+                            <bottom>3</bottom>
+                        </include>
+                    </control>
+					
                     <control type="group">
                         <visible>String.IsEqual(ListItem.DBType,song)</visible>
                         <include content="Object_Control">
