@@ -729,7 +729,8 @@
                     <left>grid_x04</left>
                     <right>grid_x04</right>
                     <control type="group">
-                        <visible>!String.IsEqual(ListItem.DBType,song)</visible>
+						<visible>!String.IsEqual(ListItem.DBType,song) + [!String.IsEmpty(ListItem.DBID) | !String.IsEmpty(ListItem.Year)]</visible> <!-- TEMP001 -->
+                        <!-- visible>!String.IsEqual(ListItem.DBType,song)</visible -->
                         <include content="Object_Control">
                             <param name="control" value="label" />
                             <include condition="$PARAM[selected]">Color_SelectedText</include>
@@ -826,7 +827,8 @@
 
                 <!-- Basic -->
                 <control type="group">
-                    <visible>![$PARAM[detailed]]</visible>
+                    <visible>![$PARAM[detailed]] | [String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Year)]</visible>
+					<!-- TEMP001 - visibility above changed from ![$PARAM[detailed]] -->
                     <left>grid_x04</left>
                     <right>grid_x04</right>
 
@@ -868,6 +870,8 @@
                         <label>$INFO[ListItem.Label2]</label>
                         <font>font_small</font>
                         <align>right</align>
+						<!-- TEMP001 - visible tag added -->
+						<visible>![String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Year)]</visible>
                     </include>
                 </control>
             </control>
