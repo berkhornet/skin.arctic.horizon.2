@@ -158,6 +158,10 @@
 	<expression name="Exp_HomeWindow">Window.IsVisible(Home) | Window.IsVisible(11114)</expression>
 	<!-- MyPVRChannels.xml (10700), MyPVRRecordings.xml (10701), MyPVRGuide.xml (10702), MyPVRGuide.xml (10703), MyPVRSearch.xml (10704) -->
 	<expression name="Exp_PVRWindow">Window.IsVisible(10700) | Window.IsVisible(10701) | Window.IsVisible(10702) | Window.IsVisible(10703) | Window.IsVisible(10704)</expression>
+	
+	<!-- On Demand (Control Id 511) NOT TESTED -->
+	<!-- expression name="Exp_OnDemandWindow">String.IsEqual(System.CurrentControlID,"511")</expression -->
+	
 	<!-- MyVideoNav.xml (10025), MyPlaylist.xml (10028) -->
 	<expression name="Exp_VideoWindow">Window.IsVisible(10025) | Window.IsVisible(10028)</expression>
 	<!-- MyMusicNav.xml (10502), MyMusicPlaylistEditor.xml (10503), MyPlayList.xml (10500) -->
@@ -168,10 +172,26 @@
 	<!-- FileBrowser.xml (10026) -->
 	<expression name="Exp_SystemWindow">Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</expression>
 
+	<!-- Expanded conditions to make Home background dynamic depending on selected Menu item -->
+	<expression name="Exp_HomeWindow_PVR">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,0)</expression>
+	<expression name="Exp_HomeWindow_OnDemand">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,1)</expression>
+	<expression name="Exp_HomeWindow_Videos">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,2)</expression>
+	<expression name="Exp_HomeWindow_Music">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,3)</expression>
+	<expression name="Exp_HomeWindow_Weather">Window.IsVisible(Home) + Integer.IsEqual(Container(300).Position,4)</expression>
+
 	<!-- Skin Background variable -->
 	<variable name="ImageSkinBackground">
+		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
+		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
+		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
+		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
+	
 		<value condition="$EXP[Exp_HomeWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
+		
+		<!-- NOT TESTED -->
+		<!--value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\OnDemand.jpg</value -->
+		
 		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
