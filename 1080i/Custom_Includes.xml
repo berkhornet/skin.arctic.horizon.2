@@ -159,8 +159,8 @@
 	<!-- MyPVRChannels.xml (10700), MyPVRRecordings.xml (10701), MyPVRGuide.xml (10702), MyPVRGuide.xml (10703), MyPVRSearch.xml (10704) -->
 	<expression name="Exp_PVRWindow">Window.IsVisible(10700) | Window.IsVisible(10701) | Window.IsVisible(10702) | Window.IsVisible(10703) | Window.IsVisible(10704)</expression>
 	
-	<!-- On Demand (Control Id 511) NOT TESTED -->
-	<!-- expression name="Exp_OnDemandWindow">String.IsEqual(System.CurrentControlID,"511")</expression -->
+	<!-- On Demand (Tested by looking for "plugin") -->
+	<expression name="Exp_OnDemandWindow">Window.IsVisible(10025) + String.Contains(Container.FolderPath,plugin)</expression>
 	
 	<!-- MyVideoNav.xml (10025), MyPlaylist.xml (10028) -->
 	<expression name="Exp_VideoWindow">Window.IsVisible(10025) | Window.IsVisible(10028)</expression>
@@ -185,14 +185,10 @@
 		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
 		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
-		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
-	
+		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>	
 		<value condition="$EXP[Exp_HomeWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
-		
-		<!-- NOT TESTED -->
-		<!--value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\OnDemand.jpg</value -->
-		
+		<value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
 		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
