@@ -1160,10 +1160,10 @@
                 <visible>[ControlGroup($PARAM[id]).HasFocus() + $PARAM[usegrouplist]] | [Control.HasFocus($PARAM[id]) + !$PARAM[usegrouplist]] | $PARAM[isfocused] | [Control.HasFocus($PARAM[groupid]) + [$PARAM[usemousefocus]]]</visible>
                 <include>Animation_FadeIn</include>
                 <include condition="!$PARAM[isbuttonmenu]">Animation_FadeOut</include>
-				<!-- Disable Overlay -->
-                <!-- include content="Object_Overlay" condition="$PARAM[has_background_overlay]">
+				<!-- Disable Overlay OFF -->
+                <include content="Object_Overlay" condition="$PARAM[has_background_overlay]">
                     <param name="windowanimation" value="false" />
-                </include -->
+                </include>
                 <include content="Object_Control" condition="$PARAM[hasbuttonoverlay]">
                     <param name="control" value="group" />
                     <visible>!Window.IsVisible(DialogBusy.xml)</visible>
