@@ -62,18 +62,7 @@
         <include condition="Skin.HasSetting(UseLargerFlixArt)" content="_Background_Blur">
             <param name="flixart_size">flixart_size_l</param>
         </include>
-		
-		<!-- BACK001 - Temporary backgrounds for non-media screens (including Home) -->
-		<!-- Other screens, including EPG -->
-		<include content="Object_Control">
-			<param name="control" value="image" />
-			<texture>$VAR[ImageSkinBackground]</texture>
-			<visible>!String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))</visible>
-		</include>
-		<!-- BACK001 - End of Temporary backgrounds -->	
-			
     </include>
-	
     <include name="_Background_Blur">
         <param name="flixart_size">flixart_size_s</param>
         <definition>
@@ -86,7 +75,6 @@
                 <include content="Object_Control" condition="!Skin.String(ForegroundStyle,FlixArt) + !Skin.String(ForegroundStyle,KeyArt)">
                     <param name="control" value="image" />
                     <fadetime>800</fadetime>
-					<!-- BACK001 - texture changed from $VAR[Image_Background_Blur] $INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)] -->
                     <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
                 </include>
 
@@ -150,6 +138,22 @@
 
                 </include>
 				
+				<!-- Temporary backgrounds for non-media screens -->
+				<!-- Other screens, including EPG -->
+				<include content="Object_Control">
+					<param name="control" value="image" />
+					<texture>$VAR[ImageSkinBackground]</texture>
+					<visible>!String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))</visible>
+				</include>
+			
+				<!-- Force background for Home (and Search) screens (required for Widgets) -->		
+				<include content="Object_Control">
+					<param name="control" value="image" />
+					<texture>$VAR[ImageSkinBackground]</texture>
+					<visible>Window.IsVisible(Home) | Window.IsVisible(11114)</visible>
+				</include>
+				<!-- End of Temporary backgrounds -->    
+						
                 <include content="Object_Control">
                     <param name="control" value="image" />
                     <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
@@ -188,7 +192,7 @@
     <include name="Background_Image">
         <param name="texture" default="common/blur2.png" />
         <definition>
-            <!-- BACK001 - Disable standard Background_Image -->
+            <!-- Disable standard Background_Image -->
             <!-- include content="Object_Control">
                 <param name="control" value="image" />
                 <aspectratio>scale</aspectratio>
@@ -198,19 +202,19 @@
                 </include>
             </include -->
 			
-			<!-- BACK001 - Use custom Image Background and overlay from Background_Blur -->		
+			<!-- Use custom Image Background and overlay from Background_Blur -->		
 			<include content="Object_Control">
 				<param name="control" value="image" />
 				<texture>$VAR[ImageSkinBackground]</texture>				
 			</include>
-			<!-- BACK001 - End of Temporary backgrounds -->
+			<!-- End of Temporary backgrounds -->
 			
-			<!-- BACK001 - Reinstate standard code removed by version 0.4.6 -->
+			<!-- Reinstate standard code removed by version 0.4.6 -->
 			<include content="Object_Control">
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
             </include>
-			<!-- BACK001 - End of Reinstate standard code removed by version 0.4.6 -->
+			<!-- End of Reinstate standard code removed by version 0.4.6 -->
 			
         </definition>
     </include>
