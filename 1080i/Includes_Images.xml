@@ -2,28 +2,13 @@
 <includes>
 
     <variable name="Image_Background_Blur">
-		<!-- BACK001 - First condition not required -->
         <value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))">common/blur2.png</value>
         <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(artist.fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
         <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
-        <!-- BACK001 - START add conditions (taken from Custom_Includes.xml) for Home Page and Section Backgrounds (if no Blur) -->
-		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
-		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
-		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
-		<value condition="$EXP[Exp_HomeWindow_Music]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
-		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>	
-		<value condition="$EXP[Exp_HomeWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
-		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
-		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
-		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
-		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
-		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
-		<value>special://userdata/customisations\Skin Images\AH2 Backgrounds\Fallback.jpg</value>
-		<!-- BACK001 - END add conditions for Home Page and Section Backgrounds (if no Blur) -->
+        <value>common/blur2.png</value>
     </variable>
 
     <variable name="Image_Foreground_FlixKeyArt">

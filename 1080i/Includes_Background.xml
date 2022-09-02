@@ -61,9 +61,8 @@
         <include condition="!Skin.HasSetting(UseLargerFlixArt)">_Background_Blur</include>
         <include condition="Skin.HasSetting(UseLargerFlixArt)" content="_Background_Blur">
             <param name="flixart_size">flixart_size_l</param>
-        </include>				
+        </include>
     </include>
-	
     <include name="_Background_Blur">
         <param name="flixart_size">flixart_size_s</param>
         <definition>
@@ -76,8 +75,7 @@
                 <include content="Object_Control" condition="!Skin.String(ForegroundStyle,FlixArt) + !Skin.String(ForegroundStyle,KeyArt)">
                     <param name="control" value="image" />
                     <fadetime>800</fadetime>
-					<!-- BACK001 - texture changed from $INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)] -->
-                    <texture background="true">$VAR[Image_Background_Blur]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
                 </include>
 
                 <!-- KeyArt (Offset Blur) -->
@@ -139,7 +137,6 @@
                     </control>
 
                 </include>
-				
                 <include content="Object_Control">
                     <param name="control" value="image" />
                     <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
@@ -178,27 +175,14 @@
     <include name="Background_Image">
         <param name="texture" default="common/blur2.png" />
         <definition>
-            <!-- BACK001 - Disable standard Background_Image -->
-            <!-- include content="Object_Control">
+            <include content="Object_Control">
                 <param name="control" value="image" />
                 <aspectratio>scale</aspectratio>
                 <texture background="true" colordiffuse="main_back">$PARAM[texture]</texture>
                 <include content="Background_NotVideo">
                     <param name="fade_end" value="70" />
                 </include>
-            </include -->
-			
-			<!-- BACK001 - START Use custom Image Background and overlay -->		
-			<include content="Object_Control">
-				<param name="control" value="image" />
-				<texture>$VAR[ImageSkinBackground]</texture>				
-			</include>
-			<include content="Object_Control">
-                <param name="control" value="image" />
-                <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
             </include>
-			<!-- BACK001 - END Use custom Image Background and overlay -->
-			
         </definition>
     </include>
 
@@ -279,14 +263,13 @@
             </include>
             <nested />
         </include>
-		<!-- BACK001 - Disable Overay at bottom of screen -->
-        <!-- control type="group">
+        <control type="group">
             <include>Animation_Background_FadeInOut</include>
             <include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
                 <param name="control" value="image" />
                 <texture colordiffuse="main_bg_100">common/floor.png</texture>
             </include>
-        </control -->
+        </control>
     </include>
 
 </includes>
