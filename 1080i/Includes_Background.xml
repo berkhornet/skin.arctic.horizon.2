@@ -70,11 +70,6 @@
 			<texture>$VAR[ImageSkinBackground]</texture>
 			<visible>!String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))</visible>
 		</include>
-		
-		<include content="Object_Control">
-            <param name="control" value="image" />
-            <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
-        </include>
 		<!-- BACK001 - End of Temporary backgrounds -->	
 			
     </include>
@@ -91,6 +86,7 @@
                 <include content="Object_Control" condition="!Skin.String(ForegroundStyle,FlixArt) + !Skin.String(ForegroundStyle,KeyArt)">
                     <param name="control" value="image" />
                     <fadetime>800</fadetime>
+					<!-- BACK001 - texture changed from $VAR[Image_Background_Blur] $INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)] -->
                     <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
                 </include>
 
@@ -154,6 +150,10 @@
 
                 </include>
 				
+                <include content="Object_Control">
+                    <param name="control" value="image" />
+                    <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
+                </include>
             </control>
         </definition>
     </include>
