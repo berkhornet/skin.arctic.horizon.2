@@ -245,9 +245,20 @@
         </definition>
     </include>
     <include name="Action_Blur_Onload">
-        <include content="_Action_Blur_Onload">
+		<!-- BACK003 - START Use Poster artwork for Video Library blur background -->
+        <!--include content="_Action_Blur_Onload">
+            <param name="sourceimage">Art(fanart)</param>
+        </include -->
+		
+		<include content="_Action_Blur_Onload" condition="!Window.IsVisible(10025)">
             <param name="sourceimage">Art(fanart)</param>
         </include>
+		
+		<include content="_Action_Blur_Onload" condition="Window.IsVisible(10025)">
+            <param name="sourceimage">Art(poster)|Art(fanart)</param>
+        </include>
+		<!-- BACK003 - END Use Poster artwork for Video Library blur background -->
+		
         <!-- <include content="_Action_Blur_Onload">
             <param name="sourceimage">Art(keyart)|Art(fanart)</param>
         </include> -->
