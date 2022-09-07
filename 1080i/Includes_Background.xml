@@ -75,8 +75,7 @@
                 <include content="Object_Control" condition="!Skin.String(ForegroundStyle,FlixArt) + !Skin.String(ForegroundStyle,KeyArt)">
                     <param name="control" value="image" />
                     <fadetime>800</fadetime>
-                    <!-- BACK001 - texture changed from $INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]-->
-                    <texture background="true">$VAR[Image_Background_Blur]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</texture>
                 </include>
 
                 <!-- KeyArt (Offset Blur) -->
@@ -138,7 +137,6 @@
                     </control>
 
                 </include>
-				
                 <include content="Object_Control">
                     <param name="control" value="image" />
                     <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
@@ -177,30 +175,14 @@
     <include name="Background_Image">
         <param name="texture" default="common/blur2.png" />
         <definition>
-            <!-- BACK001 - START Disable standard Background_Image -->
-            <!-- include content="Object_Control">
+            <include content="Object_Control">
                 <param name="control" value="image" />
                 <aspectratio>scale</aspectratio>
                 <texture background="true" colordiffuse="main_back">$PARAM[texture]</texture>
                 <include content="Background_NotVideo">
                     <param name="fade_end" value="70" />
                 </include>
-            </include -->
-			
-			<!-- Use custom Image Background and overlay from Background_Blur -->		
-			<include content="Object_Control">
-				<param name="control" value="image" />
-				<texture>$VAR[ImageSkinBackground]</texture>				
-			</include>
-			<!-- BACK001 - END Disable standard Background_Image -->
-			
-			<!-- BACK001 - START Reinstate standard code removed by version 0.4.6 -->
-			<include content="Object_Control">
-                <param name="control" value="image" />
-                <texture colordiffuse="main_bg_45">common/bg.jpg</texture>
             </include>
-			<!-- BACK001 - END of Reinstate standard code removed by version 0.4.6 -->
-			
         </definition>
     </include>
 
@@ -244,81 +226,53 @@
     </include>
 
     <include name="Background_Main">
-        <include>Background_Video</include>
-        <include content="Object_Control" condition="$EXP[Exp_SettingsDialogs]">
-            <param name="control" value="group" />
-            <description>Plain background used to prevent fadetime transitions</description>
-            <include>Animation_Background_FadeInOut</include>
-            <include>Background_Image</include>
-        </include>
-        <include content="Object_Control" condition="!$EXP[Exp_SettingsDialogs]">
-            <param name="control" value="group" />
-            <include>Animation_Background_FadeInOut</include>
-            <include condition="Skin.String(BackgroundStyle,None)">Background_None</include>
-            <include condition="Skin.String(BackgroundStyle,Image)">Background_Image</include>
-            <include condition="Skin.String(BackgroundStyle,Fanart)">Background_Fanart</include>
-            <include condition="Skin.String(BackgroundStyle,Blur)">Background_Blur</include>
-            <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
-            <include content="Object_Control" condition="!Skin.String(BackgroundStyle,Fanart) + Skin.String(ForegroundStyle,KeyArt)">
-                <param name="control">group</param>
-                <include content="View_Visibility_Common">
-                    <param name="animation_include">Animation_Foreground_Visible_FadeInOut</param>
-                    <param name="visible_infodialogs">true</param>
-                    <param name="visible_widgets">true</param>
-                </include>
-                <include>View_KeyArt</include>
+        <param name="plain_background">$EXP[Exp_SettingsDialogs]</param>
+        <definition>
+            <include>Background_Video</include>
+            <include content="Object_Control" condition="$PARAM[plain_background]">
+                <param name="control" value="group" />
+                <description>Plain background used to prevent fadetime transitions</description>
+                <include>Animation_Background_FadeInOut</include>
+                <include>Background_Image</include>
             </include>
-            <include content="Object_Control" condition="!Skin.String(BackgroundStyle,Fanart) + Skin.String(ForegroundStyle,FlixArt)">
-                <param name="control">group</param>
-                <include content="View_Visibility_Common">
-                    <param name="animation_include">Animation_Foreground_Visible_FadeInOut</param>
-                    <param name="visible_widgets">true</param>
+            <include content="Object_Control" condition="!$PARAM[plain_background]">
+                <param name="control" value="group" />
+                <include>Animation_Background_FadeInOut</include>
+                <include condition="Skin.String(BackgroundStyle,None)">Background_None</include>
+                <include condition="Skin.String(BackgroundStyle,Image)">Background_Image</include>
+                <include condition="Skin.String(BackgroundStyle,Fanart)">Background_Fanart</include>
+                <include condition="Skin.String(BackgroundStyle,Blur)">Background_Blur</include>
+                <include condition="System.HasAddon(resource.images.arctic.waves)">Background_BusyLoader</include>
+                <include content="Object_Control" condition="!Skin.String(BackgroundStyle,Fanart) + Skin.String(ForegroundStyle,KeyArt)">
+                    <param name="control">group</param>
+                    <include content="View_Visibility_Common">
+                        <param name="animation_include">Animation_Foreground_Visible_FadeInOut</param>
+                        <param name="visible_infodialogs">true</param>
+                        <param name="visible_widgets">true</param>
+                    </include>
+                    <include>View_KeyArt</include>
                 </include>
-                <include condition="!Skin.HasSetting(UseLargerFlixArt)">View_FlixArt</include>
-                <include condition="Skin.HasSetting(UseLargerFlixArt)" content="View_FlixArt">
-                    <param name="flixart_size">flixart_size_l</param>
+                <include content="Object_Control" condition="!Skin.String(BackgroundStyle,Fanart) + Skin.String(ForegroundStyle,FlixArt)">
+                    <param name="control">group</param>
+                    <include content="View_Visibility_Common">
+                        <param name="animation_include">Animation_Foreground_Visible_FadeInOut</param>
+                        <param name="visible_widgets">true</param>
+                    </include>
+                    <include condition="!Skin.HasSetting(UseLargerFlixArt)">View_FlixArt</include>
+                    <include condition="Skin.HasSetting(UseLargerFlixArt)" content="View_FlixArt">
+                        <param name="flixart_size">flixart_size_l</param>
+                    </include>
                 </include>
+                <nested />
             </include>
-            <nested />
-        </include>
-		
-		<!-- BACK002 - START Add Kodi Logo Backgrounds -->
-		<control type="group">
-			<control type="image">
-				<left>65</left>
-				<!-- use 950 for consistency with video/music windows -->
-				<top>1005</top>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/kodi.png</texture>
-			</control>
-			<control type="label">
-				<left>132</left>
-				<!-- use 967 for consistency with video/music windows -->
-				<top>1022</top>
-				<height>32</height>
-				<textcolor>main_fg_100</textcolor>
-				<width>auto</width>
-				<centertop>52%</centertop>
-				<label>KODI</label>
-				<font>font_logo</font>
-			</control>				
-			<!-- visible>Window.IsVisible(12600) | Window.IsVisible(Home) | Window.IsVisible(11114) | Window.IsVisible(10702) | Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</visible -->
-		</control>		
-		<!-- BACK002 - END Add Kodi Logo Backgrounds -->
-		
-		
-        <!-- BACK001 - START Disable overlay at bottom of Main Background -->
-        <!-- control type="group">
-            <include>Animation_Background_FadeInOut</include>
-            <include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
-                <param name="control" value="image" />
-                <texture colordiffuse="main_bg_100">common/floor.png</texture>
-            </include>
-        </control -->
-		<!-- BACK001 - END Disable overlay at bottom of Main Background -->
+            <control type="group">
+                <include>Animation_Background_FadeInOut</include>
+                <include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
+                    <param name="control" value="image" />
+                    <texture colordiffuse="main_bg_100">common/floor.png</texture>
+                </include>
+            </control>
+        </definition>
     </include>
 
 </includes>
