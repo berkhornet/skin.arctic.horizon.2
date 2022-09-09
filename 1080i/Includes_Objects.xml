@@ -1454,7 +1454,8 @@
                     <control type="group">
                         <left>$PARAM[offset_x]</left>
                         <right>-$PARAM[offset_x]</right>
-                        <include content="Object_MenuBar_Item">
+						<!-- PVR014 - Do not display "Selected" texture if TV Guide (Group Switcher) -->
+                        <include content="Object_MenuBar_Item" condition="!Window.IsVisible(10702)"> <!-- PVR014 - condition added -->
                             <param name="color_bg" value="$PARAM[color_bg]" />
                             <param name="color_fg" value="$PARAM[color]_70" />
                             <param name="haslabel" value="false" />
@@ -1467,7 +1468,8 @@
                             <right>40</right>
                             <align>center</align>
                             <font>$PARAM[font]</font>
-                            <textcolor>$PARAM[color]_70</textcolor>
+							<!-- PVR014 - textcolor changed from $PARAM[color]_70 -->
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -1476,7 +1478,8 @@
                     <control type="group">
                         <left>$PARAM[offset_x]</left>
                         <right>-$PARAM[offset_x]</right>
-                        <include content="Object_MenuBar_Item">
+                        <!-- PVR014 - Do not display "Selected" texture if TV Guide (Group Switcher) -->
+                        <include content="Object_MenuBar_Item" condition="!Window.IsVisible(10702)"> <!-- PVR014 - condition added -->
                             <param name="color_bg" value="$PARAM[color_bg]" />
                             <param name="color_fg" value="$VAR[ColorSelected]" />
                             <param name="haslabel" value="false" />
@@ -1490,7 +1493,8 @@
                             <right>40</right>
                             <align>center</align>
                             <font>$PARAM[font]</font>
-                            <textcolor>$VAR[ColorSelected]</textcolor>
+							<!-- PVR014 - textcolor changed from $VAR[ColorSelected] -->
+                            <textcolor>$VAR[ColorGradient]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -1513,6 +1517,8 @@
                 </control>
                 <control type="image">
                     <texture colordiffuse="$PARAM[colordiffuse]" border="30">$PARAM[fo_texture]</texture>
+					<!-- PVR014 - Do not display texture if TV Guide (Group Switcher) -->
+					<visible>!Window.IsVisible(10702)</visible>
                 </control>
                 <include content="Object_Control" condition="$PARAM[overlay]">
                     <param name="control" value="image" />

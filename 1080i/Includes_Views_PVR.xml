@@ -16,7 +16,8 @@
 				<left>20</left>
 				<!-- PVR014 - END -->
                 <visible>!$EXP[Exp_InfoDialogs]</visible>
-                <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
+				<!-- PVR014 - Visible Condition removed (was Control.HasFocus(11) -->
+                <visible allowhiddenfocus="true"></visible>
                 <include content="Object_MenuBar_Group_Texture">
                     <param name="colordiffuse" value="main_fg_12" />
                     <param name="overlay" value="false" />
@@ -24,7 +25,7 @@
                     <right>0</right>
 					<!-- PVR014 - Group Switcher Customisations -->
 					<!-- height changed from 60 -->
-                    <height>70</height>
+                    <height>35</height>
 					<!-- PVR014 - END -->
                     <centertop>50%</centertop>
                 </include>
