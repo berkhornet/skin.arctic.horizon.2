@@ -1510,6 +1510,8 @@
         <param name="fo_texture" default="common/circle.png" />
         <definition>
             <control type="group">
+				<!-- PVR014 - Do not display texture if TV Guide (Group Switcher) -->
+				<visible>!Window.IsVisible(10702)</visible>
                 <nested />
                 <control type="image">
                     <include content="Dimension_Padding"><param name="pad" value="-40" /></include>
@@ -1517,8 +1519,6 @@
                 </control>
                 <control type="image">
                     <texture colordiffuse="$PARAM[colordiffuse]" border="30">$PARAM[fo_texture]</texture>
-					<!-- PVR014 - Do not display texture if TV Guide (Group Switcher) -->
-					<visible>!Window.IsVisible(10702)</visible>
                 </control>
                 <include content="Object_Control" condition="$PARAM[overlay]">
                     <param name="control" value="image" />
