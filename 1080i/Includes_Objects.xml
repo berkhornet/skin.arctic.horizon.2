@@ -1469,7 +1469,7 @@
                             <align>center</align>
                             <font>$PARAM[font]</font>
 							<!-- PVR014 - textcolor changed from $PARAM[color]_70 -->
-                            <textcolor>$VAR[ColorHighlight]</textcolor>
+                            <textcolor>$VAR[ColorGradient]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -1494,7 +1494,7 @@
                             <align>center</align>
                             <font>$PARAM[font]</font>
 							<!-- PVR014 - textcolor changed from $VAR[ColorSelected] -->
-                            <textcolor>$VAR[ColorGradient]</textcolor>
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>

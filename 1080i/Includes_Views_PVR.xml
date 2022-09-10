@@ -21,6 +21,9 @@
                 <include content="Object_MenuBar_Group_Texture">
                     <param name="colordiffuse" value="main_fg_12" />
                     <param name="overlay" value="false" />
+					<!-- PVR014 - Group Switcher Customisations -->
+					<!-- parameter added -->
+					<param name="squared" value="true" />
                     <left>0</left>
                     <right>0</right>
 					<!-- PVR014 - Group Switcher Customisations -->
