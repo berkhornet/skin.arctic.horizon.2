@@ -1510,8 +1510,6 @@
         <param name="fo_texture" default="common/circle.png" />
         <definition>
             <control type="group">
-				<!-- PVR014 - Do not display texture if TV Guide (Group Switcher) -->
-				<visible>!Window.IsVisible(10702)</visible>
                 <nested />
                 <control type="image">
                     <include content="Dimension_Padding"><param name="pad" value="-40" /></include>
