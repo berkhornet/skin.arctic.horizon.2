@@ -75,7 +75,7 @@
                 <include content="Object_Control" condition="!Skin.String(ForegroundStyle,FlixArt) + !Skin.String(ForegroundStyle,KeyArt)">
                     <param name="control" value="image" />
                     <fadetime>800</fadetime>
-                    <!-- BACK001 - texture changed from $INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]-->
+                    <!-- BACK001 - texture changed from $INFO[Container(99950).ListItem.Art(blurimage)] -->
                     <texture background="true">$VAR[Image_Background_Blur]</texture>
                 </include>
 
