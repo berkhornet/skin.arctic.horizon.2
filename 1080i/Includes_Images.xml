@@ -13,27 +13,32 @@
 		<value condition="$EXP[Exp_HomeWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
 		<!-- BACK001 - END Add Home screen backgrounds -->
 		
-		<!-- BACK001 - Ensure thumbs do not apply to "Library" screens, MyPrograms.xml (10001) -->
-		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
+		<!-- BACK001 - START Other "Non-Blur" Backgrounds -->
+		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
+		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
+		<value condition="$EXP[Exp_VideoWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
+		<value condition="$EXP[Exp_MusicWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
+		<!--value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value -->		
 		<value condition="String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
-		<!-- BACK001 - Ensure thumbs do not apply to "Library" screens, MyPrograms.xml (10001) -->
+		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
+		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
 		
 		<!-- BACK001 - START Add conditions for Poster and Thumb blur images -->
-		<value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),ListItem.Art(poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),ListItem.Art(thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
 		<!-- BACK001 - END Add conditions for Poster and Thumb blur images -->	
 	
-        <!-- STANDARD AH2 CONDITIONS -->
-        <value condition="String.IsEmpty(String.IsEmpty(Container(99950).ListItem.BlurImage))">background/blur2.png</value>
-        <value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),ListItem.Art(artist.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.Fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(String.IsEmpty(Container(99950).ListItem.BlurImage.Original),Window(Home).Property(TMDbHelper.ListItem.TVShow.Fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <!-- STANDARD AH2 CONDITIONS -->
+        <!-- START STANDARD AH2 CONDITIONS -->
+        <!--value condition="String.IsEmpty(Container(99950).ListItem.Art(blurimage))">background/blur2.png</value -->
+        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(artist.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
+        <!-- END STANDARD AH2 CONDITIONS -->
         
         <!-- BACK001 - START Add conditions for other screens without blur images -->
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
