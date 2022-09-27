@@ -18,7 +18,7 @@
 		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
 		<value condition="$EXP[Exp_VideoWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_MusicWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
-		<!--value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value -->		
+		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
 		<value condition="String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
