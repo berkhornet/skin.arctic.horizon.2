@@ -21,31 +21,33 @@
         <definition>
             <control type="group">
                 <height>80</height>
-                <visible>!$PARAM[visible]</visible>
-                <animation effect="fade" start="0" end="100" time="200" delay="800" reversible="true">Visible</animation>
+                <visible>![$PARAM[mainlogo_visible]]</visible>
+                <animation effect="fade" start="0" end="100" time="200" delay="400" reversible="true">Visible</animation>
                 <animation effect="fade" start="100" end="0" delay="0" time="200" reversible="true">Hidden</animation>
                 <include content="Info_Title_Label">
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
-                    <visible>!$PARAM[templogo_visible]</visible>
+                    <visible>![$PARAM[templogo_visible]]</visible>
                 </include>
                 <control type="image">
                     <height>80</height>
+                    <width>75%</width>
                     <aspectratio align="left">keep</aspectratio>
                     <fadetime>200</fadetime>
-                    <width>75%</width>
-                    <texture background="true">$VAR[Image_CropLogo_Fallback]</texture>
+                    <texture background="true">$PARAM[templogo_texture]</texture>
                     <visible>$PARAM[templogo_visible]</visible>
                 </control>
             </control>
-            <control type="image">
-                <height>80</height>
-                <width>75%</width>
-                <aspectratio align="left">keep</aspectratio>
-                <fadetime>200</fadetime>
-                <texture background="true">$VAR[Image_CropLogo_Main]</texture>
+            <control type="group">
                 <animation effect="fade" start="0" end="100" time="200" delay="0" reversible="true">Visible</animation>
-                <animation effect="fade" start="100" end="0" delay="800" time="200" reversible="true">Hidden</animation>
-                <visible>$PARAM[visible]</visible>
+                <animation effect="fade" start="100" end="0" delay="400" time="200" reversible="true">Hidden</animation>
+                <visible>$PARAM[mainlogo_visible]</visible>
+                <control type="image">
+                    <height>80</height>
+                    <width>75%</width>
+                    <aspectratio align="left">keep</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$PARAM[mainlogo_texture]</texture>
+                </control>
             </control>
         </definition>
     </include>
@@ -54,6 +56,8 @@
         <param name="colordiffuse" default="main_fg" />
         <param name="container" default="" />
         <param name="width" default="info_plot_w" />
+        <param name="mainlogo_visible">[!String.IsEmpty(Container(99950).ListItem.Art(cropimage)) | !String.IsEmpty(Container(99950).ListItem.Property(base_clearlogo))]</param>
+        <param name="mainlogo_texture">$VAR[Image_CropLogo]</param>
         <definition>
             <control type="group">
                 <height>80</height>
@@ -62,14 +66,14 @@
                 <include content="Info_Title_Label" condition="!Skin.HasSetting(TMDbHelper.EnableCrop)">
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
                 </include>
-
                 <!-- Other -->
                 <include content="Info_Title_Logo" condition="Skin.HasSetting(TMDbHelper.EnableCrop)">
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
-                    <param name="visible">[!String.IsEmpty(Container(99950).ListItem.Art(cropimage)) + String.IsEmpty(Window(Home).Property(TMDBHelper.IsUpdating))]</param>
-                    <param name="templogo_visible">[[!String.IsEmpty($PARAM[container]ListItem.Art(clearlogo)) | !String.IsEmpty($PARAM[container]ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty($PARAM[container]ListItem.Art(artist.clearlogo))]]</param>
+                    <param name="mainlogo_visible">$PARAM[mainlogo_visible]</param>
+                    <param name="mainlogo_texture">$PARAM[mainlogo_texture]</param>
+                    <param name="templogo_visible">$PARAM[templogo_visible]</param>
+                    <param name="templogo_texture">$PARAM[templogo_texture]</param>
                 </include>
-
             </control>
         </definition>
     </include>
@@ -86,18 +90,6 @@
                 <centertop>52%</centertop>
                 <visible>$PARAM[visible]</visible>
             </control>
-            <!-- <control type="$PARAM[controltype]">
-                <aligny>center</aligny>
-                <label>•</label>
-                <textcolor>$VAR[ColorHighlight]</textcolor>
-                <font>$PARAM[font]</font>
-                <width>auto</width>
-                <textoffsetx>0</textoffsetx>
-                <visible>$PARAM[visible]</visible>
-                <texturefocus />
-                <texturenofocus />
-            </control> -->
-            <!-- <control type="label"> -->
             <control type="$PARAM[controltype]">
                 <width>auto</width>
                 <aligny>center</aligny>
@@ -584,35 +576,35 @@
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Half</include>
+                            <include>Texture_Star_Half</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],1)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Half</include>
+                            <include>Texture_Star_Half</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],3)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Half</include>
+                            <include>Texture_Star_Half</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],5)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Half</include>
+                            <include>Texture_Star_Half</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],7)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Half</include>
+                            <include>Texture_Star_Half</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star5.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],9)">Conditional</animation>
                         </control>
@@ -625,35 +617,35 @@
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Full</include>
+                            <include>Texture_Star_Full</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],10) + !String.StartsWith($PARAM[rating_prop],9) + !String.StartsWith($PARAM[rating_prop],8) + !String.StartsWith($PARAM[rating_prop],7) + !String.StartsWith($PARAM[rating_prop],6) + !String.StartsWith($PARAM[rating_prop],5) + !String.StartsWith($PARAM[rating_prop],4) + !String.StartsWith($PARAM[rating_prop],3) + !String.StartsWith($PARAM[rating_prop],2)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Full</include>
+                            <include>Texture_Star_Full</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],10) + !String.StartsWith($PARAM[rating_prop],9) + !String.StartsWith($PARAM[rating_prop],8) + !String.StartsWith($PARAM[rating_prop],7) + !String.StartsWith($PARAM[rating_prop],6) + !String.StartsWith($PARAM[rating_prop],5) + !String.StartsWith($PARAM[rating_prop],4)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Full</include>
+                            <include>Texture_Star_Full</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],10) + !String.StartsWith($PARAM[rating_prop],9) + !String.StartsWith($PARAM[rating_prop],8) + !String.StartsWith($PARAM[rating_prop],7) + !String.StartsWith($PARAM[rating_prop],6)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Full</include>
+                            <include>Texture_Star_Full</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],10) + !String.StartsWith($PARAM[rating_prop],9) + !String.StartsWith($PARAM[rating_prop],8)">Conditional</animation>
                         </control>
                         <control type="image">
                             <height>64</height>
                             <width>64</width>
-                            <include condition="!Skin.HasSetting(EnableMonochromeFlags)">Texture_Star_Full</include>
+                            <include>Texture_Star_Full</include>
                             <texture colordiffuse="$PARAM[colordiffuse]_100">flags/star10.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!String.StartsWith($PARAM[rating_prop],10)">Conditional</animation>
                         </control>
@@ -683,13 +675,9 @@
                 <top>$PARAM[icon_top]</top>
                 <width>$PARAM[icon_width]</width>
                 <height>$PARAM[icon_height]</height>
-                <include content="Object_Texture" condition="!Skin.HasSetting(EnableMonochromeFlags)">
+                <include content="Object_Texture">
                     <param name="texture" value="$PARAM[icon]" />
                     <param name="colordiffuse" value="$PARAM[icon_colordiffuse]" />
-                </include>
-                <include content="Object_Texture" condition="Skin.HasSetting(EnableMonochromeFlags)">
-                    <param name="texture" value="$PARAM[icon]" />
-                    <param name="colordiffuse" value="$PARAM[colordiffuse]_100" />
                 </include>
                 <include content="Object_Visible" condition="$PARAM[is_autohide]">
                     <param name="visible">!String.IsEmpty($PARAM[label])</param>
@@ -734,7 +722,7 @@
     </include>
 
     <include name="Info_MiscLine">
-        <param name="directory">$VAR[Texture_ColorMode_Dir]</param>
+        <param name="directory">color</param>
         <param name="align">left</param>
         <param name="tmdbtype">ListItem</param>
         <param name="colordiffuse">main_fg</param>
@@ -808,7 +796,7 @@
     </include>
 
     <include name="Info_Ratings">
-        <param name="directory">$VAR[Texture_ColorMode_Dir]</param>
+        <param name="directory">color</param>
         <param name="align">left</param>
         <param name="rottentomatoes">true</param>
         <param name="usermeter">true</param>
@@ -835,10 +823,6 @@
                 <align>$PARAM[align]</align>
                 <itemgap>4</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
-                <!-- <include content="Info_StarRating">
-                    <left>-16</left>
-                </include> -->
-
                 <include content="Info_Ratings_Item">
                     <param name="include_condition">!Skin.HasSetting(Ratings.DisableStarRating)</param>
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
@@ -1034,10 +1018,42 @@
         </include>
     </include>
 
+    <include name="Info_Codec_MonoStack">
+        <param name="color_fg">main_fg_90</param>
+        <param name="color_bg">main_fg_30</param>
+        <definition>
+            <control type="group">
+                <nested />
+                <width>60</width>
+                <height>32</height>
+                <centertop>50%</centertop>
+                <visible>$PARAM[visible]</visible>
+                <control type="image">
+                    <texture colordiffuse="$PARAM[color_bg]">$PARAM[icon]</texture>
+                    <height>64</height>
+                    <width>64</width>
+                    <centerleft>50%</centerleft>
+                    <aspectratio>keep</aspectratio>
+                    <top>-22</top>
+                </control>
+                <control type="label">
+                    <font>font_videocodec_bold</font>
+                    <textcolor>$PARAM[color_fg]</textcolor>
+                    <label>$PARAM[label]</label>
+                    <align>center</align>
+                    <height>20</height>
+                    <bottom>0</bottom>
+                    <left>-16</left>
+                    <right>-16</right>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="Info_Codecs">
         <param name="infohide" default="true" />
         <param name="align" default="left" />
-        <param name="directory" default="$VAR[Texture_ColorMode_Dir]" />
+        <param name="directory" default="color" />
         <definition>
             <control type="label" id="99995">
                 <label>$VAR[Image_RipSource]</label>
@@ -1045,25 +1061,6 @@
                 <width>100</width>
                 <visible>false</visible>
             </control>
-
-            <!-- Kodi Logo -->
-            <!-- <control type="image">
-                <left>-10</left>
-                <width>64</width>
-                <height>64</height>
-                <centertop>50%</centertop>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/kodi.png</texture>
-            </control>
-            <control type="label">
-                <left>-20</left>
-                <height>32</height>
-                <textcolor>main_fg_100</textcolor>
-                <width>auto</width>
-                <centertop>52%</centertop>
-                <label>KODI</label>
-                <font>font_logo</font>
-            </control> -->
 
             <!-- Playable Items -->
             <control type="grouplist">
@@ -1478,8 +1475,9 @@
                     </control>
                     <include content="Info_Title" condition="$PARAM[title]">
                         <param name="colordiffuse" value="$PARAM[colordiffuse]" />
-                        <param name="container" value="$PARAM[container]" />
                         <param name="width" value="$PARAM[plotwidth]" />
+                        <param name="templogo_visible">[!String.IsEmpty($PARAM[container]ListItem.Art(clearlogo))]</param>
+                        <param name="templogo_texture">$INFO[$PARAM[container]ListItem.Art(clearlogo)]</param>
                     </include>
                     <control type="group">
                         <height>40</height>
