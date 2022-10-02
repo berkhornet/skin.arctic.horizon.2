@@ -211,12 +211,12 @@
     <variable name="Label_Title_Main">
         <value condition="Window.IsVisible(script-tmdbhelper-recommendations.xml)">$INFO[Window.Property(Title)]</value>
         <value condition="$EXP[Exp_InfoDialogs]">$VAR[Label_Title]</value>
-        <value condition="Window.IsVisible(Home) + Integer.IsEqual(Window(Home).Property(TMDBHelper.WidgetContainer),301) + !$EXP[Exp_InfoDialogs]">$VAR[Label_Title_C301]</value>
+        <value condition="Window.IsVisible(Home) + Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301) + !$EXP[Exp_InfoDialogs]">$VAR[Label_Title_C301]</value>
         <value>$VAR[Label_Title_Parent]</value>
     </variable>
 
     <variable name="Label_Plot_Main">
-        <value condition="!$EXP[Exp_InfoDialogs] + Window.IsVisible(Home) + Integer.IsEqual(Window(Home).Property(TMDBHelper.WidgetContainer),301)">$VAR[Label_Plot_C301]</value>
+        <value condition="!$EXP[Exp_InfoDialogs] + Window.IsVisible(Home) + Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301)">$VAR[Label_Plot_C301]</value>
         <value>$VAR[Label_Plot_Parent]</value>
     </variable>
 
@@ -348,7 +348,7 @@
         <value condition="!String.IsEmpty(Container.ListItem.Plot)"> ~ </value>
     </variable>
     <variable name="Label_Plot_Widget_Title">
-        <value condition="String.IsEqual(Window(Home).Property(Slide.WidgetInfoStyle),Full)" />
+        <value condition="String.IsEqual(Window.Property(Slide.WidgetInfoStyle),Full)" />
         <value condition="!String.IsEmpty(Container.ListItem.TvShowTitle) + !String.IsEmpty(Container.ListItem.Title) + !String.IsEqual(Container.ListItem.TvShowTitle,Container.ListItem.Title) + !String.IsEqual(Container.ListItem.DBType,tvshow)">$INFO[Container.ListItem.TvShowTitle,,: ]$INFO[Container.ListItem.Title]$VAR[Label_Plot_Widget_Title_Tilde]</value>
         <value condition="String.IsEqual(Container.ListItem.DBType,episode)">$INFO[Container.ListItem.Title]$VAR[Label_Plot_Widget_Title_Tilde]</value>
         <value condition="!String.IsEmpty(Container.ListItem.TvShowTitle)">$INFO[Container.ListItem.TvShowTitle]$INFO[Container.ListItem.Year, (,)]$VAR[Label_Plot_Widget_Title_Tilde]</value>
