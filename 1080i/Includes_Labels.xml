@@ -304,7 +304,7 @@
 		<value condition="Container.Content(tvshows)">TV Shows By Title</value>   																	<!-- MISC003 - Add condition for TV Shows -->
 		<value condition="Container.Content(sets)">Movie Collections</value>  																		<!-- MISC003 - Add condition for Movie Sets -->
         <value condition="Container.Content(seasons)">$INFO[Container.ShowTitle] - $LOCALIZE[33054]</value>											<!-- MISC003 - Add TV Show Title to Seasons Header -->
-    <value condition="Container.Content(episodes) + !String.IsEmpty(Container.FolderName) + String.IsEqual(Container.FolderName,Container.ShowTitle)">$LOCALIZE[20360]</value>
+		<value condition="Container.Content(episodes) + !String.IsEmpty(Container.FolderName) + String.IsEqual(Container.FolderName,Container.ShowTitle)">$LOCALIZE[20360]</value>
         
         <value condition="Container.Content(albums)">$LOCALIZE[132]</value>
         <value condition="Container.Content(songs)">$LOCALIZE[134]</value>
