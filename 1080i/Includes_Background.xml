@@ -308,7 +308,6 @@
                 </include>
                 <nested />
             </include>
-
             <!-- BACK002 - START Add Kodi Logo Backgrounds -->
 			<control type="group">
 				<control type="image">
@@ -337,14 +336,14 @@
 			<!-- BACK002 - END Add Kodi Logo Backgrounds -->
 			
             <!-- BACK001 - START Disable overlay at bottom of Main Background -->
-			<!-- control type="group">
-				<include>Animation_Background_FadeInOut</include>
-				<include content="Object_Control" condition="Skin.String(DividerStyle,Fade) | String.IsEmpty(Skin.String(DividerStyle))" >
-					<param name="control" value="image" />
-					<texture colordiffuse="main_bg_100">common/floor.png</texture>
-				</include>
-			</control -->
-			<!-- BACK001 - END Disable overlay at bottom of Main Background -->
+            <!-- control type="group">
+                <include>Animation_Background_FadeInOut</include>
+                <include content="Object_Control">
+                    <param name="control" value="image" />
+                    <texture colordiffuse="main_bg_100">background/floor.png</texture>
+                </include>
+            </control -->
+            			<!-- BACK001 - END Disable overlay at bottom of Main Background -->
         </definition>
     </include>
 
