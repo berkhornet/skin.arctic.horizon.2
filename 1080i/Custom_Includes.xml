@@ -139,7 +139,7 @@
 	<!-- PVR Channel Provider variable (Icon) -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNatho_Channel]">special://userdata/customisations\Addon Icons\FHNatho.png</value>
-		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer New.png</value>
+		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\Addon Icons\CUTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\Addon Icons\Anova.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
