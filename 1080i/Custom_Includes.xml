@@ -143,11 +143,11 @@
 	<!-- PVR Channel Provider variable (Icon) -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNatho_Channel]">special://userdata/customisations\Addon Icons\FHNatho.png</value>
-		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer.png</value>
-		<value condition="$EXP[ITV_Channel]">special://userdata/customisations\Addon Icons\ITV Hub New.png</value>
-		<value condition="$EXP[STV_Channel]">special://userdata/customisations\Addon Icons\STV Icon.png</value>
-		<value condition="$EXP[All4_Channel]">special://userdata/customisations\Addon Icons\All4 Icon.png</value>
-		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\Addon Icons\UKTV Play Icon 2.png</value>
+		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer Icon v2.png</value>
+		<value condition="$EXP[ITV_Channel]">special://userdata/customisations\Addon Icons\ITV Hub Icon v2.png</value>
+		<value condition="$EXP[STV_Channel]">special://userdata/customisations\Addon Icons\STV Icon v2.png</value>
+		<value condition="$EXP[All4_Channel]">special://userdata/customisations\Addon Icons\All4 Icon v2.png</value>
+		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\Addon Icons\UKTVPlay Icon 2.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\Addon Icons\CUTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\Addon Icons\Anova.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
