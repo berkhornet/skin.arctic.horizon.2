@@ -134,24 +134,24 @@
 	<!-- Expressions for Channel Provider variable (ImagePVRProviderIcon) -->
 	<expression name="FHNatho_Channel">Integer.IsLess(ListItem.ChannelNumberLabel,200) | Integer.IsGreater(ListItem.ChannelNumberLabel,599) </expression>
 	<expression name="Anova_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,201) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,599) </expression>
-	<expression name="BBC_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,401) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,406) </expression>
-	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,407) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>	
+	<expression name="BBC_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,401) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,410) </expression>
+	<expression name="ITV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,411) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,420) </expression>
+	<expression name="STV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,421) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,430) </expression>
+	<expression name="All4_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,431) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,440) </expression>
+	<expression name="UKTVPlay_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,441) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,450) </expression>
+	<expression name="CUTV_Channel">Integer.IsGreaterOrEqual(ListItem.ChannelNumberLabel,451) + Integer.IsLessOrEqual(ListItem.ChannelNumberLabel,499) </expression>
 	<!-- PVR Channel Provider variable (Icon) -->
 	<variable name="ImagePVRProviderIcon">
 		<value condition="$EXP[FHNatho_Channel]">special://userdata/customisations\Addon Icons\FHNatho.png</value>
 		<value condition="$EXP[BBC_Channel]">special://userdata/customisations\Addon Icons\BBC iPlayer.png</value>
+		<value condition="$EXP[ITV_Channel]">special://userdata/customisations\Addon Icons\ITV Hub New.png</value>
+		<value condition="$EXP[STV_Channel]">special://userdata/customisations\Addon Icons\STV Icon.png</value>
+		<value condition="$EXP[All4_Channel]">special://userdata/customisations\Addon Icons\All4 Icon.png</value>
+		<value condition="$EXP[UKTVPlay_Channel]">special://userdata/customisations\Addon Icons\UKTV Play Icon 2.png</value>
 		<value condition="$EXP[CUTV_Channel]">special://userdata/customisations\Addon Icons\CUTV.png</value>
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\Addon Icons\Anova.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
-	<!-- Alternative PVR Channel Provider variable (Fanart)-->
-	<!-- variable name="ImagePVRProviderIcon">
-		<value condition="$EXP[FHNathoChannel]">special://userdata/customisations\Addon Fanart\FHNatho.jpg</value>
-		<value condition="$EXP[BBCChannel]">special://userdata/customisations\Addon Fanart\BBC iPlayer New.png</value>
-		<value condition="$EXP[CUTVChannel]">special://userdata/customisations\Addon Fanart\CUTV.jpg</value>
-		<value condition="$EXP[AnovaChannel]">special://userdata/customisations\Addon Fanart\Anova.png</value>
-		<value>special://userdata/customisations\Addon Fanart\NoProvider.png</value>
-	</variable -->
 	
 	<!-- SKIN BACKGROUNDS EXPRESSIONS & VARIABLES -->
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
