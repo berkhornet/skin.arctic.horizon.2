@@ -512,7 +512,7 @@
                             <param name="colordiffuse">$VAR[ColorSelected]</param>
                         </include>
                         <colordiffuse>dialog_fg_70</colordiffuse>
-                        <texture border="10">common/box.png</texture>
+                        <texture border="12">common/box.png</texture>
                         <animation effect="fade" start="100" end="20" condition="!ListItem.property(sync)">Conditional</animation>
                     </control>
                     <control type="label">
@@ -1192,7 +1192,7 @@
                 </include>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <control type="group">
                     <top>-$PARAM[misc]</top>
@@ -1247,7 +1247,7 @@
                     <visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,video) | $EXP[Exp_IsPVRItem]</visible>
                     <include content="Object_Control" condition="$PARAM[bg_layer]">
                         <param name="control" value="image" />
-                        <texture border="10" colordiffuse="bbffffff">diffuse/poster_fade.png</texture>
+                        <texture border="12" colordiffuse="bbffffff">diffuse/poster_fade.png</texture>
                     </include>
                     <include content="Object_Control" condition="$PARAM[fg_layer]">
                         <param name="control" value="group" />
@@ -1285,7 +1285,7 @@
                 </include>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <control type="group">
                     <top>-$PARAM[misc]</top>
@@ -1333,7 +1333,7 @@
                 </include>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <control type="group">
                     <include condition="$PARAM[fg_layer] + !$PARAM[selected]" content="Object_Indicator">
@@ -1382,7 +1382,7 @@
                     <visible>String.IsEqual($PARAM[listitem_dbtype],actor) | String.IsEqual($PARAM[listitem_dbtype],video) | $PARAM[detailed]</visible>
                     <include content="Object_Control" condition="$PARAM[bg_layer]">
                         <param name="control" value="image" />
-                        <texture border="10" colordiffuse="bbffffff">diffuse/poster_fade.png</texture>
+                        <texture border="12" colordiffuse="bbffffff">diffuse/poster_fade.png</texture>
                     </include>
                     <include content="Object_Control" condition="$PARAM[fg_layer]">
                         <param name="control" value="group" />
@@ -1423,7 +1423,7 @@
                 </include>
                 <include content="Object_Control" condition="!$PARAM[selected] + $PARAM[bg_layer] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <control type="group">
                     <top>-$PARAM[misc]</top>
@@ -1884,7 +1884,7 @@
                 </control>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <include content="Object_SelectBox" condition="$PARAM[selected]">
                     <param name="indicator" value="false" />
@@ -1937,7 +1937,7 @@
 
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
 
                 <include content="Object_SelectBox" condition="$PARAM[selected]">
@@ -1994,7 +1994,7 @@
                 </control>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <include content="Object_SelectBox" condition="$PARAM[selected]">
                     <param name="indicator" value="false" />
@@ -2082,7 +2082,7 @@
                 </control>
                 <include content="Object_Control" condition="!$PARAM[selected] + Skin.HasSetting(Glass.BorderOutline)">
                     <param name="control" value="image" />
-                    <texture colordiffuse="overlay_line" border="10">common/box-outline.png</texture>
+                    <texture colordiffuse="overlay_line" border="12">common/box-outline.png</texture>
                 </include>
                 <include content="Object_SelectBox" condition="$PARAM[selected]">
                     <param name="indicator" value="false" />
