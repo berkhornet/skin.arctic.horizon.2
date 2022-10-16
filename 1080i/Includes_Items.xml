@@ -177,9 +177,12 @@
             <param name="sliceid" value="5204" />
             <param name="label" value="Trakt" />
             <param name="icon" value="special://skin/extras/icons/watchlist.png" />
-            <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(Container(99950).ListItem.Property(tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
-            <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
-            <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
+            <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(Container(99950).ListItem.Property(tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" />
+            <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + !String.IsEqual(ListItem.DBType,episode)">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
+            <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id)) + !String.IsEqual(ListItem.DBType,episode)">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
+
+            <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id)) + String.IsEqual(ListItem.DBType,episode)">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode],cache_refresh)</onclick>
+            <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id)) + String.IsEqual(ListItem.DBType,episode)">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode],cache_refresh)</onclick>
         </include>
         <include content="Object_Info_Button_Circle">
             <param name="id" value="5005" />
@@ -1579,8 +1582,8 @@
             <param name="id" value="8003" />
             <param name="control" value="radiobutton" />
             <label>$LOCALIZE[31226]</label>
-            <onclick>Skin.ToggleSetting(Background.DisableExtraFanart)</onclick>
-            <selected>!Skin.HasSetting(Background.DisableExtraFanart)</selected>
+            <onclick>Skin.ToggleSetting(Background.ExtraFanart)</onclick>
+            <selected>Skin.HasSetting(Background.ExtraFanart)</selected>
         </include>
         <include content="Dialog_Settings_Button" description="Use videowindow for background">
             <param name="id" value="8004" />
