@@ -156,7 +156,8 @@
 		<!-- BACK003 - START Use Home Screen overlay -->
 		<include content="Object_Control">
             <param name="control" value="image" />
-            <texture colordiffuse="main_bg_45">background/bg.jpg</texture>
+            <texture colordiffuse="main_bg_80">background/combined_flixart.png</texture>
+            <include>Animation_Background_FadeInOut</include>
         </include>
 		<!-- BACK003 - END Use Home Screen overlay -->
     </include>
@@ -278,11 +279,11 @@
                 <include condition="!Skin.String(BackgroundStyle,Fanart)">Background_FlixKeyArt</include>
                 <nested />
             </include>
-			<!-- BACK002 - START Add Kodi Logo Backgrounds -->
-			<control type="group">
+			<!-- BACK002 (DISABLED) - START Add Kodi Logo Backgrounds -->
+			<!-- control type="group">
 				<control type="image">
 					<left>65</left>
-					<!-- use 950 for consistency with video/music windows -->
+					<!-- use 950 for consistency with video/music windows>
 					<top>1005</top>
 					<width>64</width>
 					<height>64</height>
@@ -292,7 +293,7 @@
 				</control>
 				<control type="label">
 					<left>132</left>
-					<!-- use 967 for consistency with video/music windows -->
+					<!-- use 967 for consistency with video/music windows>
 					<top>1022</top>
 					<height>32</height>
 					<textcolor>main_fg_100</textcolor>
@@ -301,8 +302,8 @@
 					<label>KODI</label>
 					<font>font_logo</font>
 				</control>				
-				<!-- visible>Window.IsVisible(12600) | Window.IsVisible(Home) | Window.IsVisible(11114) | Window.IsVisible(10702) | Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</visible -->
-			</control>		
+				<!-- visible>Window.IsVisible(12600) | Window.IsVisible(Home) | Window.IsVisible(11114) | Window.IsVisible(10702) | Window.IsVisible(10003) | Window.IsVisible(10004) | Window.IsVisible(10007) | Window.IsVisible(10016) | Window.IsVisible(10018) | Window.IsVisible(10021) | Window.IsVisible(10022) | Window.IsVisible(10030) | Window.IsVisible(10031) | Window.IsVisible(10032) | Window.IsVisible(10034) | Window.IsVisible(10035) | Window.IsVisible(10040) | Window.IsVisible(10050) | Window.IsVisible(10126)</visible>
+			</control -->		
 			<!-- BACK002 - END Add Kodi Logo Backgrounds -->
             <include content="Object_Control" condition="Skin.String(BackgroundStyle,Fanart)">
                 <param name="control">image</param>
@@ -312,8 +313,8 @@
             <include content="Object_Control" condition="!Skin.String(BackgroundStyle,Fanart)">
                 <param name="control">image</param>
 				<!-- BACK001 - Overlay texture changed -->
-                <!-- texture colordiffuse="main_bg_100">background/combined_flixart.png</texture -->
-				<texture colordiffuse="main_bg_45">background/bg.jpg</texture>
+                <!-- texture WAS colordiffuse="main_bg_100">background/combined_flixart.png</texture -->
+				<texture colordiffuse="main_bg_80">background/combined_flixart.png</texture>
                 <include>Animation_Background_FadeInOut</include>
             </include>
         </definition>
