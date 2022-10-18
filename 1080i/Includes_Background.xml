@@ -177,7 +177,7 @@
             <control type="image">
                 <aspectratio>scale</aspectratio>
 				<!-- BACK001 - texture changed from $PARAM[texture] -->
-                <texture background="true" colordiffuse="main_back">$VAR[ImageSkinBackground]</texture>
+                <texture background="true" colordiffuse="main_flix">$VAR[ImageSkinBackground]</texture>
                 <include content="Background_NotVideo">
                     <param name="fade_end" value="70" />
                 </include>
@@ -202,11 +202,12 @@
     </include>
 
     <include name="Background_None">
-        <include content="Object_Control" condition="![Skin.String(ForegroundStyle,KeyArt) | Skin.String(ForegroundStyle,FlixArt)]">
+        <include condition="![Skin.String(ForegroundStyle,KeyArt) | Skin.String(ForegroundStyle,FlixArt)]">Background_Image</include>
+        <!-- <include content="Object_Control" condition="![Skin.String(ForegroundStyle,KeyArt) | Skin.String(ForegroundStyle,FlixArt)]">
             <param name="control" value="image" />
             <texture colordiffuse="main_back">common/white.png</texture>
             <include>Background_NotVideo</include>
-        </include>
+        </include> -->
     </include>
 
     <include name="Background_NotVideo">
