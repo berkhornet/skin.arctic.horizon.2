@@ -17,8 +17,7 @@
     </variable>
 
     <variable name="Image_Background_Blur">
-        <!-- BACK001 - START Add Home screen backgrounds -->
-        <!-- value condition="String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))">background/blur2.png</value-->		
+        <!-- BACK001 - START Add Home screen backgrounds -->	
 		<value condition="$EXP[Exp_HomeWindow_PVR]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
 		<value condition="$EXP[Exp_HomeWindow_OnDemand]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
 		<value condition="$EXP[Exp_HomeWindow_Videos]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
@@ -30,15 +29,14 @@
 		<!-- BACK001 - START Other "Non-Blur" Backgrounds -->
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
 		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
-		<value condition="$EXP[Exp_VideoWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
-		<value condition="$EXP[Exp_MusicWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
-		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>		
+		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>	
+		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>	
 		<value condition="String.Contains(Container.Folderpath,watchlist)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
 		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
 		
-		<!-- BACK001 - START Add conditions for Poster and Thumb blur images -->
+		<!-- BACK001 - START Add conditions for Poster and Thumb blur images  (DISABLED >
 		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
 		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
 		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
@@ -52,18 +50,8 @@
 		
 		<!-- BACK001 - END Add conditions for Poster and Thumb blur images -->	
 	
-        <!-- START STANDARD AH2 CONDITIONS -->
-        <!--value condition="String.IsEmpty(Container(99950).ListItem.Art(blurimage))">background/blur2.png</value -->
-        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(artist.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        
-        <value condition="!$EXP[Exp_IsMediaWindow] + !$EXP[Exp_HasBackgroundFanart_Widgets] + !$EXP[Exp_InfoDialogs]">background/blur2.png</value>
+        <!-- START STANDARD AH2 CONDITIONS -->    
+        <value condition="!$EXP[Exp_IsMediaWindow] + !$EXP[Exp_HasBackgroundFanart_Widgets] + !$EXP[Exp_InfoDialogs]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + $EXP[Exp_IsCurrentServiceItem]">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + $EXP[Exp_IsCurrentServiceItem]">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
         
@@ -76,7 +64,7 @@
 		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
-		<value>special://userdata/customisations\Skin Images\AH2 Backgrounds\Fallback.jpg</value>
+		<value>special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
 		<!-- value>background/blur2.png</value -->
 		<!-- BACK001 - END Add conditions for other screens without blur images -->
         <value>common/null.png</value>
