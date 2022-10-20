@@ -28,7 +28,7 @@
 		
 		<!-- BACK001 - START Other "Non-Blur" Backgrounds -->
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
+		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\iPlayer.png</value>
 		<value condition="$EXP[Exp_OnDemandWindow] + String.IsEmpty(Container(99950).ListItem.Art(blurimage))">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>
 		<value condition="$EXP[Exp_VideoWindow] + !String.StartsWith(Container.Folderpath,videodb) + !$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>	
 		<value condition="$EXP[Exp_MusicWindow] + !String.StartsWith(Container.Folderpath,musicdb)">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>	
@@ -36,26 +36,11 @@
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
 		<!-- BACK001 - END Other "Non-Blur" Backgrounds  -->
-		
-		<!-- BACK001 - START Add conditions for Poster and Thumb blur images  (DISABLED >
-		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		<value condition="String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-		
-		<value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Poster))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage)) + String.IsEqual(Container(99950).ListItem.Art(blurimage.original),Container(99950).ListItem.Art(Thumb))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        
-		
-		<!-- BACK001 - END Add conditions for Poster and Thumb blur images -->	
 	
         <!-- START STANDARD AH2 CONDITIONS -->    
         <value condition="!$EXP[Exp_IsMediaWindow] + !$EXP[Exp_HasBackgroundFanart_Widgets] + !$EXP[Exp_InfoDialogs]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>
-        
+        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(blurimage))">$INFO[Container(99950).ListItem.Art(blurimage)]</value>       
         <!-- END STANDARD AH2 CONDITIONS -->
         
         <!-- BACK001 - START Add conditions for other screens without blur images -->

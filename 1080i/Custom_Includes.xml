@@ -199,7 +199,7 @@
 		<value condition="$EXP[Exp_HomeWindow_Weather]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>	
 		<value condition="$EXP[Exp_HomeWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Home.jpg</value>
 		<value condition="$EXP[Exp_PVRWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\PVR.png</value>
-		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>	
+		<value condition="$EXP[Exp_OnDemandWindow_iPlayer]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\iPlayer.png</value>	
 		<value condition="$EXP[Exp_OnDemandWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\On Demand.jpg</value>	
 		<value condition="$EXP[Exp_VideoWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Video.jpg</value>
 		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
