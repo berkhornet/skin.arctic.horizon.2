@@ -50,11 +50,9 @@
 		<value condition="$EXP[Exp_MusicWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Music.jpg</value>
 		<value condition="$EXP[Exp_WeatherWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Weather.jpg</value>
 		<value condition="$EXP[Exp_SystemWindow]">special://userdata/customisations\Skin Customisations\AH2 Backgrounds\System.png</value>
-		<value>special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
-		<!-- value>background/blur2.png</value -->
-		<!-- BACK001 - END Add conditions for other screens without blur images -->
 
-        <value>common/null.png</value>
+		<!-- BACK001 - Fallback changed from common/null.png -->
+        <value>special://userdata/customisations\Skin Customisations\AH2 Backgrounds\Fallback.jpg</value>
     </variable>
 
     <variable name="Image_Background_Stretch">
