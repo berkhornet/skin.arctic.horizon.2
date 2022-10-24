@@ -206,9 +206,9 @@
     <include name="Action_Blur_Onload">
 		<!-- BACK001 - param sourceimage changed from Art(fanart) -->
         <include content="_Action_Blur_Onload">           
-            <param name="sourceimage">Art(poster)|Art(thumb)|Art(fanart)</param>
+            <param name="sourceimage">Art(poster)|Art(thumb)|Art(fanart)|Property(fanart)</param>
         </include>		
-		
+
         <!-- <include content="_Action_Blur_Onload">
             <param name="sourceimage">Art(keyart)|Art(fanart)</param>
         </include> -->
