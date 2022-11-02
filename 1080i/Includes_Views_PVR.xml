@@ -29,7 +29,7 @@
 				<!-- PVR014 - START custom background for Group Switcher -->
 				<control type="image">
 					<visible>Window.IsVisible(10702)</visible>
-					<texture>special://home\addons\skin.arctic.horizon.2\extras\textures\button.png</texture>
+					<texture>special://home\addons\skin.arctic.horizon.2\media\common\button.png</texture>
 					<colordiffuse>33000000</colordiffuse>
 					<top>-18</top>
                     <right>0</right>
