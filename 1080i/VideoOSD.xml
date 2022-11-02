@@ -364,10 +364,8 @@
         </control>
 
         <include content="OSD_CastInfo_HintText">
-            <param name="label">$VAR[Label_OSD_HintText]</param>
-			<!-- PVR015 - Only display Episodes/Cast Hint Text when playing library content -->
-			<!-- PVR015 "+ [VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]" added -->
-            <visible>ControlGroup(6000).HasFocus() | [ControlGroup(6001).HasFocus() + [VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]] </visible>
+            <param name="label">$VAR[Label_OSD_HintText]</param>			
+            <visible>ControlGroup(6000).HasFocus() | ControlGroup(6001).HasFocus()</visible>
             <visible>!$EXP[Exp_OSD_ExpandInfo] | [[Control.HasFocus(6401) | Control.HasFocus(6501)] + !Window.IsVisible(videobookmarks) + !Window.IsVisible(pvrchannelguide)]</visible>
             <include>Animation_FadeOut</include>
             <include>Animation_FadeIn_Delay</include>
