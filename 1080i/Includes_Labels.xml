@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_Setting_SelectboxStyle">
+        <value condition="Skin.HasSetting(SelectBox.Thin)">$LOCALIZE[31337]</value>
+        <value>$LOCALIZE[739]</value>
+    </variable>
+
     <variable name="Label_Set">
         <value condition="!String.IsEmpty(ListItem.Set)">$INFO[ListItem.Set]</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Set)">$INFO[Container(99950).ListItem.Set]</value>
@@ -33,11 +38,11 @@
         <value>$LOCALIZE[19055]</value>
     </variable>
     <variable name="Label_OSD_HintText">
-        <value condition="Control.HasFocus(6100)">$LOCALIZE[31293]</value>
+        <value condition="ControlGroup(6001).HasFocus()">$LOCALIZE[31293]</value>
         <value condition="Control.HasFocus(6501)">$LOCALIZE[31298]</value>
         <value condition="VideoPlayer.Content(livetv)">$LOCALIZE[31295]</value>
         <value condition="!Integer.IsEqual(Container(6401).NumItems,0) + !Control.HasFocus(6401)">$LOCALIZE[31296]</value>
-        <value>$LOCALIZE[31294]</value>
+        <value condition="ControlGroup(6000).HasFocus()">$LOCALIZE[31294]</value>
     </variable>
     <variable name="Label_HomeHeader">
         <value condition="!String.IsEmpty(Window(Home).Property(Slide.WidgetTitle))">$INFO[Window(Home).Property(Slide.WidgetTitle)]</value>
