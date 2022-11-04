@@ -22,6 +22,21 @@
             <!-- GEN003 - size changed from 107 -->
             <size>78</size>
         </font>
+
+        <font>
+            <name>font_infotitle_doublerow</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <style>bold</style>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
+        </font>
+        <font>
+            <name>font_infotitle_light_doublerow</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
+        </font>
+
         <font>
             <name>font_weatherlabel</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
@@ -232,6 +247,21 @@
             <size>107</size>
         </font>
         <font>
+            <name>font_infotitle_doublerow</name>
+            <filename>RobotoNotoCondensed-Bold.ttf</filename>
+            <style>bold</style>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
+        </font>
+        <font>
+            <name>font_infotitle_light_doublerow</name>
+            <filename>RobotoNotoCondensed-Light.ttf</filename>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
+        </font>
+
+
+        <font>
             <name>font_weatherlabel</name>
             <filename>RobotoNotoCondensed-Bold.ttf</filename>
             <size>50</size>
@@ -441,6 +471,20 @@
             <filename>RobotoCJKSC-Light.ttf</filename>
             <aspect>0.89</aspect>
             <size>107</size>
+        </font>
+        <font>
+            <name>font_infotitle_doublerow</name>
+            <filename>RobotoCJKSC-Bold.ttf</filename>
+            <aspect>0.89</aspect>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
+        </font>
+        <font>
+            <name>font_infotitle_light_doublerow</name>
+            <filename>RobotoCJKSC-Light.ttf</filename>
+            <aspect>0.89</aspect>
+            <size>70</size>
+            <linespacing>0.74</linespacing>
         </font>
         <font>
             <name>font_weatherlabel</name>
