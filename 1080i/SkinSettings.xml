@@ -280,6 +280,14 @@
                                 <onclick condition="String.IsEqual(Skin.String(Rows.OnDown),Wall)">Skin.Reset(Rows.OnDown)</onclick>
                             </include>
                             <include content="Dialog_Settings_Button">
+                                <param name="id" value="3009" />
+                                <param name="control" value="radiobutton" />
+                                <label>$LOCALIZE[31339]</label>
+                                <visible>Container(3).HasFocus(3)</visible>
+                                <onclick>Skin.ToggleSetting(DialogInfo.FocusButtons)</onclick>
+                                <selected>Skin.HasSetting(DialogInfo.FocusButtons)</selected>
+                            </include>
+                            <include content="Dialog_Settings_Button">
                                 <param name="id" value="3008" />
                                 <param name="control" value="radiobutton" />
                                 <label>$LOCALIZE[31332]</label>
@@ -448,6 +456,15 @@
                                 <selected>!Skin.HasSetting(Codecs.DisableMediaCodecIcons)</selected>
                                 <enable>!Skin.HasSetting(Furniture.DisableLeftFooter)</enable>
                             </include>
+                            <include content="Dialog_Settings_Button" description="Filename Source Icons">
+                                <param name="id" value="4096" />
+                                <param name="control" value="radiobutton" />
+                                <label>-  $LOCALIZE[31338]</label>
+                                <visible>Container(3).HasFocus(4)</visible>
+                                <onclick>Skin.ToggleSetting(Codecs.UseFileNameInfo)</onclick>
+                                <selected>Skin.HasSetting(Codecs.UseFileNameInfo)</selected>
+                                <enable>!Skin.HasSetting(Furniture.DisableLeftFooter)</enable>
+                            </include>
                             <include content="Dialog_Settings_Button" description="Media Provider Icons">
                                 <param name="id" value="4093" />
                                 <param name="control" value="radiobutton" />
@@ -457,6 +474,7 @@
                                 <selected>!Skin.HasSetting(Codecs.DisableMediaProviderIcons)</selected>
                                 <enable>!Skin.HasSetting(Furniture.DisableLeftFooter)</enable>
                             </include>
+
 
                             <!-- Playback -->
                             <include content="Dialog_Settings_Label" description="Playback">

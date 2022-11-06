@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-    <defaultcontrol always="true">5000</defaultcontrol>
+    <include content="Object_DefaultControl" condition="!Skin.HasSetting(DialogInfo.FocusButtons)">
+        <param name="always">true</param>
+        <param name="defaultcontrol">5000</param>
+    </include>
+    <include content="Object_DefaultControl" condition="Skin.HasSetting(DialogInfo.FocusButtons)">
+        <param name="always">true</param>
+        <param name="defaultcontrol">4000</param>
+    </include>
     <menucontrol>4000</menucontrol>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
     <controls>
@@ -16,6 +23,9 @@
 
         <include content="DialogInfo_MainGroup">
             <include content="DialogInfo_LeftGroup">
+                <include content="DialogInfo_PullTab">
+                    <centertop>280</centertop>
+                </include>
             </include>
             <include content="DialogInfo_RightGroup">
                 <!-- Info -->

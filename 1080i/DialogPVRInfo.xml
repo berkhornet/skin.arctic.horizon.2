@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-    <defaultcontrol always="true">5000</defaultcontrol>
+    <include content="Object_DefaultControl" condition="!Skin.HasSetting(DialogInfo.FocusButtons)">
+        <param name="always">true</param>
+        <param name="defaultcontrol">5000</param>
+    </include>
+    <include content="Object_DefaultControl" condition="Skin.HasSetting(DialogInfo.FocusButtons)">
+        <param name="always">true</param>
+        <param name="defaultcontrol">4000</param>
+    </include>
     <menucontrol>4000</menucontrol>
     <onunload>ClearProperty(HasTrailer,Home)</onunload>
     <controls>
@@ -17,6 +24,11 @@
             <include content="DialogInfo_LeftGroup">
                 <param name="icon">$VAR[Image_PVRPoster]</param>
                 <param name="poster_visible">!String.IsEmpty(Container(99950).ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster)) | !String.IsEmpty(ListItem.Art(poster))</param>
+
+
+                <include content="DialogInfo_PullTab">
+                    <centertop>280</centertop>
+                </include>
 
                 <!-- Use Square when Poster not available -->
                 <include content="Object_BigPoster">
@@ -65,7 +77,7 @@
         </include>
 
         <include content="DialogInfo_Furniture">
-            <param name="downarrow_visible">false</param>
+            <param name="downarrow_visible">true</param>
         </include>
 
         <include content="Object_Options_Menu">

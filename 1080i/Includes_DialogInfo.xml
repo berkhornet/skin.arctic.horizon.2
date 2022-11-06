@@ -80,10 +80,12 @@
             <animation effect="fade" reversible="false" start="0" end="100" time="400" delay="200">Visible</animation>
             <animation effect="fade" reversible="false" start="100" end="0" time="200" delay="0">Hidden</animation>
             <animation effect="fade" reversible="false" start="0" end="100" time="400" delay="600">WindowOpen</animation>
-            <animation effect="fade" reversible="false" start="100" end="0" time="400" delay="0">WindowClose</animation>
+            <animation effect="fade" reversible="false" start="100" end="0" time="100" delay="0">WindowClose</animation>
 
             <onleft>5000</onleft>
             <onright>5000</onright>
+            <onback>5000</onback>
+            <onback condition="Skin.HasSetting(DialogInfo.FocusButtons)">Dialog.Close(movieinformation)</onback>
 
             <include>$PARAM[include]</include>
         </control>
@@ -107,6 +109,31 @@
             <onright condition="!Integer.IsEqual(Container(7003).NumItems,0)">SetFocus(7003,0,absolute)</onright>
             <onright condition="Integer.IsEqual(Container(7003).NumItems,0)">4000</onright>
         </include>
+    </include>
+
+    <include name="DialogInfo_PullTab">
+        <control type="group">
+            <nested />
+            <left>0</left>
+            <height>80</height>
+            <width>80</width>
+            <visible>!ControlGroup(4000).HasFocus()</visible>
+            <include>Animation_FadeIn_Delay</include>
+            <control type="image">
+                <right>0</right>
+                <width>30</width>
+                <height>60</height>
+                <centertop>50%</centertop>
+                <texture colordiffuse="dialog_bg_100">common/halfcircle.png</texture>
+            </control>
+            <control type="image">
+                <texture colordiffuse="dialog_fg_90">special://skin/extras/icons/bars.png</texture>
+                <width>32</width>
+                <height>32</height>
+                <centertop>50%</centertop>
+                <right>-3</right>
+            </control>
+        </control>
     </include>
 
     <!-- Furniture -->
@@ -171,8 +198,8 @@
                 <include content="Object_InfoCircle">
                     <param name="icon">special://skin/extras/icons/video-addons.png</param>
                     <param name="role" value="$LOCALIZE[20339]" />
-                    <param name="name" value="$INFO[ListItem.Director]" />
-                    <visible>!String.IsEmpty(ListItem.Director)</visible>
+                    <param name="name" value="$VAR[Label_Director]" />
+                    <visible>!String.IsEmpty(Container(99950).ListItem.Director) | !String.IsEmpty(ListItem.Director)</visible>
                     <include content="Object_InfoCircle_Image">
                         <param name="colordiffuse">white</param>
                         <param name="icon">$VAR[Image_DirectorIcon]</param>
@@ -181,8 +208,8 @@
                 <include content="Object_InfoCircle">
                     <param name="icon">special://skin/extras/icons/write.png</param>
                     <param name="role" value="$LOCALIZE[20417]" />
-                    <param name="name" value="$INFO[ListItem.Writer]" />
-                    <visible>!String.IsEmpty(ListItem.Writer)</visible>
+                    <param name="name" value="$VAR[Label_Writer]" />
+                    <visible>!String.IsEmpty(Container(99950).ListItem.Writer) | !String.IsEmpty(ListItem.Writer)</visible>
                     <include content="Object_InfoCircle_Image">
                         <param name="colordiffuse">white</param>
                         <param name="icon">$VAR[Image_WriterIcon]</param>
