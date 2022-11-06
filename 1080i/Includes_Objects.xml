@@ -402,7 +402,7 @@
                     <param name="control" value="label" />
                     <bottom>-40</bottom>
                     <height>40</height>
-                    <width>400</width>
+                    <width>600</width>
                     <centerleft>50%</centerleft>
                     <align>center</align>
                     <label>$PARAM[label]</label>
@@ -645,7 +645,7 @@
     <include name="Object_MenuButton">
         <param name="icon" default="$VAR[Image_MuteBug]" />
         <param name="overlay" default="true" />
-        <param name="bordersize" default="0" />
+        <param name="bordersize" default="6" />
         <param name="profileimage" default="false" />
         <param name="flipy" default="false" />
         <definition>
