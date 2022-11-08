@@ -149,6 +149,18 @@
 		<value condition="$EXP[Anova_Channel]">special://userdata/customisations\Addon Icons\Anova.png</value>
 		<value>special://userdata/customisations\Skin Customisations\PVR\provider icons\NoProvider.png</value>
 	</variable>
+	<!-- PVR016 - Provider text label added -->
+	<variable name="TextPVRProviderName">
+		<value condition="$EXP[FHNatho_Channel]">FH Natho IPTV</value>
+		<value condition="$EXP[BBC_Channel]">BBC iPlayer</value>
+		<value condition="$EXP[ITV_Channel]">ITV Hub</value>
+		<value condition="$EXP[STV_Channel]">STV Player</value>
+		<value condition="$EXP[All4_Channel]">All4</value>
+		<value condition="$EXP[UKTVPlay_Channel]">UKTV Play</value>
+		<value condition="$EXP[CUTV_Channel]">CUTV</value>
+		<value condition="$EXP[Anova_Channel]">Anova IPTV</value>
+		<value>Unknown</value>
+	</variable>
 	
 	<!-- SKIN BACKGROUNDS EXPRESSIONS & VARIABLES -->
 	<!-- Expressions for Skin Background variable (ImageSkinBackground) -->
