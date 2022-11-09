@@ -40,7 +40,7 @@
                     <param name="id" value="11" />
                     <param name="color_nf" value="main_fg" />
 					<!-- PVR014 - font parameter added -->
-					<param name="font" value="font_hint_bold" />
+					<param name="font" value="font_hint_black" />
                     <left>-20</left>
                     <right>0</right>
 
