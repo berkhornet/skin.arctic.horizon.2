@@ -134,7 +134,7 @@
                 <control type="label">
 					<!-- PVR007 - top changed from 30 -->
                     <top>10</top>
-                    <!-- PVR007 - font changed from font_menulabel -->
+                    <!-- PVR007 - font changed from font_main_black -->
                     <font>font_mini_bold</font>
                     <!-- PVR013 - First part of label changed from $INFO[ListItem.Label,, ] -->
                     <label>$VAR[TextPVREPGProgramInfo,, ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, ]</label>
@@ -156,7 +156,7 @@
                 <control type="textbox">
                     <!-- PVR007 - top changed from 70 -->
                     <top>50</top>
-                    <!-- PVR007 - font changed from font_plotbox -->
+                    <!-- PVR007 - font changed from font_main_plot -->
                     <font>font_plotbox_mini</font>
                     <!-- PVR013 - Label changed from $VAR[Label_Plot] -->
                     <label>$VAR[TextPVREPGProgramPlot]</label>
@@ -338,7 +338,7 @@
                             <width>$PARAM[channelwidth]</width>
                             <align>left</align>
                             <aligny>top</aligny>
-                            <!-- PVR010 - font changed from font_statusbar -->
+                            <!-- PVR010 - font changed from font_tiny -->
 							<font>font_mini_bold</font>
                             <label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
                             <!-- PVR010 - textcolor changed from main_fg_70 to yellow -->
@@ -350,7 +350,7 @@
                                 <width>50%</width>
                                 <align>left</align>
                                 <aligny>top</aligny>
-                                <!-- PVR010 - font changed from font_statusbar -->
+                                <!-- PVR010 - font changed from font_tiny -->
 								<font>font_mini_bold</font>
                                 <label>$LOCALIZE[19030]</label>
                                 <!-- PVR010 - textcolor changed from main_fg_70 to yellow -->
@@ -361,7 +361,7 @@
                                 <width>50%</width>
                                 <align>left</align>
                                 <aligny>top</aligny>
-                                <!-- PVR010 - font changed from font_statusbar -->
+                                <!-- PVR010 - font changed from font_tiny -->
 								<font>font_mini_bold</font>
                                 <label>$LOCALIZE[19031]</label>
                                 <!-- PVR010 - textcolor changed from main_fg_70 to yellow -->
@@ -507,7 +507,7 @@
                     <height>30</height>
                     <height>30</height>
                     <width>auto</width>
-                    <font>font_statusbar</font>
+                    <font>font_tiny</font>
                     <textcolor>main_fg_70</textcolor>
                     <label fallback="19076">$PARAM[path_label]</label>
                 </control>
@@ -555,7 +555,7 @@
                 <control type="label">
                     <height>80</height>
                     <label>$INFO[ListItem.ChannelName]</label>
-                    <font>font_small_bold</font>
+                    <font>font_main_bold</font>
                     <textcolor>main_fg_100</textcolor>
                 </control>
                 <control type="label">
@@ -584,7 +584,7 @@
                     <top>-20</top>
                     <height>80</height>
                     <label>$INFO[ListItem.Title]</label>
-                    <font>font_small_bold</font>
+                    <font>font_main_bold</font>
                     <textcolor>main_fg_100</textcolor>
                 </control>
                 <control type="label">
@@ -621,7 +621,7 @@
                     <top>40</top>
                     <height>auto</height>
                     <label>$VAR[Label_Plot]</label>
-                    <font>font_plotbox</font>
+                    <font>font_main_plot</font>
                     <textcolor>main_fg_70</textcolor>
                 </control>
             </control>

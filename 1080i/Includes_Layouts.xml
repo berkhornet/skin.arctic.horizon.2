@@ -85,7 +85,7 @@
                     <left>grid_x04</left>
                     <textcolor>main_fg_70</textcolor>
                     <selectedcolor>main_fg_70</selectedcolor>
-                    <font>font_small</font>
+                    <font>font_main</font>
                     <!--  PVR001 - EPG: Left align Channel Number -->
                     <align>left</align>
 					<!--  PVR001 - END -->
@@ -100,7 +100,7 @@
                     <left>grid_x04</left>
                     <textcolor>main_fg_70</textcolor>
                     <selectedcolor>main_fg_70</selectedcolor>
-                    <font>font_small_bold</font>
+                    <font>font_main_bold</font>
                     <label>$INFO[ListItem.Label]</label>
                 </include -->
                 <include content="Object_Control" condition="!$PARAM[detailed]">
@@ -263,7 +263,7 @@
                 <align>right</align>
                 <textcolor>main_fg_70</textcolor>
                 <selectedcolor>main_fg_70</selectedcolor>
-                <font>font_statusbar</font>
+                <font>font_tiny</font>
                 <label>$INFO[ListItem.$PARAM[affix]StartTime]$INFO[ListItem.$PARAM[affix]EndTime, - ,]</label>
             </include>
             <include content="Object_Control" condition="$PARAM[detailed]">
@@ -286,7 +286,7 @@
                 <right>30</right>
                 <bottom>20</bottom>
                 <top>60</top>
-                <font>font_statusbar</font>
+                <font>font_tiny</font>
                 <textcolor>main_fg_30</textcolor>
                 <selectedcolor>main_fg_30</selectedcolor>
                 <label>$INFO[ListItem.$PARAM[affix]Genre]</label>
@@ -299,7 +299,7 @@
                 <bottom>20</bottom>
                 <top>60</top>
                 <align>right</align>
-                <font>font_statusbar</font>
+                <font>font_tiny</font>
                 <textcolor>main_fg_30</textcolor>
                 <selectedcolor>main_fg_30</selectedcolor>
                 <label>$INFO[ListItem.$PARAM[affix]StartTime]$INFO[ListItem.$PARAM[affix]EndTime, - ,]</label>
@@ -376,7 +376,7 @@
                 <right>30</right>
                 <bottom>20</bottom>
                 <top>60</top>
-                <font>font_statusbar</font>
+                <font>font_tiny</font>
                 <textcolor>main_fg_30</textcolor>
                 <selectedcolor>main_fg_30</selectedcolor>
                 <label>$INFO[ListItem.Genre]</label>
@@ -450,7 +450,7 @@
                         <textoffsetx>20</textoffsetx>
                         <bottom>20</bottom>
                         <height>40</height>
-                        <font>font_statusbar</font>
+                        <font>font_tiny</font>
                         <textcolor>dialog_fg_70</textcolor>
                         <selectedcolor>dialog_fg_70</selectedcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -464,7 +464,7 @@
                     <aligny>center</aligny>
                     <height>grid_x08</height>
                     <centertop>50%</centertop>
-                    <font>font_plotbox_mini</font>
+                    <font>font_mini_plot</font>
                     <right>240</right>
                     <textcolor>dialog_fg_70</textcolor>
                     <selectedcolor>dialog_fg_70</selectedcolor>
@@ -521,7 +521,7 @@
                         </include>
                         <textcolor>dialog_bg_100</textcolor>
                         <label>[B]SYNC[/B]</label>
-                        <font>font_statusbar</font>
+                        <font>font_tiny</font>
                         <align>center</align>
                     </control>
                 </control>
@@ -624,7 +624,7 @@
                         <selectedcolor>white</selectedcolor>
                         <label>$VAR[Label_ListTrackNumber]</label>
                         <align>center</align>
-                        <font>font_menulabel</font>
+                        <font>font_main_black</font>
                         <bottom>3</bottom>
                         <visible>!ListItem.IsPlaying</visible>
                     </include>
@@ -681,7 +681,7 @@
                             <textcolor>main_fg_90</textcolor>
                             <selectedcolor>main_fg_90</selectedcolor>
                             <label>$VAR[Label_Playlist_Title]</label>
-                            <font>font_small_bold</font>
+                            <font>font_main_bold</font>
                             <height>40</height>
                             <centertop>35%</centertop>
                         </include>
@@ -691,7 +691,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$VAR[Label_Playlist_Sublabel]</label>
-                            <font>font_statusbar</font>
+                            <font>font_tiny</font>
                             <align>left</align>
                             <height>40</height>
                             <centerbottom>35%</centerbottom>
@@ -704,7 +704,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <selectedcolor>main_fg_70</selectedcolor>
                         <label>$INFO[ListItem.Duration]</label>
-                        <font>font_small</font>
+                        <font>font_main</font>
                         <align>right</align>
                         <bottom>3</bottom>
                     </include>
@@ -722,7 +722,7 @@
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <align>left</align>
-                <font>font_small_bold</font>
+                <font>font_main_bold</font>
                 <bottom>3</bottom>
             </control>
             <control type="label">
@@ -731,7 +731,7 @@
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$INFO[ListItem.Label2]</label>
                 <align>right</align>
-                <font>font_small</font>
+                <font>font_main</font>
                 <bottom>3</bottom>
             </control>
         </definition>
@@ -746,7 +746,7 @@
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$VAR[Label_ListTrackNumber]</label>
                 <align>center</align>
-                <font>font_small</font>
+                <font>font_main</font>
                 <bottom>3</bottom>
                 <width>80</width>
                 <left>-20</left>
@@ -757,7 +757,7 @@
                 <textcolor>main_fg_70</textcolor>
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$INFO[ListItem.Title]</label>
-                <font>font_small_bold</font>
+                <font>font_main_bold</font>
                 <bottom>3</bottom>
             </control>
             <control type="label">
@@ -765,7 +765,7 @@
                 <textcolor>main_fg_70</textcolor>
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$VAR[Label_ListArtist]</label>
-                <font>font_small</font>
+                <font>font_main</font>
                 <align>right</align>
                 <bottom>3</bottom>
                 <right>200</right>
@@ -783,7 +783,7 @@
                 <textcolor>main_fg_70</textcolor>
                 <selectedcolor>main_fg_70</selectedcolor>
                 <label>$INFO[ListItem.Duration]</label>
-                <font>font_small</font>
+                <font>font_main</font>
                 <align>right</align>
                 <bottom>3</bottom>
             </control>
@@ -838,7 +838,7 @@
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$VAR[Label_MediaList_Year]</label>
                             <align>right</align>
-                            <font>font_small</font>
+                            <font>font_main</font>
                             <bottom>3</bottom>
                             <width>80</width>
                             <left>-20</left>
@@ -855,7 +855,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$VAR[Label_TitleLabel]</label>
-                            <font>font_small_bold</font>
+                            <font>font_main_bold</font>
                             <bottom>3</bottom>
                         </include>
                         <include content="Object_Control">
@@ -864,7 +864,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$INFO[ListItem.Rating]</label>
-                            <font>font_small</font>
+                            <font>font_main</font>
                             <align>right</align>
                             <bottom>3</bottom>
                         </include>
@@ -899,7 +899,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>font_small_bold</font>
+                            <font>font_main_bold</font>
                             <left>60</left>
                         </include>
                         <include content="Object_Control">
@@ -908,7 +908,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$INFO[ListItem.Label2]</label>
-                            <font>font_small</font>
+                            <font>font_main</font>
                             <align>right</align>
                         </include>
                     </control>
@@ -922,7 +922,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>font_small_bold</font>
+                            <font>font_main_bold</font>
                             <visible>![!String.IsEmpty(ListItem.FileExtension) | String.IsEqual(ListItem.Property(IsPlayable),true)]</visible>
                         </include>
                         <include content="Object_Control">
@@ -931,7 +931,7 @@
                             <textcolor>main_fg_70</textcolor>
                             <selectedcolor>main_fg_70</selectedcolor>
                             <label>$INFO[ListItem.Label2]</label>
-                            <font>font_small</font>
+                            <font>font_main</font>
                             <align>right</align>
                         </include>
                     </control>
@@ -1015,7 +1015,7 @@
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
                     <textcolor>dialog_fg_70</textcolor>
                     <selectedcolor>dialog_fg_70</selectedcolor>
-                    <font>font_small_bold</font>
+                    <font>font_main_bold</font>
                     <label>$INFO[ListItem.Label]</label>
                 </include>
                 <include content="Object_Control" condition="$PARAM[detailed]">
@@ -1026,11 +1026,11 @@
                         <include condition="$PARAM[selected]">Color_SelectedText</include>
                         <textcolor>dialog_fg_70</textcolor>
                         <selectedcolor>dialog_fg_70</selectedcolor>
-                        <font>font_small_bold</font>
+                        <font>font_main_bold</font>
                         <label>$INFO[ListItem.Property(Name)]$INFO[ListItem.Property(Number), (,)]</label>
                     </control>
                     <control type="label">
-                        <font>font_statusbar</font>
+                        <font>font_tiny</font>
                         <centerbottom>35%</centerbottom>
                         <height>20</height>
                         <include condition="$PARAM[selected]">Color_SelectedText</include>
@@ -1116,7 +1116,7 @@
                     <bottom>10</bottom>
                     <textoffsetx>20</textoffsetx>
                     <align>center</align>
-                    <font>font_statusbar</font>
+                    <font>font_tiny</font>
                     <visible>$PARAM[detailed]</visible>
                 </control>
 
@@ -1183,7 +1183,7 @@
                             <textoffsetx>0</textoffsetx>
                             <right>20</right>
                             <align>left</align>
-                            <font>font_small</font>
+                            <font>font_main</font>
                         </control>
                         <control type="label">
                             <include condition="$PARAM[detailed]">Layout_Iconic_Pad</include>
@@ -1194,7 +1194,7 @@
                             <textoffsetx>0</textoffsetx>
                             <right>100</right>
                             <align>right</align>
-                            <font>font_small</font>
+                            <font>font_main</font>
                         </control>
                     </control>
                 </control>
@@ -1439,7 +1439,7 @@
                             <right>15</right>
                             <align>center</align>
                             <aligny>center</aligny>
-                            <font>font_statusbar_bold</font>
+                            <font>font_tiny_bold</font>
                             <height>60</height>
                             <bottom>20</bottom>
                             <visible>String.IsEmpty($PARAM[listitem_label2])</visible>
@@ -1449,7 +1449,7 @@
                             <label>$INFO[$PARAM[listitem_label]]</label>
                             <textoffsetx>15</textoffsetx>
                             <align>center</align>
-                            <font>font_statusbar_bold</font>
+                            <font>font_tiny_bold</font>
                             <height>40</height>
                             <bottom>40</bottom>
                             <visible>!String.IsEmpty($PARAM[listitem_label2])</visible>
@@ -1459,7 +1459,7 @@
                             <label>$INFO[$PARAM[listitem_label2]]</label>
                             <textoffsetx>15</textoffsetx>
                             <align>center</align>
-                            <font>font_statusbar</font>
+                            <font>font_tiny</font>
                             <height>20</height>
                             <bottom>20</bottom>
                             <visible>!String.IsEmpty($PARAM[listitem_label2])</visible>
@@ -1507,7 +1507,7 @@
                 <include condition="$PARAM[selected]">Color_SelectedText</include>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>main_fg_90</textcolor>
-                <font>font_small_bold</font>
+                <font>font_main_bold</font>
                 <align>left</align>
             </control>
             <control type="label">
@@ -1525,7 +1525,7 @@
                 <include condition="$PARAM[selected]">Color_SelectedText</include>
                 <label>$VAR[Label_ListPlot]</label>
                 <textcolor>main_fg_70</textcolor>
-                <font>font_plotbox_mini</font>
+                <font>font_mini_plot</font>
                 <align>left</align>
                 <include content="Object_AutoScroll" condition="!$PARAM[selected]">
                     <param name="autoscroll">false</param>
@@ -1720,7 +1720,7 @@
                                 <label>$VAR[Label_PVRRecordings_Mainlabel]</label>
                                 <textcolor>$PARAM[textcolor]_70</textcolor>
                                 <selectedcolor>$PARAM[textcolor]_70</selectedcolor>
-                                <font>font_small_bold</font>
+                                <font>font_main_bold</font>
                                 <align>left</align>
                                 <visible>![!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Genre) | ListItem.IsFolder | [[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(fullscreenvideo)] + !String.ISEmpty(ListItem.Title)]]</visible>
                             </control>
@@ -1732,7 +1732,7 @@
                                 <label>$VAR[Label_PVRRecordings_Mainlabel]</label>
                                 <textcolor>$PARAM[textcolor]_70</textcolor>
                                 <selectedcolor>$PARAM[textcolor]_70</selectedcolor>
-                                <font>font_small_bold</font>
+                                <font>font_main_bold</font>
                                 <align>left</align>
                                 <visible>!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Genre) | ListItem.IsFolder | [[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(fullscreenvideo)] + !String.ISEmpty(ListItem.Title)]</visible>
                             </control>
@@ -1748,7 +1748,7 @@
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>$PARAM[textcolor]_70</textcolor>
                                 <selectedcolor>$PARAM[textcolor]_70</selectedcolor>
-                                <font>font_statusbar</font>
+                                <font>font_tiny</font>
                                 <align>right</align>
                                 <visible>ListItem.IsFolder</visible>
                             </control>
@@ -1759,7 +1759,7 @@
                                 <label>$VAR[Label_PVRRecordings_Sublabel]$VAR[Label_PVRRecordings_Sublabel_Channels]</label>
                                 <textcolor>$PARAM[textcolor]_70</textcolor>
                                 <selectedcolor>$PARAM[textcolor]_90</selectedcolor>
-                                <font>font_statusbar</font>
+                                <font>font_tiny</font>
                                 <align>left</align>
                                 <autoscroll>false</autoscroll>
                                 <visible>!String.IsEmpty(ListItem.EpisodeName) | !String.IsEmpty(ListItem.Genre) | ListItem.IsFolder | [[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(fullscreenvideo)] + !String.ISEmpty(ListItem.Title)]</visible>
@@ -1815,7 +1815,7 @@
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
                     <label>[B]$INFO[ListItem.Label,, ~ ][/B]$INFO[ListItem.Plot]</label>
                     <textcolor>main_fg_70</textcolor>
-                    <font>font_plotbox_mini</font>
+                    <font>font_mini_plot</font>
                     <top>25</top>
                     <bottom>25</bottom>
                     <left>35</left>
@@ -2110,7 +2110,7 @@
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>$PARAM[textcolor]_70</textcolor>
                         <selectedcolor>$PARAM[textcolor]_70</selectedcolor>
-                        <font>font_statusbar_bold</font>
+                        <font>font_tiny_bold</font>
                         <align>center</align>
                         <textoffsetx>20</textoffsetx>
                     </control>
@@ -2235,7 +2235,7 @@
                             <label>$VAR[Label_Landscape_Lower]</label>
                             <textcolor>$PARAM[textcolor]_70</textcolor>
                             <selectedcolor>$PARAM[textcolor]_70</selectedcolor>
-                            <font>font_statusbar</font>
+                            <font>font_tiny</font>
                             <align>center</align>
                             <textoffsetx>30</textoffsetx>
                             <height>20</height>

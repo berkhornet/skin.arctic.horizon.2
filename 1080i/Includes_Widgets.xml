@@ -24,7 +24,7 @@
                         <param name="label">[CAPITALIZE]$INFO[Container($PARAM[id]).ListItem.Property(widget)][/CAPITALIZE]</param>
                     </include>
                     <label>$PARAM[label]</label>
-                    <font>font_small_bold</font>
+                    <font>font_main_bold</font>
                     <visible>!Control.HasFocus($PARAM[id])</visible>
                     <visible>$PARAM[labelvisible]</visible>
                 </control>
@@ -37,7 +37,7 @@
                         <param name="label">[CAPITALIZE]$INFO[Container($PARAM[id]).ListItem.Property(widget)][/CAPITALIZE]</param>
                     </include>
                     <label>$PARAM[label]</label>
-                    <font>font_menulabel</font>
+                    <font>font_main_black</font>
                     <visible>Control.HasFocus($PARAM[id])</visible>
                     <visible>$PARAM[labelvisible]</visible>
                     <visible>![$PARAM[infowidget_full]] | !Skin.HasSetting(Widgets.ExpandedHeader)</visible>
@@ -336,6 +336,7 @@
     <include name="Widget_Lovefilm">
         <param name="visible">true</param>
         <param name="altvisible">false</param>
+        <param name="busy_visible">true</param>
         <param name="include">List_SmallLandscape_Row</param>
         <param name="height">widget_items_h</param>
         <definition>
@@ -412,7 +413,7 @@
                         </control>
                         <control type="textbox">
                             <height>240</height>
-                            <font>font_infotitle</font>
+                            <font>font_info_black</font>
                             <textcolor>main_fg_100</textcolor>
                             <aligny>center</aligny>
                             <align>center</align>
@@ -460,16 +461,29 @@
                         <aligny>center</aligny>
                         <textcolor>main_fg_30</textcolor>
                         <label>$PARAM[label]</label>
-                        <font>font_small_bold</font>
+                        <font>font_main_bold</font>
                         <visible>!Control.HasFocus($PARAM[id])</visible>
                     </control>
                     <control type="label">
                         <aligny>center</aligny>
                         <textcolor>main_fg_100</textcolor>
                         <label>$PARAM[label]</label>
-                        <font>font_menulabel</font>
+                        <font>font_main_black</font>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
+                </control>
+                <control type="group">
+                    <top>500</top>
+                    <height>230</height>
+                    <visible>$PARAM[busy_visible]</visible>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" time="400" delay="600"/>
+                    </animation>
+                    <include content="Object_BusySpinner">
+                        <param name="colordiffuse">main_fg</param>
+                        <param name="label">$LOCALIZE[31023] $PARAM[label]</param>
+                        <param name="spinspinner">$PARAM[busy_visible]</param>
+                    </include>
                 </control>
             </control>
             <include content="$PARAM[include]">
@@ -490,7 +504,7 @@
                 </include>
                 <top>widget_items_t</top>
                 <height>$PARAM[height]</height>
-                <animation effect="fade" start="100" end="0" time="0" condition="Container($PARAM[id]).IsUpdating">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="Container($PARAM[id]).IsUpdating + $PARAM[busy_visible]">Conditional</animation>
                 <visible>[Container($PARAM[id]).IsUpdating | !Integer.IsEqual(Container($PARAM[id]).NumItems,0) | $PARAM[altvisible]]</visible>
                 <visible>$PARAM[visible]</visible>
                 <include content="Widget_SlideAnimation">
