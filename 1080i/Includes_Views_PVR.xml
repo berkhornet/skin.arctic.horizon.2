@@ -157,7 +157,7 @@
                     <!-- PVR007 - top changed from 70 -->
                     <top>50</top>
                     <!-- PVR007 - font changed from font_main_plot -->
-                    <font>font_plotbox_mini</font>
+                    <font>font_mini_plot</font>
                     <!-- PVR013 - Label changed from $VAR[Label_Plot] -->
                     <label>$VAR[TextPVREPGProgramPlot]</label>
                     <textcolor>main_fg_70</textcolor>
