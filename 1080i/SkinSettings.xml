@@ -208,8 +208,10 @@
                                 <label>$LOCALIZE[31336]</label>
                                 <label2>$VAR[Label_Setting_SelectboxStyle]</label2>
                                 <visible>Container(3).HasFocus(2)</visible>
-                                <onclick>Skin.ToggleSetting(SelectBox.Thin)</onclick>
-                                <selected>Skin.HasSetting(SelectBox.Thin)</selected>
+                                <onclick condition="!Skin.HasSetting(SelectBox.Thin) + !Skin.HasSetting(SelectBox.Glow)">Skin.SetBool(SelectBox.Thin)</onclick>
+                                <onclick condition="Skin.HasSetting(SelectBox.Thin) + !Skin.HasSetting(SelectBox.Glow)">Skin.SetBool(SelectBox.Glow)</onclick>
+                                <onclick condition="Skin.HasSetting(SelectBox.Glow)">Skin.Reset(SelectBox.Thin)</onclick>
+                                <onclick condition="Skin.HasSetting(SelectBox.Glow)">Skin.Reset(SelectBox.Glow)</onclick>
                             </include>
                             <include content="Dialog_Settings_Button" description="Background video">
                                 <param name="id" value="2006" />
@@ -295,6 +297,14 @@
                                 <visible>Container(3).HasFocus(3)</visible>
                                 <onclick>Skin.ToggleSetting(Hubs.DisableQuickSwitch)</onclick>
                                 <selected>!Skin.HasSetting(Hubs.DisableQuickSwitch)</selected>
+                            </include>
+                            <include content="Dialog_Settings_Button">
+                                <param name="id" value="3010" />
+                                <param name="control" value="radiobutton" />
+                                <label>$LOCALIZE[31349]</label>
+                                <visible>Container(3).HasFocus(3)</visible>
+                                <onclick>Skin.ToggleSetting(Widgets.FullScreenContext)</onclick>
+                                <selected>Skin.HasSetting(Widgets.FullScreenContext)</selected>
                             </include>
                             <include content="Dialog_Settings_Label" description="Kiosk Mode">
                                 <param name="id" value="3004" />
